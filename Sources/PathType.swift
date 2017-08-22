@@ -1,5 +1,5 @@
 //
-//  Path.swift
+//  PathType.swift
 //  XcodeProjKit
 //
 //  Created by phimage on 30/07/2017.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-public enum Path {
+public enum PathType {
     case absolute(String)
     case relativeTo(SourceTreeFolder, String)
 }
 
-extension Path {
+extension PathType {
 
     public func url(with urlForSourceTreeFolder: (SourceTreeFolder) -> URL) -> URL {
         switch self {

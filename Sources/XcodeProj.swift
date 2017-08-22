@@ -23,7 +23,7 @@ public class XcodeProj {
     public class Objects: PBXObjectFactory {
 
         public var dict: [UUID: PBXObject] = [:]
-        public var fullFilePaths: [UUID: Path] = [:]
+        public var fullFilePaths: [UUID: PathType] = [:]
 
         public func object<T: PBXObject>(_ ref: String) -> T? {
             guard let obj = dict[ref] else {
