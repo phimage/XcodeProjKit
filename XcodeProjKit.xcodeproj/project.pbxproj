@@ -31,6 +31,8 @@
 		480B88041F31CAFA00E700F7 /* XcodeProjKitParseKoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480B88031F31CAFA00E700F7 /* XcodeProjKitParseKoTests.swift */; };
 		480B88061F31CD5E00E700F7 /* XcodeProjKitWriteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480B88051F31CD5E00E700F7 /* XcodeProjKitWriteTests.swift */; };
 		481EAA091F31B9D90039C6C0 /* FieldKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481EAA081F31B9D90039C6C0 /* FieldKey.swift */; };
+		481EDC6B1F4C1E2A00E97960 /* PBXLegacyTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481EDC6A1F4C1E2A00E97960 /* PBXLegacyTarget.swift */; };
+		481EDC6D1F4C1F3100E97960 /* plist.pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 481EDC6C1F4C1F3100E97960 /* plist.pbxproj */; };
 		4869C3311F30BC0F00BFED57 /* XcodeProjKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4869C32F1F30BC0F00BFED57 /* XcodeProjKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4869C33E1F30BC2800BFED57 /* Sequence+XcodeProjKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869C3391F30BC2800BFED57 /* Sequence+XcodeProjKit.swift */; };
 		4869C33F1F30BC2800BFED57 /* PBXObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869C33A1F30BC2800BFED57 /* PBXObject.swift */; };
@@ -111,6 +113,8 @@
 		480B88031F31CAFA00E700F7 /* XcodeProjKitParseKoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeProjKitParseKoTests.swift; sourceTree = "<group>"; };
 		480B88051F31CD5E00E700F7 /* XcodeProjKitWriteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeProjKitWriteTests.swift; sourceTree = "<group>"; };
 		481EAA081F31B9D90039C6C0 /* FieldKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldKey.swift; sourceTree = "<group>"; };
+		481EDC6A1F4C1E2A00E97960 /* PBXLegacyTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBXLegacyTarget.swift; sourceTree = "<group>"; };
+		481EDC6C1F4C1F3100E97960 /* plist.pbxproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.pbxproject; path = plist.pbxproj; sourceTree = "<group>"; };
 		4869C32C1F30BC0F00BFED57 /* XcodeProjKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XcodeProjKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4869C32F1F30BC0F00BFED57 /* XcodeProjKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XcodeProjKit.h; sourceTree = "<group>"; };
 		4869C3301F30BC0F00BFED57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -208,6 +212,7 @@
 				480B87EC1F31C78400E700F7 /* weixin.17aeced.project.pbxproj */,
 				480B87ED1F31C78400E700F7 /* xcglogger.iosdemo.5510795.project.pbxproj */,
 				480B87EE1F31C78400E700F7 /* yocelsius.09b4cb7.project.pbxproj */,
+				481EDC6C1F4C1F3100E97960 /* plist.pbxproj */,
 			);
 			path = ok;
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 				4869C35D1F30BE2F00BFED57 /* PBXTarget.swift */,
 				4869C37E1F30C65200BFED57 /* PBXAggregateTarget.swift */,
 				4869C3801F30C66100BFED57 /* PBXNativeTarget.swift */,
+				481EDC6A1F4C1E2A00E97960 /* PBXLegacyTarget.swift */,
 			);
 			name = PBXTarget;
 			sourceTree = "<group>";
@@ -518,6 +524,7 @@
 				480B87F41F31C78400E700F7 /* criollo.b1e014c.project.pbxproj in Resources */,
 				480B87F71F31C78400E700F7 /* injectionpluginlite.f6d6387.project.pbxproj in Resources */,
 				480B87F01F31C78400E700F7 /* 001.pbxproj in Resources */,
+				481EDC6D1F4C1F3100E97960 /* plist.pbxproj in Resources */,
 				480B87F51F31C78400E700F7 /* dwifft.05d449a.project.pbxproj in Resources */,
 				480B88001F31C78400E700F7 /* weixin.17aeced.project.pbxproj in Resources */,
 				480B88021F31C78400E700F7 /* yocelsius.09b4cb7.project.pbxproj in Resources */,
@@ -554,7 +561,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint # autocorrect\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -588,6 +595,7 @@
 				4869C3561F30BDBF00BFED57 /* PBXBuildPhase.swift in Sources */,
 				4869C3851F30C69A00BFED57 /* PBXShellScriptBuildPhase.swift in Sources */,
 				4869C36D1F30BEDA00BFED57 /* PBXVariantGroup.swift in Sources */,
+				481EDC6B1F4C1E2A00E97960 /* PBXLegacyTarget.swift in Sources */,
 				4869C35B1F30BE1500BFED57 /* XCBuildConfiguration.swift in Sources */,
 				4869C3651F30BE9500BFED57 /* PBXReference.swift in Sources */,
 				4869C3891F30C6B500BFED57 /* PBXHeadersBuildPhase.swift in Sources */,

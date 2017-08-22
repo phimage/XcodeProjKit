@@ -83,6 +83,10 @@ class XcodeProjKitParseTests: XCTestCase {
     func testyocelsius() {
         testParse("yocelsius.09b4cb7.project")
     }
+    
+    func testplist() {
+        testParse("plist")
+    }
 
     func testParse(_ resource: String) {
         if let url = bundle.url(forResource: resource, withExtension: XcodeProj.pbxprojFileExtension) {

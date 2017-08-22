@@ -17,6 +17,7 @@ public enum Isa: String, CustomStringConvertible {
     case aggregateTarget = "PBXAggregateTarget"
     case nativeTarget = "PBXNativeTarget"
     case targetDependency = "PBXTargetDependency"
+    case legacybTarget = "PBXLegacyTarget"
     case reference = "PBXReference"
     case referenceProxy = "PBXReferenceProxy"
     case fileReference = "PBXFileReference"
@@ -59,6 +60,7 @@ extension Isa {
         case .buildStyle: return PBXBuildStyle.self
         case .aggregateTarget: return PBXAggregateTarget.self
         case .nativeTarget: return PBXNativeTarget.self
+        case .legacybTarget: return PBXLegacyTarget.self
         case .targetDependency: return PBXTargetDependency.self
         case .reference: return PBXReference.self
         case .referenceProxy: return PBXReferenceProxy.self
