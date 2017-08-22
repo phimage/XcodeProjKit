@@ -8,18 +8,18 @@
 
 import Foundation
 
-public typealias UUID = String
+public typealias XcodeUUID = String
 
 public /* abstract */ class PBXObject {
     public typealias Fields = [String: Any]
 
-    let ref: UUID
+    let ref: XcodeUUID
     let fields: PBXObject.Fields
     let objects: PBXObjectFactory
 
     public lazy var isa: Isa = Isa(rawValue: self.string("isa")!)!
 
-    public required init(ref: UUID, fields: PBXObject.Fields, objects: PBXObjectFactory) {
+    public required init(ref: XcodeUUID, fields: PBXObject.Fields, objects: PBXObjectFactory) {
         self.ref = ref
         self.fields = fields
         self.objects = objects
@@ -33,7 +33,7 @@ public /* abstract */ class PBXObject {
 
 extension PBXObject {
 
-    func bool(_ key: UUID) -> Bool {
+    func bool(_ key: XcodeUUID) -> Bool {
         guard let string = fields[key] as? String else {
             assertionFailure("Missing field \(key) for \(self)")
             return false
@@ -49,14 +49,14 @@ extension PBXObject {
         }
     }
 
-    func string(_ key: UUID) -> String? {
+    func string(_ key: XcodeUUID) -> String? {
         guard let value = fields[key] as? String else {
             return nil // missing path
         }
         return value
     }
 
-    func strings(_ key: UUID) -> [String] {
+    func strings(_ key: XcodeUUID) -> [String] {
         guard let value = fields[key] as? [String] else {
             assertionFailure("Missing field \(key) for \(self)")
             return []
@@ -71,7 +71,7 @@ extension PBXObject {
 }
 
 public protocol PBXObjectFactory {
-    func object<T: PBXObject>(_ ref: UUID) -> T?
+    func object<T: PBXObject>(_ ref: XcodeUUID) -> T?
 }
 
 public extension PBXObjectFactory {
@@ -82,7 +82,7 @@ public extension PBXObjectFactory {
 
 extension PBXObject: PBXObjectFactory {
 
-    public func object<T: PBXObject>(_ key: UUID) -> T? {
+    public func object<T: PBXObject>(_ key: XcodeUUID) -> T? {
         guard let objectKey = fields[key] as? String else {
             return nil
         }
@@ -91,7 +91,7 @@ extension PBXObject: PBXObjectFactory {
         return obj
     }
 
-    func objects<T: PBXObject>(_ key: UUID) -> [T] {
+    func objects<T: PBXObject>(_ key: XcodeUUID) -> [T] {
         guard let objectKeys = fields[key] as? [String] else {
             return []
         }

@@ -22,8 +22,8 @@ public class XcodeProj {
 
     public class Objects: PBXObjectFactory {
 
-        public var dict: [UUID: PBXObject] = [:]
-        public var fullFilePaths: [UUID: PathType] = [:]
+        public var dict: [XcodeUUID: PBXObject] = [:]
+        public var fullFilePaths: [XcodeUUID: PathType] = [:]
 
         public func object<T: PBXObject>(_ ref: String) -> T? {
             guard let obj = dict[ref] else {
@@ -35,7 +35,7 @@ public class XcodeProj {
             return T(ref: ref, fields: obj.fields, objects: self)
         }
 
-        lazy var buildPhaseByFileRef: [UUID: PBXBuildPhase] = {
+        lazy var buildPhaseByFileRef: [XcodeUUID: PBXBuildPhase] = {
             let buildPhases = self.dict.values.of(type: PBXBuildPhase.self)
             var dict: [String: PBXBuildPhase] = [:]
             for buildPhase in buildPhases {
