@@ -71,9 +71,9 @@ public class XcodeProj {
                 let entireRange = NSRange(location: 0, length: str.utf16.count)
                 if let result = extractProjetNameRegex.firstMatch(in: str, options: [], range: entireRange) {
                     self.projectName = (str as NSString).substring(with: result.range)
-                    self.projectName = self.projectName.substring(with:
-                        extractProjetName.endIndex..<self.projectName.index(self.projectName.endIndex, offsetBy: -1)
-                    )
+                    self.projectName = String(self.projectName[
+                        extractProjetName.endIndex..<self.projectName.index(self.projectName.endIndex, offsetBy: -1)])
+
                 }
             }
         } catch let error as XcodeProjError {
@@ -85,7 +85,7 @@ public class XcodeProj {
         if url.isDirectoryURL {
             let subpaths = url.pathComponents
             if let last = subpaths.last, let range = last.range(of: ".xcodeproj") {
-                self.projectName = last.substring(to: range.lowerBound)
+                self.projectName = String(last[...range.lowerBound])
             }
         }
     }

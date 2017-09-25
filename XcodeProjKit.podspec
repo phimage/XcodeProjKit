@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "XcodeProjKit"
-  s.version          = "0.1.0"
+  s.version          = "1.0.0"
   s.license          = "MIT"
   s.homepage         = "https://github.com/phimage/XcodeProjKit/"
   s.summary          = "Read, edit and serialize Xcode projet into open step file format."
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/phimage/XcodeProjKit.git", :tag => s.version }
 
   s.ios.deployment_target = '10.0'
-  s.osx.deployment_target = '10.10'
+  s.osx.deployment_target = '10.12'
 
   s.source_files = "Sources/*.swift"
 

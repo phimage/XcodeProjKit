@@ -22,7 +22,7 @@ extension XcodeProj {
             } else {
                 // Find in project
                 if let last = subpaths.last, let range = last.range(of: ".xcodeproj") {
-                    name = last.substring(to: range.lowerBound)
+                    name = String(last[...range.lowerBound])
                 } else {
                     name = self.projectName // default
                 }
