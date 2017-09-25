@@ -1,7 +1,11 @@
-// swift-tools-version:3.1
+// swift-tools-version:4.0
 
 import PackageDescription
 
 let package = Package(
-    name: "XcodeProjKit"
+    name: "XcodeProjKit",
+    targets: [
+        .target(name: "XcodeProjKit", path: "Sources"),
+        .testTarget(name: "Tests", dependencies: ["XcodeProjKit"], path: "Tests")
+    ]
 )
