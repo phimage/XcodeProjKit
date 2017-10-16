@@ -56,6 +56,14 @@ extension PBXObject {
         return value
     }
 
+    func string(_ key: XcodeUUID) -> String {
+        guard let value = fields[key] as? String else {
+            assertionFailure("Missing field \(key) for \(self)")
+          return ""
+        }
+        return value
+    }
+
     func strings(_ key: XcodeUUID) -> [String] {
         guard let value = fields[key] as? [String] else {
             assertionFailure("Missing field \(key) for \(self)")
