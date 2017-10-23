@@ -76,6 +76,13 @@ extension PBXObject {
         return string(key.rawValue)
     }
 
+    func dictionary<Key, Value>(_ key: XcodeUUID) -> [Key: Value]? {
+        guard let value = fields[key] as? [Key: Value] else {
+            return nil // missing path
+        }
+        return value
+    }
+
 }
 
 public protocol PBXObjectFactory {

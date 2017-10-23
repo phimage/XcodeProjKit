@@ -8,7 +8,9 @@
 
 import Foundation
 
-public class XCConfigurationList: PBXProjectItem {}
+public class XCConfigurationList: PBXProjectItem {
+  public lazy var buildConfigurations: [XCBuildConfiguration] = self.objects("buildConfigurations")
+}
 
 public protocol PBXBuildConfigurationListable {
      var buildConfigurationList: XCConfigurationList? {get}
