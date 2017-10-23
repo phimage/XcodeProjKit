@@ -8,4 +8,6 @@
 
 import Foundation
 
-public class PBXBuildStyle: PBXProjectItem {}
+public class PBXBuildStyle: PBXProjectItem {
+    public lazy var buildSettings: [String: Any]? = dictionary("buildSettings")
+}
