@@ -33,6 +33,21 @@ public /* abstract */ class PBXObject {
 
 extension PBXObject {
 
+    func bool(_ key: XcodeUUID) -> Bool? {
+        guard let string = fields[key] as? String else {
+            return nil // missing path
+        }
+
+        switch string {
+        case "0":
+            return false
+        case "1":
+            return true
+        default:
+            return nil
+        }
+    }
+
     func bool(_ key: XcodeUUID) -> Bool {
         guard let string = fields[key] as? String else {
             assertionFailure("Missing field \(key) for \(self)")
