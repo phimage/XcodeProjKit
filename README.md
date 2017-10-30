@@ -46,6 +46,7 @@ pod "XcodeProjKit"
 ### Thanks
 
 - @Karumi for the test files : https://github.com/Karumi/Kin
+- @allu22 for the PR
 
 ### TODO
 
