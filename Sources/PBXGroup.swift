@@ -13,4 +13,6 @@ public class PBXGroup: PBXReference {
 
     public lazy var subGroups: [PBXGroup] = self.children.of(type: PBXGroup.self)
     public lazy var fileRefs: [PBXFileReference] = self.children.of(type: PBXFileReference.self)
+
+    public lazy var usesTabs: Bool? = self.bool("usesTabs")
 }
