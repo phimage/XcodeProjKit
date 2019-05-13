@@ -49,8 +49,8 @@ class OpenStepSerializer {
 
                         let parts = try rows(type: isa, objKey: object.ref, multiline: multiline, fields: object.fields)
                         if multiline {
-                            for ln in parts {
-                                lines.append("\t\t" + ln)
+                            for line in parts {
+                                lines.append("\t\t" + line)
                             }
                         } else {
                             lines.append("\t\t" + parts.joined(separator: ""))
@@ -98,7 +98,7 @@ class OpenStepSerializer {
                 }
             } else if obj is XCConfigurationList {
                 if let target = self.projectFile.project.targetsByConfigRef[key] {
-                    return "Build configuration list for \(target.isa) \"\(target.name ?? "")\""
+                    return "Build configuration list for \(target.isa) \"\(target.name)\""
                 }
                 return "Build configuration list for PBXProject \"\(projectName)\""
             }
@@ -116,24 +116,24 @@ class OpenStepSerializer {
         if let valArr = val as? [String] {
             parts.append("\(keyStr) = (")
 
-            var ps: [String] = []
+            var rows: [String] = []
             for valItem in valArr {
                 let str = valItem.valueString
 
                 var extraComment = ""
-                if let c = comment(forKey: valItem) {
-                    extraComment = " /* \(c) */"
+                if let comment = self.comment(forKey: valItem) {
+                    extraComment = " /* \(comment) */"
                 }
 
-                ps.append("\(str)\(extraComment),")
+                rows.append("\(str)\(extraComment),")
             }
             if multiline {
-                for p in ps {
-                    parts.append("\t\(p)")
+                for part in rows {
+                    parts.append("\t\(part)")
                 }
                 parts.append(");")
             } else {
-                parts.append(ps.map { $0 + " "}.joined(separator: "") + "); ")
+                parts.append(rows.map { $0 + " "}.joined(separator: "") + "); ")
             }
 
         } else if let valArr = val as? [PBXObject.Fields] {
@@ -146,14 +146,14 @@ class OpenStepSerializer {
 
                 for valKey in valObj.keys.sorted() {
                     if let valVal = valObj[valKey] {
-                        let ps = try objectValue(key: valKey, val: valVal, multiline: multiline)
+                        let rows = try self.objectValue(key: valKey, val: valVal, multiline: multiline)
 
                         if multiline {
-                            for p in ps {
-                                parts.append("\t\t\(p)")
+                            for part in rows {
+                                parts.append("\t\t\(part)")
                             }
                         } else {
-                            parts.append("\t" + ps.joined(separator: "") + "}; ")
+                            parts.append("\t" + rows.joined(separator: "") + "}; ")
                         }
                     } else {
                         assertionFailure("Missing val for \(valKey)")
@@ -172,14 +172,14 @@ class OpenStepSerializer {
 
             for valKey in valObj.keys.sorted() {
                 if let valVal = valObj[valKey] {
-                    let ps = try objectValue(key: valKey, val: valVal, multiline: multiline)
+                    let rows = try self.objectValue(key: valKey, val: valVal, multiline: multiline)
 
                     if multiline {
-                        for p in ps {
-                            parts.append("\t\(p)")
+                        for part in rows {
+                            parts.append("\t\(part)")
                         }
                     } else {
-                        parts.append(ps.joined(separator: "") + "}; ")
+                        parts.append(rows.joined(separator: "") + "}; ")
                     }
                 } else {
                     assertionFailure("Missing val for \(valKey)")
@@ -194,8 +194,8 @@ class OpenStepSerializer {
             let str = "\(val)".valueString
 
             var extraComment = ""
-            if let c = comment(forKey: str) {
-                extraComment = " /* \(c) */"
+            if let comment = self.comment(forKey: str) {
+                extraComment = " /* \(comment) */"
             }
 
             if key == "remoteGlobalIDString" || key == "TestTargetID" {
@@ -223,8 +223,8 @@ class OpenStepSerializer {
 
         for key in fields.keys.sorted() where key != FieldKey.isa.rawValue {
             if let val = fields[key] {
-                for p in try objectValue(key: key, val: val, multiline: multiline) {
-                    parts.append(p)
+                for part in try objectValue(key: key, val: val, multiline: multiline) {
+                    parts.append(part)
                 }
             } else {
                 assertionFailure("missing \(key)")
@@ -232,8 +232,8 @@ class OpenStepSerializer {
         }
 
         var objComment = ""
-        if let c = comment(forKey: objKey) {
-            objComment = " /* \(c) */"
+        if let comment = self.comment(forKey: objKey) {
+            objComment = " /* \(comment) */"
         }
 
         let opening = "\(objKey)\(objComment) = {"

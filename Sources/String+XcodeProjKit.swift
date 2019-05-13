@@ -10,14 +10,13 @@ import Foundation
 
 //swiftlint:disable:next force_try
 let nonescapeRegex = try! NSRegularExpression(pattern: "^[a-z0-9_\\$\\.\\/]+$", options: .caseInsensitive)
-let specialRegexes: [String: NSRegularExpression] =  Dictionary(tuples:
-    ["\\\\", "\\\"", "\\n", "\\r", "\\t"].flatMap {
-        if let regular = try? NSRegularExpression(pattern: $0, options: []) {
-            return ($0, regular)
-        } else {
-            return nil
-        }
-})
+let specialRegexes: [(String, NSRegularExpression)] = ["\\\\", "\\\"", "\\n", "\\r", "\\t"].compactMap { string in
+    if let regular = try? NSRegularExpression(pattern: string, options: []) {
+        return (string, regular)
+    } else {
+        return nil
+    }
+}
 
 extension String {
 

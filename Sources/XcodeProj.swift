@@ -29,8 +29,8 @@ public class XcodeProj {
             guard let obj = dict[ref] else {
                 return nil
             }
-            if let t = obj as? T {
-                return t
+            if let castedObj = obj as? T {
+                return castedObj
             }
             return T(ref: ref, fields: obj.fields, objects: self)
         }
@@ -92,7 +92,7 @@ public class XcodeProj {
 
     public convenience init(propertyListData data: Data) throws {
         var format: PropertyListSerialization.PropertyListFormat = .binary
-        let obj = try PropertyListSerialization.propertyList(from: data, options:[], format: &format)
+        let obj = try PropertyListSerialization.propertyList(from: data, options: [], format: &format)
 
         guard let dict = obj as? PBXObject.Fields else {
             throw XcodeProjError.invalidData(object: obj)
@@ -156,7 +156,7 @@ let extractProjetNameRegex = try! NSRegularExpression(pattern:
     "Build configuration list for PBXProject \"(.*)\"", options: [])
 
 extension XcodeProj: PBXObjectFactory {
-    public func object<T>(_ ref: String) -> T? where T : PBXObject {
+    public func object<T>(_ ref: String) -> T? where T: PBXObject {
         return self.objects.object(ref)
     }
 }

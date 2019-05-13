@@ -11,7 +11,7 @@ import Foundation
 extension XcodeProj {
 
     func paths(_ current: PBXGroup, prefix: String) -> [String: PathType] {
-        var ps: [String: PathType] = [:]
+        var paths: [String: PathType] = [:]
 
         for file in current.fileRefs {
             if let path = file.path, let sourceTree = file.sourceTree {
@@ -19,20 +19,20 @@ extension XcodeProj {
                 case .group:
                     switch sourceTree {
                     case .absolute:
-                        ps[file.ref] = .absolute(prefix + "/" + path)
+                        paths[file.ref] = .absolute(prefix + "/" + path)
 
                     case .group:
-                        ps[file.ref] = .relativeTo(.sourceRoot, prefix + "/" + path)
+                        paths[file.ref] = .relativeTo(.sourceRoot, prefix + "/" + path)
 
                     case .relativeTo(let sourceTreeFolder):
-                        ps[file.ref] = .relativeTo(sourceTreeFolder, prefix + "/" + path)
+                        paths[file.ref] = .relativeTo(sourceTreeFolder, prefix + "/" + path)
                     }
 
                 case .absolute:
-                    ps[file.ref] = .absolute(path)
+                    paths[file.ref] = .absolute(path)
 
                 case let .relativeTo(sourceTreeFolder):
-                    ps[file.ref] = .relativeTo(sourceTreeFolder, path)
+                    paths[file.ref] = .relativeTo(sourceTreeFolder, path)
                 }
             }
         }
@@ -61,13 +61,13 @@ extension XcodeProj {
                     str = path
                 }
 
-                ps += paths(group, prefix: str)
+                paths += self.paths(group, prefix: str)
             } else {
-                ps += paths(group, prefix: prefix)
+                paths += self.paths(group, prefix: prefix)
             }
         }
 
-        return ps
+        return paths
     }
 
 }

@@ -126,7 +126,7 @@ extension PBXObject: PBXObjectFactory {
             return []
         }
 
-        return objectKeys.flatMap(objects.object)
+        return objectKeys.compactMap(objects.object)
     }
 
     func objects<T: PBXObject>(_ key: FieldKey) -> [T] {
