@@ -14,7 +14,42 @@ This project aim to
 
 Alternatively you can use apple private framework DVTFoundation, like [Xcodeproj](https://github.com/CocoaPods/Xcodeproj) do.
 
+## Usage
+
+### Read
+
+```swift
+let xcodeProj = try XcodeProj(url: url)
+let project: PBXProject = xcodeProj.project
+
+let mainGroup: PBXGroup? = project.mainGroup
+let targets: [PBXNativeTarget] = project.targets
+let buildConfigurationList: XCConfigurationList? = project.buildConfigurationList
+```
+
+### Write
+
+```swift
+try xcodeProj.write(to: newURL, format: .openStep)
+```
+
 ## Setup
+
+### Using Swift Package Manager
+
+```swift
+let package = Package(
+    name: "MyProject",
+    dependencies: [
+        .package(url: "https://github.com/phimage/XcodeProjKit.git", .upToNextMajor(from: "2.0.0")),
+        ],
+    targets: [
+        .target(
+            name: "MyProject",
+            dependencies: ["XcodeProjKit"]),
+        ]
+)
+```
 
 ### Using Carthage
 
@@ -32,10 +67,6 @@ Add the project to your Podfile.
 ```
 pod "XcodeProjKit"
 ```
-
-### Using Swift Package Manager
-
-...
 
 ### Referenes
 
