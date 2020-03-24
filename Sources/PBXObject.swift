@@ -134,3 +134,10 @@ extension PBXObject: PBXObjectFactory {
     }
 
 }
+
+extension PBXObject: CustomStringConvertible {
+    
+    public var description: String {
+        return "\(type(of: self)): [id: \(ref), fields: \(fields)]"
+    }
+}
