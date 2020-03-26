@@ -182,6 +182,32 @@ extension PBXObject {
         fields[key] = value
     }
 
+    public func remove<R: RawRepresentable>(forKey key: R) where R.RawValue == String {
+        fields.removeValue(forKey: key.rawValue)
+    }
+
+    public func remove<T: PBXObject, R: RawRepresentable>(object: T, forKey key: R) where R.RawValue == String {
+        if var objectKeys = fields[key.rawValue] as? [String] {
+            objectKeys.removeAll(where: { $0 == object.ref})
+            fields[key.rawValue] = objectKeys
+        }
+    }
+
+    public func add<T: PBXObject, R: RawRepresentable>(object: T, into key: R) where R.RawValue == String {
+        if var objectKeys = fields[key.rawValue] as? [String] {
+            objectKeys.append(object.ref)
+            fields[key.rawValue] = objectKeys
+        }
+    }
+
+    public func set<T: PBXObject, R: RawRepresentable>(object: T, into key: R) where R.RawValue == String {
+        fields[key.rawValue] = object.ref
+    }
+
+    public func set<R: RawRepresentable>(value: Any, into key: R) where R.RawValue == String {
+        fields[key.rawValue] = value
+    }
+
     public func destroy() {
         objects.remove(self)
     }
