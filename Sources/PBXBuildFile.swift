@@ -12,12 +12,15 @@ public class PBXBuildFile: PBXProjectItem {
 
     public enum PBXKeys: PBXKey {
         case fileRef
+        case settings
     }
 
     #if LAZY
     public lazy var fileRef: PBXReference? = self.object(PBXKeys.fileRef)
+    public lazy var settings: [String: Any]? = self.dictionary(PBXKeys.settings)
     #else
     public var fileRef: PBXReference? { self.object(PBXKeys.fileRef) }
+    public var settings: [String: Any]? { self.dictionary(PBXKeys.settings) }
     #endif
 
 }
