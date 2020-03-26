@@ -35,6 +35,10 @@ public class XcodeProj {
             return T(ref: ref, fields: obj.fields, objects: self)
         }
 
+        public func remove<T: PBXObject>(_ object: T) {
+            dict.removeValue(forKey: object.ref)
+        }
+
         #if LAZY
         lazy var buildPhaseByFileRef: [XcodeUUID: PBXBuildPhase] = {
             let buildPhases = self.dict.values.of(type: PBXBuildPhase.self)
@@ -172,5 +176,8 @@ let extractProjetNameRegex = try! NSRegularExpression(pattern:
 extension XcodeProj: PBXObjectFactory {
     public func object<T>(_ ref: String) -> T? where T: PBXObject {
         return self.objects.object(ref)
+    }
+    public func remove<T: PBXObject>(_ object: T) {
+        self.objects.remove(object)
     }
 }

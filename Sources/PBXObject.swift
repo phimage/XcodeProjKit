@@ -14,7 +14,7 @@ public /* abstract */ class PBXObject {
     public typealias Fields = [String: Any]
 
     let ref: XcodeUUID
-    let fields: PBXObject.Fields
+    var fields: PBXObject.Fields
     let objects: PBXObjectFactory
 
     #if LAZY
@@ -106,17 +106,12 @@ extension PBXObject {
 
 public protocol PBXObjectFactory {
     func object<T: PBXObject>(_ ref: XcodeUUID) -> T?
+    func remove<T: PBXObject>(_ object: T)
 }
 
-public extension PBXObjectFactory {
-    func object<T: PBXObject>(_ key: FieldKey) -> T? {
-        return object(key.rawValue)
-    }
-}
+extension PBXObject {
 
-extension PBXObject: PBXObjectFactory {
-
-    public func object<T: PBXObject>(_ key: XcodeUUID) -> T? {
+    public func object<T: PBXObject>(_ key: String) -> T? {
         guard let objectKey = fields[key] as? String else {
             return nil
         }
@@ -125,7 +120,7 @@ extension PBXObject: PBXObjectFactory {
         return obj
     }
 
-    func objects<T: PBXObject>(_ key: XcodeUUID) -> [T] {
+    func objects<T: PBXObject>(_ key: String) -> [T] {
         guard let objectKeys = fields[key] as? [String] else {
             return []
         }
@@ -133,8 +128,42 @@ extension PBXObject: PBXObjectFactory {
         return objectKeys.compactMap(objects.object)
     }
 
+    func object<T: PBXObject>(_ key: FieldKey) -> T? {
+        return object(key.rawValue)
+    }
+
     func objects<T: PBXObject>(_ key: FieldKey) -> [T] {
         return objects(key.rawValue)
+    }
+
+}
+
+extension PBXObject {
+
+    public func remove(forKey key: String) {
+        fields.removeValue(forKey: key)
+    }
+
+    public func remove<T: PBXObject>(object: T, forKey key: String) {
+        if var objectKeys = fields[key] as? [String] {
+            objectKeys.removeAll(where: { $0 == object.ref})
+            fields[key] = objectKeys
+        }
+    }
+
+    public func add<T: PBXObject>(object: T, into key: String) {
+        if var objectKeys = fields[key] as? [String] {
+            objectKeys.append(object.ref)
+            fields[key] = objectKeys
+        }
+    }
+
+    public func set<T: PBXObject>(object: T, into key: String) {
+        fields[key] = object.ref
+    }
+
+    public func destroy() {
+        objects.remove(self)
     }
 
 }
