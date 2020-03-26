@@ -632,11 +632,11 @@
 			};
 			buildConfigurationList = 4869C3261F30BC0F00BFED57 /* Build configuration list for PBXProject "XcodeProjKit" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = 4869C3221F30BC0F00BFED57;
 			productRefGroup = 4869C32D1F30BC0F00BFED57 /* Products */;
@@ -737,7 +737,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		48E403461F31E821000C81A0 /* swiftlint autocorrect */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -751,7 +751,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint # autocorrect\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nfi\n";
 		};
 		E48F58171F949F4800F92F20 /* swiftlint autocorrect */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -765,7 +765,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint # autocorrect\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nfi\n";
 		};
 		E48F58481F949F4800F92F20 /* swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -779,7 +779,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

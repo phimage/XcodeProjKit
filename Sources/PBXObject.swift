@@ -17,7 +17,11 @@ public /* abstract */ class PBXObject {
     let fields: PBXObject.Fields
     let objects: PBXObjectFactory
 
+    #if LAZY
     public lazy var isa: Isa = Isa(rawValue: self.string("isa")!)!
+    #else
+    public var isa: Isa { Isa(rawValue: self.string("isa")!)! }
+    #endif
 
     public required init(ref: XcodeUUID, fields: PBXObject.Fields, objects: PBXObjectFactory) {
         self.ref = ref
@@ -136,7 +140,7 @@ extension PBXObject: PBXObjectFactory {
 }
 
 extension PBXObject: CustomStringConvertible {
-    
+
     public var description: String {
         return "\(type(of: self)): [id: \(ref), fields: \(fields)]"
     }

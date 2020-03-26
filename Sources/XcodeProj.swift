@@ -35,6 +35,7 @@ public class XcodeProj {
             return T(ref: ref, fields: obj.fields, objects: self)
         }
 
+        #if LAZY
         lazy var buildPhaseByFileRef: [XcodeUUID: PBXBuildPhase] = {
             let buildPhases = self.dict.values.of(type: PBXBuildPhase.self)
             var dict: [String: PBXBuildPhase] = [:]
@@ -45,8 +46,21 @@ public class XcodeProj {
             }
             return dict
         }()
+        #else
+        var buildPhaseByFileRef: [XcodeUUID: PBXBuildPhase] {
+            let buildPhases = self.dict.values.of(type: PBXBuildPhase.self)
+            var dict: [String: PBXBuildPhase] = [:]
+            for buildPhase in buildPhases {
+                for file in buildPhase.files {
+                    dict[file.ref] = buildPhase
+                }
+            }
+            return dict
+        }
+        #endif
 
     }
+
     public let objects: Objects
 
     // MARK: init

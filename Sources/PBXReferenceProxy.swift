@@ -10,6 +10,10 @@ import Foundation
 
 public class PBXReferenceProxy: PBXReference {
 
+    #if LAZY
     public lazy var remoteRef: PBXContainerItemProxy? = self.object("remoteRef")
+    #else
+    public var remoteRef: PBXContainerItemProxy? { self.object("remoteRef") }
+    #endif
 
 }

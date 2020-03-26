@@ -9,5 +9,11 @@
 import Foundation
 
 public class PBXBuildStyle: PBXProjectItem {
+
+    #if LAZY
     public lazy var buildSettings: [String: Any]? = dictionary("buildSettings")
+    #else
+    public var buildSettings: [String: Any]? { dictionary("buildSettings") }
+    #endif
+
 }

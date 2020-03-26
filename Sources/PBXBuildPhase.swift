@@ -9,5 +9,9 @@
 import Foundation
 
 public /* abstract */ class PBXBuildPhase: PBXProjectItem {
+    #if LAZY
     public lazy var files: [PBXBuildFile] = self.objects("files")
+    #else
+    public var files: [PBXBuildFile] { self.objects("files") }
+    #endif
 }

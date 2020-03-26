@@ -9,7 +9,13 @@
 import Foundation
 
 public class XCConfigurationList: PBXProjectItem {
-  public lazy var buildConfigurations: [XCBuildConfiguration] = self.objects("buildConfigurations")
+
+    #if LAZY
+    public lazy var buildConfigurations: [XCBuildConfiguration] = self.objects("buildConfigurations")
+    #else
+    public var buildConfigurations: [XCBuildConfiguration] { self.objects("buildConfigurations") }
+    #endif
+
 }
 
 public protocol PBXBuildConfigurationListable {
