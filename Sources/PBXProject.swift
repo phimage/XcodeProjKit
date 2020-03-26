@@ -10,13 +10,22 @@ import Foundation
 
 public class PBXProject: PBXContainer, PBXBuildConfigurationListable {
 
+    public enum PBXKeys: PBXKey {
+        case developmentRegion
+        case hasScannedForEncodings
+        case knownRegions
+        case targets
+        case mainGroup
+        case buildConfigurationList
+    }
+
     #if LAZY
-    public lazy var developmentRegion: String? = self.string("developmentRegion")
-    public lazy var hasScannedForEncodings: Bool = self.bool("hasScannedForEncodings")
-    public lazy var knownRegions: [String] = self.strings("knownRegions")
-    public lazy var targets: [PBXNativeTarget] = self.objects("targets")
+    public lazy var developmentRegion: String? = self.string(PBXKeys.developmentRegion)
+    public lazy var hasScannedForEncodings: Bool = self.bool(PBXKeys.hasScannedForEncodings)
+    public lazy var knownRegions: [String] = self.strings(PBXKeys.knownRegions)
+    public lazy var targets: [PBXNativeTarget] = self.objects(PBXKeys.targets)
     public lazy var mainGroup: PBXGroup? = self.object(.mainGroup)
-    public lazy var buildConfigurationList: XCConfigurationList? = self.object("buildConfigurationList")
+    public lazy var buildConfigurationList: XCConfigurationList? = self.object(PBXKeys.buildConfigurationList)
 
     lazy var targetsByConfigRef: [String: PBXNativeTarget] = {
         var dict: [String: PBXNativeTarget] = [:]
@@ -28,12 +37,12 @@ public class PBXProject: PBXContainer, PBXBuildConfigurationListable {
         return dict
     }()
     #else
-    public var developmentRegion: String? { self.string("developmentRegion") }
-    public var hasScannedForEncodings: Bool { self.bool("hasScannedForEncodings") }
-    public var knownRegions: [String] { self.strings("knownRegions") }
-    public var targets: [PBXNativeTarget] { self.objects("targets") }
-    public var mainGroup: PBXGroup? { self.object(.mainGroup) }
-    public var buildConfigurationList: XCConfigurationList? { self.object("buildConfigurationList") }
+    public var developmentRegion: String? { self.string(PBXKeys.developmentRegion) }
+    public var hasScannedForEncodings: Bool { self.bool(PBXKeys.hasScannedForEncodings) }
+    public var knownRegions: [String] { self.strings(PBXKeys.knownRegions) }
+    public var targets: [PBXNativeTarget] { self.objects(PBXKeys.targets) }
+    public var mainGroup: PBXGroup? { self.object(PBXKeys.mainGroup) }
+    public var buildConfigurationList: XCConfigurationList? { self.object(PBXKeys.buildConfigurationList) }
 
     var targetsByConfigRef: [String: PBXNativeTarget] {
         var dict: [String: PBXNativeTarget] = [:]

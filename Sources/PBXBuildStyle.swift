@@ -10,10 +10,14 @@ import Foundation
 
 public class PBXBuildStyle: PBXProjectItem {
 
+    public enum PBXKeys: PBXKey {
+        case buildSettings
+    }
+
     #if LAZY
-    public lazy var buildSettings: [String: Any]? = dictionary("buildSettings")
+    public lazy var buildSettings: [String: Any]? = dictionary(PBXKeys.buildSettings)
     #else
-    public var buildSettings: [String: Any]? { dictionary("buildSettings") }
+    public var buildSettings: [String: Any]? { dictionary(PBXKeys.buildSettings) }
     #endif
 
 }

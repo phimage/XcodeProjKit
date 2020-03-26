@@ -9,6 +9,7 @@
 import Foundation
 
 public typealias XcodeUUID = String
+public typealias PBXKey = String
 
 public /* abstract */ class PBXObject {
     public typealias Fields = [String: Any]
@@ -37,7 +38,7 @@ public /* abstract */ class PBXObject {
 
 extension PBXObject {
 
-    func bool(_ key: XcodeUUID) -> Bool? {
+    fileprivate func bool(_ key: String) -> Bool? {
         guard let string = fields[key] as? String else {
             return nil // missing path
         }
@@ -52,7 +53,7 @@ extension PBXObject {
         }
     }
 
-    func bool(_ key: XcodeUUID) -> Bool {
+    fileprivate func bool(_ key: String) -> Bool {
         guard let string = fields[key] as? String else {
             assertionFailure("Missing field \(key) for \(self)")
             return false
@@ -68,14 +69,14 @@ extension PBXObject {
         }
     }
 
-    func string(_ key: XcodeUUID) -> String? {
+    fileprivate func string(_ key: String) -> String? {
         guard let value = fields[key] as? String else {
             return nil // missing path
         }
         return value
     }
 
-    func string(_ key: XcodeUUID) -> String {
+    fileprivate func string(_ key: String) -> String {
         guard let value = fields[key] as? String else {
             assertionFailure("Missing field \(key) for \(self)")
           return ""
@@ -83,7 +84,7 @@ extension PBXObject {
         return value
     }
 
-    func strings(_ key: XcodeUUID) -> [String] {
+    fileprivate func strings(_ key: String) -> [String] {
         guard let value = fields[key] as? [String] else {
             assertionFailure("Missing field \(key) for \(self)")
             return []
@@ -91,17 +92,32 @@ extension PBXObject {
         return value
     }
 
-    func string(_ key: FieldKey) -> String? {
-        return string(key.rawValue)
-    }
-
-    func dictionary<Key, Value>(_ key: XcodeUUID) -> [Key: Value]? {
+    fileprivate func dictionary<Key, Value>(_ key: String) -> [Key: Value]? {
         guard let value = fields[key] as? [Key: Value] else {
             return nil // missing path
         }
         return value
     }
 
+    func string<R: RawRepresentable>(_ key: R) -> String? where R.RawValue == String {
+        return string(key.rawValue)
+    }
+
+    func string<R: RawRepresentable>(_ key: R) -> String where R.RawValue == String {
+        return string(key.rawValue)
+    }
+
+    func strings<R: RawRepresentable>(_ key: R) -> [String] where R.RawValue == String {
+         return strings(key.rawValue)
+    }
+
+    func bool<R: RawRepresentable>(_ key: R) -> Bool where R.RawValue == String {
+        return bool(key.rawValue)
+    }
+
+    func dictionary<Key, Value, R: RawRepresentable>(_ key: R) -> [Key: Value]? where R.RawValue == String {
+        return dictionary(key.rawValue)
+    }
 }
 
 public protocol PBXObjectFactory {
@@ -128,11 +144,11 @@ extension PBXObject {
         return objectKeys.compactMap(objects.object)
     }
 
-    func object<T: PBXObject>(_ key: FieldKey) -> T? {
+    func object<T: PBXObject, R: RawRepresentable>(_ key: R) -> T? where R.RawValue == String {
         return object(key.rawValue)
     }
 
-    func objects<T: PBXObject>(_ key: FieldKey) -> [T] {
+    func objects<T: PBXObject, R: RawRepresentable>(_ key: R) -> [T] where R.RawValue == String {
         return objects(key.rawValue)
     }
 
@@ -160,6 +176,10 @@ extension PBXObject {
 
     public func set<T: PBXObject>(object: T, into key: String) {
         fields[key] = object.ref
+    }
+
+    public func set(value: Any, into key: String) {
+        fields[key] = value
     }
 
     public func destroy() {

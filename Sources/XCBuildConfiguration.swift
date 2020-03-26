@@ -10,10 +10,14 @@ import Foundation
 
 public class XCBuildConfiguration: PBXBuildStyle {
 
+    public enum PBXKeys: PBXKey {
+        case name
+    }
+
     #if LAZY
-    public lazy var name: String? = self.string("name")
+    public lazy var name: String? = self.string(PBXKeys.name)
     #else
-    public var name: String? { self.string("name") }
+    public var name: String? { self.string(PBXKeys.name) }
     #endif
 
     public override var comment: String? {

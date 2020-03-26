@@ -9,9 +9,15 @@
 import Foundation
 
 public class PBXBuildFile: PBXProjectItem {
+
+    public enum PBXKeys: PBXKey {
+        case fileRef
+    }
+
     #if LAZY
-    public lazy var fileRef: PBXReference? = self.object("fileRef")
+    public lazy var fileRef: PBXReference? = self.object(PBXKeys.fileRef)
     #else
-    public var fileRef: PBXReference? { self.object("fileRef") }
+    public var fileRef: PBXReference? { self.object(PBXKeys.fileRef) }
     #endif
+
 }

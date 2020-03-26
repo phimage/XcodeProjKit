@@ -138,7 +138,7 @@ public class XcodeProj {
                     if let mainGroup = self.project.mainGroup {
                         objects.fullFilePaths = paths(mainGroup, prefix: "")
                     } else {
-                        if let mainGroupref = self.project.string(.mainGroup) {
+                        if let mainGroupref = self.project.string(PBXProject.PBXKeys.mainGroup) {
                             throw XcodeProjError.objectMissing(key: mainGroupref, expectedType: .group)
                         } else {
                             throw XcodeProjError.fieldKeyMissing(.mainGroup)
