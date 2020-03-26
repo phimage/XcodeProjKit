@@ -14,8 +14,8 @@ public typealias PBXKey = String
 public /* abstract */ class PBXObject {
     public typealias Fields = [String: Any]
 
-    let ref: XcodeUUID
-    var fields: PBXObject.Fields
+    public let ref: XcodeUUID
+    public private(set) var fields: PBXObject.Fields
     let objects: PBXObjectFactory
 
     #if LAZY
@@ -218,5 +218,11 @@ extension PBXObject: CustomStringConvertible {
 
     public var description: String {
         return "\(type(of: self)): [id: \(ref), fields: \(fields)]"
+    }
+}
+
+extension PBXObject: Equatable {
+    public static func == (lhs: PBXObject, rhs: PBXObject) -> Bool {
+        return lhs.ref == rhs.ref && type(of: lhs) == type(of: rhs)
     }
 }

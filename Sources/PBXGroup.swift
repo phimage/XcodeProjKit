@@ -31,3 +31,13 @@ public class PBXGroup: PBXReference {
     public var usesTabs: Bool? { self.bool(PBXKeys.usesTabs) }
     #endif
 }
+
+public extension PBXGroup {
+
+    /// Recursively get file refs
+    var fullFileRefs: [PBXFileReference] {
+        var result = self.fileRefs
+        result += subGroups.flatMap { $0.fullFileRefs }
+        return result
+    }
+}
