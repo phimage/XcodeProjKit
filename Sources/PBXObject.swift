@@ -18,16 +18,23 @@ public /* abstract */ class PBXObject {
     public private(set) var fields: PBXObject.Fields
     let objects: PBXObjectFactory
 
+    public enum PBXKeys: PBXKey {
+        case isa
+    }
+
     #if LAZY
     public lazy var isa: Isa = Isa(rawValue: self.string("isa")!)!
     #else
     public var isa: Isa { Isa(rawValue: self.string("isa")!)! }
     #endif
 
-    public required init(ref: XcodeUUID, fields: PBXObject.Fields, objects: PBXObjectFactory) {
+    public required init(ref: XcodeUUID, fields: PBXObject.Fields = [:], objects: PBXObjectFactory) {
         self.ref = ref
         self.fields = fields
         self.objects = objects
+        if self.fields[PBXKeys.isa.rawValue] == nil {
+            self.fields[PBXKeys.isa.rawValue] = String(describing: type(of: self))
+        }
     }
 
     public var comment: String? {
@@ -123,6 +130,7 @@ extension PBXObject {
 public protocol PBXObjectFactory {
     func object<T: PBXObject>(_ ref: XcodeUUID) -> T?
     func remove<T: PBXObject>(_ object: T)
+    func add<T: PBXObject>(_ object: T)
 }
 
 extension PBXObject {
@@ -208,10 +216,13 @@ extension PBXObject {
         fields[key.rawValue] = value
     }
 
-    public func destroy() {
+    public func unattach() {
         objects.remove(self)
     }
 
+    public func attach() {
+        objects.add(self)
+    }
 }
 
 extension PBXObject: CustomStringConvertible {

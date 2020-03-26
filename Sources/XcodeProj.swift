@@ -39,6 +39,10 @@ public class XcodeProj {
             dict.removeValue(forKey: object.ref)
         }
 
+        public func add<T: PBXObject>(_ object: T) {
+            dict[object.ref] = object
+        }
+
         #if LAZY
         lazy var buildPhaseByFileRef: [XcodeUUID: PBXBuildPhase] = {
             let buildPhases = self.dict.values.of(type: PBXBuildPhase.self)
@@ -179,5 +183,8 @@ extension XcodeProj: PBXObjectFactory {
     }
     public func remove<T: PBXObject>(_ object: T) {
         self.objects.remove(object)
+    }
+    public func add<T: PBXObject>(_ object: T) {
+        self.objects.add(object)
     }
 }
