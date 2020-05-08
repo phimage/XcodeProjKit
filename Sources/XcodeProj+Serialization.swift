@@ -38,7 +38,11 @@ extension XcodeProj {
             try serializer.serialize().write(to: pbxprojURL, atomically: atomic, encoding: .utf8)
         } else {
             let data = try PropertyListSerialization.data(fromPropertyList: dict, format: format, options: 0)
+            #if os(Linux)
+            try data.write(to: pbxprojURL, options: []) // error no attomic on linux
+            #else
             try data.write(to: pbxprojURL, options: atomic ? [.atomicWrite] : [])
+            #endif
         }
     }
 
