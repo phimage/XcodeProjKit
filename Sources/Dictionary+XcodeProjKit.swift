@@ -46,7 +46,7 @@ extension Dictionary {
         return self[key] as? T
     }
 
-    init(tuples: [(Key, Value)]) { /// xxx replace by uniqueKeysWithValues
+    init(tuples: [(Key, Value)]) { // xxx replace by uniqueKeysWithValues
         self.init(minimumCapacity: tuples.count)
         for (key, value) in tuples {
             self.updateValue(value, forKey: key)
