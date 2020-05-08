@@ -1,0 +1,23 @@
+name: SwiftLint
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/swiftlint.yml'
+      - '.swiftlint.yml'
+      - '**/*.swift'
+
+jobs:
+  SwiftLint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: |
+          git fetch origin +refs/heads/${{ github.base_ref }}:refs/heads/${{ github.base_ref }}
+        continue-on-error: true
+      - name: GitHub Action for SwiftLint
+        uses: norio-nomura/action-swiftlint@master
+        with:
+          args: --path Sources
+        env:
+          DIFF_BASE: ${{ github.base_ref }}
