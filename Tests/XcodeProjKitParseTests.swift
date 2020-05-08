@@ -87,9 +87,9 @@ class XcodeProjKitParseTests: XCTestCase {
     func testplist() {
         testParse("plist")
     }
-
+    
     func testParse(_ resource: String) {
-        if let url = bundle.url(forResource: resource, withExtension: XcodeProj.pbxprojFileExtension) {
+        if let url = url(forResource: resource, withExtension: XcodeProj.pbxprojFileExtension) {
             do {
                 let proj = try XcodeProj(url: url)
                 XCTAssertNotNil(proj.project.mainGroup)
@@ -100,6 +100,19 @@ class XcodeProjKitParseTests: XCTestCase {
         } else {
             XCTFail("Missing resource \(resource)")
         }
+    }
+    
+    func url(forResource resource: String, withExtension ext: String) -> URL? {
+        #if !os(Linux)
+        if let url = bundle.url(forResource: resource, withExtension: ext) {
+            return url
+        }
+        #endif
+        let url = URL(fileURLWithPath: "Tests/ok/\(resource).\(ext)")
+        if FileManager.default.fileExists(atPath: url.path) {
+            return url
+        }
+        return nil
     }
     
 }

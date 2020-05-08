@@ -33,12 +33,24 @@ class XcodeProjKitParseKoTests: XCTestCase {
     }
     
     func testParse(_ resource: String, expected: Error? = nil) throws {
-        if let url = bundle.url(forResource: resource, withExtension: "pbxproj") {
+        if let url = url(forResource: resource, withExtension: XcodeProj.pbxprojFileExtension) {
             let _ = try XcodeProj(url: url)
             XCTFail("Must not be able to read")
         } else {
             XCTFail("Missing resource \(resource)")
         }
     }
-    
+
+    func url(forResource resource: String, withExtension ext: String) -> URL? {
+        #if !os(Linux)
+        if let url = bundle.url(forResource: resource, withExtension: ext) {
+            return url
+        }
+        #endif
+        let url = URL(fileURLWithPath: "Tests/ko/\(resource).\(ext)")
+        if FileManager.default.fileExists(atPath: url.path) {
+            return url
+        }
+        return nil
+    }
 }
