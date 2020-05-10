@@ -6,7 +6,7 @@ Parse project file and write it to open step format.
 
 Plist files could be in binary, xml or open step format. All could be parsed natively using `PropertyListSerialization`.
 
-:warning: But you cannot write into open step format.
+:warning: But you cannot be written back into open step format.
 
 This project aim to
 - check xcode project file. Error could occurs after merging file using git.
@@ -41,7 +41,7 @@ try xcodeProj.write(to: newURL, format: .openStep)
 let package = Package(
     name: "MyProject",
     dependencies: [
-        .package(url: "https://github.com/phimage/XcodeProjKit.git", .upToNextMajor(from: "2.0.0")),
+        .package(url: "https://github.com/phimage/XcodeProjKit.git", .upToNextMajor(from: "2.2.0")),
         ],
     targets: [
         .target(
