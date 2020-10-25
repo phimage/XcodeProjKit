@@ -129,14 +129,14 @@ public class XcodeProj {
 
         self.objects = Objects()
 
-        if let objs = dict[FieldKey.objects.rawValue] as? [String: PBXObject.Fields] {
+        if let objs = self.dict[FieldKey.objects.rawValue] as? [String: PBXObject.Fields] {
             // Create all objects
             for (ref, obj) in objs {
                 self.objects.dict[ref] = try XcodeProj.createObject(ref: ref, fields: obj, objects: self.objects)
             }
 
             // parsing project
-            if let rootObjectRef = dict[FieldKey.rootObject.rawValue] as? String {
+            if let rootObjectRef = self.dict[FieldKey.rootObject.rawValue] as? String {
                 if let projDict = objs[rootObjectRef] {
                     self.project = PBXProject(ref: rootObjectRef, fields: projDict, objects: self.objects)
                     if let mainGroup = self.project.mainGroup {

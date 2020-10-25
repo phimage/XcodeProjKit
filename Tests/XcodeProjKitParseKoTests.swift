@@ -15,7 +15,7 @@ class XcodeProjKitParseKoTests: XCTestCase {
     
     func test001() {
         do {
-            try testParse("001")
+            try testParse("ko/001")
         } catch {
             // ok
         }
@@ -23,7 +23,7 @@ class XcodeProjKitParseKoTests: XCTestCase {
     
     func testmissingRoot() {
         do {
-            try testParse("missingRoot")
+            try testParse("ko/missingRoot")
         } catch XcodeProjError.objectMissing(_, let isa) {
             // ok
             XCTAssertEqual(isa, Isa.project)
@@ -41,16 +41,4 @@ class XcodeProjKitParseKoTests: XCTestCase {
         }
     }
 
-    func url(forResource resource: String, withExtension ext: String) -> URL? {
-        #if !os(Linux)
-        if let url = bundle.url(forResource: resource, withExtension: ext) {
-            return url
-        }
-        #endif
-        let url = URL(fileURLWithPath: "Tests/ko/\(resource).\(ext)")
-        if FileManager.default.fileExists(atPath: url.path) {
-            return url
-        }
-        return nil
-    }
 }

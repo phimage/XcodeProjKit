@@ -15,7 +15,7 @@ public /* abstract */ class PBXObject {
     public typealias Fields = [String: Any]
 
     public let ref: XcodeUUID
-    public private(set) var fields: PBXObject.Fields
+    public var fields: PBXObject.Fields
     let objects: PBXObjectFactory
 
     public enum PBXKeys: PBXKey {
