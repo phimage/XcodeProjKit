@@ -16,6 +16,7 @@ public /* abstract */ class PBXTarget: PBXProjectItem, PBXBuildConfigurationList
         case buildPhases
         case buildConfigurationList
         case dependencies
+        case packageProductDependencies
     }
 
     #if LAZY
@@ -24,12 +25,14 @@ public /* abstract */ class PBXTarget: PBXProjectItem, PBXBuildConfigurationList
     public lazy var buildPhases: [PBXBuildPhase] = self.objects(PBXKeys.buildPhases)
     public lazy var buildConfigurationList: XCConfigurationList? = self.object(PBXKeys.buildConfigurationList)
     public lazy var dependencies: [PBXTargetDependency] = self.objects(PBXKeys.dependencies)
+    public lazy var packageProductDependencies: [XCSwiftPackageProductDependency] = self.objects(PBXKeys.packageProductDependencies) // swiftlint:disable:this line_length
     #else
     public var name: String { self.string(PBXKeys.name) }
     public var productName: String? { self.string(PBXKeys.productName) }
     public var buildPhases: [PBXBuildPhase] { self.objects(PBXKeys.buildPhases) }
     public var buildConfigurationList: XCConfigurationList? { self.object(PBXKeys.buildConfigurationList) }
     public var dependencies: [PBXTargetDependency] { self.objects(PBXKeys.dependencies) }
+    public var packageProductDependencies: [XCSwiftPackageProductDependency] {self.objects(PBXKeys.packageProductDependencies) } // swiftlint:disable:this line_length
     #endif
 
     public override var comment: String? {

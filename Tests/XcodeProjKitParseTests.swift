@@ -87,19 +87,28 @@ class XcodeProjKitParseTests: XCTestCase {
     func testplist() {
         testParse("ok/plist")
     }
-    
-    func testParse(_ resource: String) {
+
+    func testswiftpm() {
+        let proj = testParse("ok/swiftpm.project")
+        XCTAssertNotNil(proj?.objects.object("48A408192662576D0068A35B"))
+        XCTAssertNotNil(proj?.objects.object("48A4081A2662576D0068A35B"))
+    }
+
+    @discardableResult
+    func testParse(_ resource: String) -> XcodeProj? {
         if let url = url(forResource: resource, withExtension: XcodeProj.pbxprojFileExtension) {
             do {
                 let proj = try XcodeProj(url: url)
                 XCTAssertNotNil(proj.project.mainGroup)
                 XCTAssertNotNil(proj.project.buildConfigurationList)
+                return proj
             } catch {
                 XCTFail("\(error)")
             }
         } else {
             XCTFail("Missing resource \(resource)")
         }
+        return nil
     }
 
 }

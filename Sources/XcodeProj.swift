@@ -173,7 +173,7 @@ public class XcodeProj {
 }
 
 let extractProjetName = "Build configuration list for PBXProject \""
-//swiftlint:disable:next force_try
+// swiftlint:disable:next force_try
 let extractProjetNameRegex = try! NSRegularExpression(pattern:
     "Build configuration list for PBXProject \"(.*)\"", options: [])
 

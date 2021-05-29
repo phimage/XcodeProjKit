@@ -17,6 +17,7 @@ public class PBXProject: PBXContainer, PBXBuildConfigurationListable {
         case targets
         case mainGroup
         case buildConfigurationList
+        case packageReferences
     }
 
     #if LAZY
@@ -26,6 +27,7 @@ public class PBXProject: PBXContainer, PBXBuildConfigurationListable {
     public lazy var targets: [PBXNativeTarget] = self.objects(PBXKeys.targets)
     public lazy var mainGroup: PBXGroup? = self.object(.mainGroup)
     public lazy var buildConfigurationList: XCConfigurationList? = self.object(PBXKeys.buildConfigurationList)
+    public lazy var packageReferences: [XCRemoteSwiftPackageReference] = self.objects(PBXKeys.packageReferences)
 
     lazy var targetsByConfigRef: [String: PBXNativeTarget] = {
         var dict: [String: PBXNativeTarget] = [:]
@@ -43,6 +45,7 @@ public class PBXProject: PBXContainer, PBXBuildConfigurationListable {
     public var targets: [PBXNativeTarget] { self.objects(PBXKeys.targets) }
     public var mainGroup: PBXGroup? { self.object(PBXKeys.mainGroup) }
     public var buildConfigurationList: XCConfigurationList? { self.object(PBXKeys.buildConfigurationList) }
+    public var packageReferences: [XCRemoteSwiftPackageReference] { self.objects(PBXKeys.packageReferences) }
 
     var targetsByConfigRef: [String: PBXNativeTarget] {
         var dict: [String: PBXNativeTarget] = [:]
@@ -84,11 +87,11 @@ extension PBXProject {
     }
 
     public struct Version: Comparable, CustomStringConvertible {
-    
+
         public var major: Int
         public var minor: Int
 
-        public init?(_ string: String?){
+        public init?(_ string: String?) {
             guard let string = string, string.count > 3 else {
                 return nil
             }
@@ -101,7 +104,7 @@ extension PBXProject {
             self.minor = minor
         }
 
-        public init(major: Int, minor: Int){
+        public init(major: Int, minor: Int) {
             self.major = major
             self.minor = minor
         }
@@ -125,7 +128,7 @@ extension PBXProject {
         }
 
         public var openStep: String {
-            return "\(String(format: "%02d", self.major))\(String(format: "%02d",self.minor))"
+            return "\(String(format: "%02d", self.major))\(String(format: "%02d", self.minor))"
         }
     }
 

@@ -32,6 +32,8 @@ public enum Isa: String, CaseIterable, CustomStringConvertible {
     case versionGroup = "XCVersionGroup"
     case configurationList = "XCConfigurationList"
     case buildConfiguration = "XCBuildConfiguration"
+    case remoteSwiftPackageReference = "XCRemoteSwiftPackageReference"
+    case swiftPackageProductDependency = "XCSwiftPackageProductDependency"
 
     public var description: String {
         return rawValue
@@ -79,6 +81,8 @@ extension Isa {
         case .versionGroup: return XCVersionGroup.self
         case .configurationList: return XCConfigurationList.self
         case .buildConfiguration: return XCBuildConfiguration.self
+        case .remoteSwiftPackageReference: return XCRemoteSwiftPackageReference.self
+        case .swiftPackageProductDependency: return XCSwiftPackageProductDependency.self
         }
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-//swiftlint:disable:next force_try
+// swiftlint:disable:next force_try
 let nonescapeRegex = try! NSRegularExpression(pattern: "^[a-z0-9_\\$\\.\\/]+$", options: .caseInsensitive)
 let specialRegexes: [(String, NSRegularExpression)] = ["\\\\", "\\\"", "\\n", "\\r", "\\t"].compactMap { string in
     if let regular = try? NSRegularExpression(pattern: string, options: []) {

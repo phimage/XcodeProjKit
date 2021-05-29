@@ -72,6 +72,14 @@
 		4869C38D1F30C6E500BFED57 /* PBXFrameworksBuildPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869C38C1F30C6E500BFED57 /* PBXFrameworksBuildPhase.swift */; };
 		4869C3951F30C75E00BFED57 /* XcodeProjKitParseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869C3941F30C75E00BFED57 /* XcodeProjKitParseTests.swift */; };
 		4869C3971F30C75E00BFED57 /* XcodeProjKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4869C32C1F30BC0F00BFED57 /* XcodeProjKit.framework */; };
+		48A4081D266258580068A35B /* XCRemoteSwiftPackageReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A4081C266258580068A35B /* XCRemoteSwiftPackageReference.swift */; };
+		48A4081E266258580068A35B /* XCRemoteSwiftPackageReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A4081C266258580068A35B /* XCRemoteSwiftPackageReference.swift */; };
+		48A408202662586E0068A35B /* XCSwiftPackageProductDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A4081F2662586E0068A35B /* XCSwiftPackageProductDependency.swift */; };
+		48A408212662586E0068A35B /* XCSwiftPackageProductDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A4081F2662586E0068A35B /* XCSwiftPackageProductDependency.swift */; };
+		48A40823266259350068A35B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A40822266259350068A35B /* Utils.swift */; };
+		48A40824266259350068A35B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A40822266259350068A35B /* Utils.swift */; };
+		48A408262662598A0068A35B /* swiftpm.project.pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 48A40825266259890068A35B /* swiftpm.project.pbxproj */; };
+		48A408272662598A0068A35B /* swiftpm.project.pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 48A40825266259890068A35B /* swiftpm.project.pbxproj */; };
 		48AFAB031F320BD300AC8AE8 /* PBXProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AFAB021F320BD300AC8AE8 /* PBXProductType.swift */; };
 		48E403481F31E8B4000C81A0 /* missingRoot.pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 48E403471F31E8B4000C81A0 /* missingRoot.pbxproj */; };
 		48E4034B1F31ED5C000C81A0 /* String+XcodeProjKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E403491F31ED43000C81A0 /* String+XcodeProjKit.swift */; };
@@ -232,6 +240,10 @@
 		4869C3921F30C75E00BFED57 /* XcodeProjKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcodeProjKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4869C3941F30C75E00BFED57 /* XcodeProjKitParseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeProjKitParseTests.swift; sourceTree = "<group>"; };
 		4869C3961F30C75E00BFED57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48A4081C266258580068A35B /* XCRemoteSwiftPackageReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCRemoteSwiftPackageReference.swift; sourceTree = "<group>"; };
+		48A4081F2662586E0068A35B /* XCSwiftPackageProductDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSwiftPackageProductDependency.swift; sourceTree = "<group>"; };
+		48A40822266259350068A35B /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		48A40825266259890068A35B /* swiftpm.project.pbxproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.pbxproject; path = swiftpm.project.pbxproj; sourceTree = "<group>"; };
 		48AFAB021F320BD300AC8AE8 /* PBXProductType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBXProductType.swift; sourceTree = "<group>"; };
 		48E403471F31E8B4000C81A0 /* missingRoot.pbxproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.pbxproject; path = missingRoot.pbxproj; sourceTree = "<group>"; };
 		48E403491F31ED43000C81A0 /* String+XcodeProjKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+XcodeProjKit.swift"; sourceTree = "<group>"; };
@@ -300,6 +312,7 @@
 				480B87E81F31C78400E700F7 /* sdwebimage.07fe1f0.project.pbxproj */,
 				480B87E91F31C78400E700F7 /* sptpersistencache.cfbe4f8.project.pbxproj */,
 				480B87EA1F31C78400E700F7 /* sqlitemigrationmanager.742ac46.project.pbxproj */,
+				48A40825266259890068A35B /* swiftpm.project.pbxproj */,
 				480B87EB1F31C78400E700F7 /* v2exswift.53049f1.project.pbxproj */,
 				480B87EC1F31C78400E700F7 /* weixin.17aeced.project.pbxproj */,
 				480B87ED1F31C78400E700F7 /* xcglogger.iosdemo.5510795.project.pbxproj */,
@@ -418,6 +431,8 @@
 				4869C35A1F30BE1500BFED57 /* XCBuildConfiguration.swift */,
 				4869C3611F30BE6E00BFED57 /* XCConfigurationList.swift */,
 				4869C36F1F30BF1700BFED57 /* XCVersionGroup.swift */,
+				48A4081C266258580068A35B /* XCRemoteSwiftPackageReference.swift */,
+				48A4081F2662586E0068A35B /* XCSwiftPackageProductDependency.swift */,
 			);
 			name = XCBuild;
 			sourceTree = "<group>";
@@ -491,6 +506,7 @@
 			children = (
 				480B87D91F31C78400E700F7 /* ko */,
 				480B87DC1F31C78400E700F7 /* ok */,
+				48A40822266259350068A35B /* Utils.swift */,
 				4869C3941F30C75E00BFED57 /* XcodeProjKitParseTests.swift */,
 				480B88031F31CAFA00E700F7 /* XcodeProjKitParseKoTests.swift */,
 				480B88051F31CD5E00E700F7 /* XcodeProjKitWriteTests.swift */,
@@ -610,7 +626,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = AnOrgaName;
 				TargetAttributes = {
 					4869C32B1F30BC0F00BFED57 = {
@@ -666,6 +682,7 @@
 				480B87F21F31C78400E700F7 /* afnetworking.c8e5ce2.project.pbxproj in Resources */,
 				480B87F61F31C78400E700F7 /* dznemptydataset.d3ab4e0.project.pbxproj in Resources */,
 				480B87FA1F31C78400E700F7 /* peekpop.c27c05e.project.pbxproj in Resources */,
+				48A408262662598A0068A35B /* swiftpm.project.pbxproj in Resources */,
 				480B87FF1F31C78400E700F7 /* v2exswift.53049f1.project.pbxproj in Resources */,
 				48E403481F31E8B4000C81A0 /* missingRoot.pbxproj in Resources */,
 				480B87F31F31C78400E700F7 /* charts.8eaba34.project.pbxproj in Resources */,
@@ -701,6 +718,7 @@
 				E4B73BA01F94A28F00B23049 /* sptpersistencache.cfbe4f8.project.pbxproj in Resources */,
 				E4B73B9C1F94A28F00B23049 /* mjrefreshexample.3b41316.project.pbxproj in Resources */,
 				E4B73BA31F94A28F00B23049 /* weixin.17aeced.project.pbxproj in Resources */,
+				48A408272662598A0068A35B /* swiftpm.project.pbxproj in Resources */,
 				E4B73BA21F94A28F00B23049 /* v2exswift.53049f1.project.pbxproj in Resources */,
 				E4B73BA71F94A29200B23049 /* missingRoot.pbxproj in Resources */,
 				E4B73BA11F94A28F00B23049 /* sqlitemigrationmanager.742ac46.project.pbxproj in Resources */,
@@ -795,6 +813,7 @@
 				4869C3871F30C6AD00BFED57 /* PBXResourcesBuildPhase.swift in Sources */,
 				4869C3411F30BC2800BFED57 /* XcodeProj.swift in Sources */,
 				4869C3461F30BCFA00BFED57 /* PBXProject.swift in Sources */,
+				48A408202662586E0068A35B /* XCSwiftPackageProductDependency.swift in Sources */,
 				4869C3701F30BF1700BFED57 /* XCVersionGroup.swift in Sources */,
 				4869C3751F30BF6500BFED57 /* SourceTreeFolder.swift in Sources */,
 				4805AC111F32043E0021930A /* OpenStepSerializer.swift in Sources */,
@@ -813,6 +832,7 @@
 				4869C3561F30BDBF00BFED57 /* PBXBuildPhase.swift in Sources */,
 				4869C3851F30C69A00BFED57 /* PBXShellScriptBuildPhase.swift in Sources */,
 				4869C36D1F30BEDA00BFED57 /* PBXVariantGroup.swift in Sources */,
+				48A4081D266258580068A35B /* XCRemoteSwiftPackageReference.swift in Sources */,
 				481EDC6B1F4C1E2A00E97960 /* PBXLegacyTarget.swift in Sources */,
 				4869C35B1F30BE1500BFED57 /* XCBuildConfiguration.swift in Sources */,
 				4869C3651F30BE9500BFED57 /* PBXReference.swift in Sources */,
@@ -841,6 +861,7 @@
 				4869C3951F30C75E00BFED57 /* XcodeProjKitParseTests.swift in Sources */,
 				480B88041F31CAFA00E700F7 /* XcodeProjKitParseKoTests.swift in Sources */,
 				480B88061F31CD5E00E700F7 /* XcodeProjKitWriteTests.swift in Sources */,
+				48A40823266259350068A35B /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -855,6 +876,7 @@
 				E48F581D1F949F4800F92F20 /* PBXResourcesBuildPhase.swift in Sources */,
 				E48F581E1F949F4800F92F20 /* XcodeProj.swift in Sources */,
 				E48F581F1F949F4800F92F20 /* PBXProject.swift in Sources */,
+				48A408212662586E0068A35B /* XCSwiftPackageProductDependency.swift in Sources */,
 				E48F58201F949F4800F92F20 /* XCVersionGroup.swift in Sources */,
 				E48F58211F949F4800F92F20 /* SourceTreeFolder.swift in Sources */,
 				E48F58221F949F4800F92F20 /* OpenStepSerializer.swift in Sources */,
@@ -873,6 +895,7 @@
 				E48F582F1F949F4800F92F20 /* PBXBuildPhase.swift in Sources */,
 				E48F58301F949F4800F92F20 /* PBXShellScriptBuildPhase.swift in Sources */,
 				E48F58311F949F4800F92F20 /* PBXVariantGroup.swift in Sources */,
+				48A4081E266258580068A35B /* XCRemoteSwiftPackageReference.swift in Sources */,
 				E48F58321F949F4800F92F20 /* PBXLegacyTarget.swift in Sources */,
 				E48F58331F949F4800F92F20 /* XCBuildConfiguration.swift in Sources */,
 				E48F58341F949F4800F92F20 /* PBXReference.swift in Sources */,
@@ -901,6 +924,7 @@
 				E4B73B921F94A22600B23049 /* XcodeProjKitParseKoTests.swift in Sources */,
 				E4B73B911F94A22600B23049 /* XcodeProjKitParseTests.swift in Sources */,
 				E4B73B931F94A22600B23049 /* XcodeProjKitWriteTests.swift in Sources */,
+				48A40824266259350068A35B /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -946,6 +970,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1009,6 +1034,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1118,7 +1144,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.phimage.XcodeProjKit;
 				PRODUCT_NAME = XcodeProjKit;
@@ -1142,7 +1168,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.phimage.XcodeProjKit;
 				PRODUCT_NAME = XcodeProjKit;
@@ -1161,7 +1187,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.phimage.XcodeProjKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1178,7 +1204,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.phimage.XcodeProjKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
