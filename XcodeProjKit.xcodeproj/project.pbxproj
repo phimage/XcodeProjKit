@@ -80,6 +80,8 @@
 		48A40824266259350068A35B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A40822266259350068A35B /* Utils.swift */; };
 		48A408262662598A0068A35B /* swiftpm.project.pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 48A40825266259890068A35B /* swiftpm.project.pbxproj */; };
 		48A408272662598A0068A35B /* swiftpm.project.pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 48A40825266259890068A35B /* swiftpm.project.pbxproj */; };
+		48A4082A266267F60068A35B /* XcodeProjKitEditionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A40829266267F60068A35B /* XcodeProjKitEditionTests.swift */; };
+		48A4082B266267F60068A35B /* XcodeProjKitEditionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A40829266267F60068A35B /* XcodeProjKitEditionTests.swift */; };
 		48AFAB031F320BD300AC8AE8 /* PBXProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AFAB021F320BD300AC8AE8 /* PBXProductType.swift */; };
 		48E403481F31E8B4000C81A0 /* missingRoot.pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 48E403471F31E8B4000C81A0 /* missingRoot.pbxproj */; };
 		48E4034B1F31ED5C000C81A0 /* String+XcodeProjKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E403491F31ED43000C81A0 /* String+XcodeProjKit.swift */; };
@@ -244,6 +246,7 @@
 		48A4081F2662586E0068A35B /* XCSwiftPackageProductDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSwiftPackageProductDependency.swift; sourceTree = "<group>"; };
 		48A40822266259350068A35B /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		48A40825266259890068A35B /* swiftpm.project.pbxproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.pbxproject; path = swiftpm.project.pbxproj; sourceTree = "<group>"; };
+		48A40829266267F60068A35B /* XcodeProjKitEditionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeProjKitEditionTests.swift; sourceTree = "<group>"; };
 		48AFAB021F320BD300AC8AE8 /* PBXProductType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBXProductType.swift; sourceTree = "<group>"; };
 		48E403471F31E8B4000C81A0 /* missingRoot.pbxproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.pbxproject; path = missingRoot.pbxproj; sourceTree = "<group>"; };
 		48E403491F31ED43000C81A0 /* String+XcodeProjKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+XcodeProjKit.swift"; sourceTree = "<group>"; };
@@ -507,6 +510,7 @@
 				480B87D91F31C78400E700F7 /* ko */,
 				480B87DC1F31C78400E700F7 /* ok */,
 				48A40822266259350068A35B /* Utils.swift */,
+				48A40829266267F60068A35B /* XcodeProjKitEditionTests.swift */,
 				4869C3941F30C75E00BFED57 /* XcodeProjKitParseTests.swift */,
 				480B88031F31CAFA00E700F7 /* XcodeProjKitParseKoTests.swift */,
 				480B88051F31CD5E00E700F7 /* XcodeProjKitWriteTests.swift */,
@@ -859,6 +863,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4869C3951F30C75E00BFED57 /* XcodeProjKitParseTests.swift in Sources */,
+				48A4082A266267F60068A35B /* XcodeProjKitEditionTests.swift in Sources */,
 				480B88041F31CAFA00E700F7 /* XcodeProjKitParseKoTests.swift in Sources */,
 				480B88061F31CD5E00E700F7 /* XcodeProjKitWriteTests.swift in Sources */,
 				48A40823266259350068A35B /* Utils.swift in Sources */,
@@ -922,6 +927,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4B73B921F94A22600B23049 /* XcodeProjKitParseKoTests.swift in Sources */,
+				48A4082B266267F60068A35B /* XcodeProjKitEditionTests.swift in Sources */,
 				E4B73B911F94A22600B23049 /* XcodeProjKitParseTests.swift in Sources */,
 				E4B73B931F94A22600B23049 /* XcodeProjKitWriteTests.swift in Sources */,
 				48A40824266259350068A35B /* Utils.swift in Sources */,

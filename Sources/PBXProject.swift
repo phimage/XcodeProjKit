@@ -84,6 +84,7 @@ extension PBXProject {
 
     public func set(value: Any, into key: Attribute) {
         self.attributes?[key.rawValue] = value
+        replace()
     }
 
     public struct Version: Comparable, CustomStringConvertible {

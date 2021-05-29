@@ -160,6 +160,10 @@ extension PBXObject {
         return objects(key.rawValue)
     }
 
+    func replace() {
+        objects.remove(self)
+        objects.add(self)
+    }
 }
 
 extension PBXObject {
