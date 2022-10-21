@@ -10,7 +10,7 @@ import Foundation
 
 extension XcodeProj {
 
-    public func write(to url: URL, format: PropertyListSerialization.PropertyListFormat? = nil,
+    public func write(to url: URL, format: Format? = nil,
                       projectName: String? = nil, lineEnding: String? = nil, atomic: Bool = true) throws {
         let pbxprojURL: URL
         let name: String
@@ -36,13 +36,22 @@ extension XcodeProj {
         if format == .openStep {
             let serializer = OpenStepSerializer(projectName: name, lineEnding: lineEnding, projectFile: self)
             try serializer.serialize().write(to: pbxprojURL, atomically: atomic, encoding: .utf8)
-        } else {
-            let data = try PropertyListSerialization.data(fromPropertyList: dict, format: format, options: 0)
-            #if os(Linux)
+        }
+        else if let propertyListformat = format.toPropertyListformat() {
+            let data = try PropertyListSerialization.data(fromPropertyList: dict, format: propertyListformat, options: 0)
+#if os(Linux)
             try data.write(to: pbxprojURL, options: []) // error no attomic on linux
-            #else
+#else
             try data.write(to: pbxprojURL, options: atomic ? [.atomicWrite] : [])
-            #endif
+#endif
+        }
+        else if format == .json {
+            let data = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+#if os(Linux)
+            try data.write(to: pbxprojURL, options: []) // error no attomic on linux
+#else
+            try data.write(to: pbxprojURL, options: atomic ? [.atomicWrite] : [])
+#endif
         }
     }
 
@@ -51,9 +60,13 @@ extension XcodeProj {
             let projectName = projectName ?? self.projectName
             let serializer = OpenStepSerializer(projectName: projectName, projectFile: self)
             return try serializer.serialize().data(using: .utf8) ?? Data()
-        } else {
-            return try PropertyListSerialization.data(fromPropertyList: dict, format: format, options: 0)
+        } else if let propertyListformat = format.toPropertyListformat() {
+            return try PropertyListSerialization.data(fromPropertyList: dict, format: propertyListformat, options: 0)
         }
+        else if format == .json {
+            return try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+        }
+        return Data() // must not occurs
     }
 
 }

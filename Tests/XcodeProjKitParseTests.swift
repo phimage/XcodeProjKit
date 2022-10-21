@@ -88,6 +88,10 @@ class XcodeProjKitParseTests: XCTestCase {
         testParse("ok/plist")
     }
 
+    func testjson() {
+        testParse("ok/json")
+    }
+
     func testswiftpm() {
         let proj = testParse("ok/swiftpm.project")
         XCTAssertNotNil(proj?.objects.object("48A408192662576D0068A35B"))

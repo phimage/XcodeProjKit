@@ -10,7 +10,7 @@ import Foundation
 
 extension XcodeProj {
 
-    func paths(_ current: PBXGroup, prefix: String) -> [String: PathType] {
+    static func paths(_ current: PBXGroup, prefix: String) -> [String: PathType] {
         var paths: [String: PathType] = [:]
 
         for file in current.fileRefs {

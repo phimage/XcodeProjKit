@@ -1,0 +1,2877 @@
+{
+  "classes" : {
+
+  },
+  "objects" : {
+    "5DB1A4641C876AD1000CF9EE" : {
+      "path" : "Animation",
+      "isa" : "PBXGroup",
+      "children" : [
+        "5DB1A4681C876AD1000CF9EE",
+        "5DB1A46C1C876AD1000CF9EE",
+        "5DB1A46E1C876AD1000CF9EE",
+        "5DB1A4661C876AD1000CF9EE",
+        "5DB1A4671C876AD1000CF9EE",
+        "5DB1A4701C876AD1000CF9EE",
+        "5DB1A4651C876AD1000CF9EE"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "5DB1A4A61C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4821C876AD1000CF9EE"
+    },
+    "5D39CEE21C6E983100DFCF86" : {
+      "isa" : "PBXGroup",
+      "name" : "Products",
+      "children" : [
+        "5D39CEE11C6E983100DFCF86",
+        "5D39CEEB1C6E983100DFCF86",
+        "22F74AA51C7674BB004C6E4C",
+        "5D3A2F311C9209EE0071F08F",
+        "5D3A2F681C92559B0071F08F",
+        "5DE959F01C9392E1008487A8",
+        "228E206B1C9CB99D0058ADA1",
+        "228E20801C9CB9B00058ADA1",
+        "228E20861C9CBA490058ADA1"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "228E206D1C9CB9B00058ADA1" : {
+      "buildConfigurationList" : "228E207D1C9CB9B00058ADA1",
+      "productReference" : "228E20801C9CB9B00058ADA1",
+      "productType" : "com.apple.product-type.bundle.unit-test",
+      "productName" : "AdvanceTests",
+      "isa" : "PBXNativeTarget",
+      "buildPhases" : [
+        "228E20721C9CB9B00058ADA1",
+        "228E207A1C9CB9B00058ADA1",
+        "228E207C1C9CB9B00058ADA1"
+      ],
+      "dependencies" : [
+        "228E206E1C9CB9B00058ADA1",
+        "228E20701C9CB9B00058ADA1",
+        "228E209A1C9CBBC30058ADA1"
+      ],
+      "name" : "AdvanceTests-tvOS",
+      "buildRules" : [
+
+      ]
+    },
+    "222E21211C7E44660063FAA2" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "222E21201C7E44660063FAA2"
+    },
+    "5D3A2F431C920C920071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4721C876AD1000CF9EE"
+    },
+    "5DE959EB1C938C54008487A8" : {
+      "isa" : "PBXTargetDependency",
+      "target" : "22F74AA41C7674BB004C6E4C",
+      "targetProxy" : "5DE959EA1C938C54008487A8"
+    },
+    "5DE959F61C9392E1008487A8" : {
+      "isa" : "PBXContainerItemProxy",
+      "containerPortal" : "5D39CED81C6E983100DFCF86",
+      "remoteGlobalIDString" : "5D3A2F301C9209EE0071F08F",
+      "remoteInfo" : "Advance-OSX",
+      "proxyType" : "1"
+    },
+    "228E20861C9CBA490058ADA1" : {
+      "path" : "AdvanceSample-tvOS.app",
+      "isa" : "PBXFileReference",
+      "includeInIndex" : "0",
+      "explicitFileType" : "wrapper.application",
+      "sourceTree" : "BUILT_PRODUCTS_DIR"
+    },
+    "5DB1A48A1C876AD1000CF9EE" : {
+      "path" : "Interpolatable.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5DB1A4871C876AD1000CF9EE" : {
+      "path" : "Double+VectorConvertible.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5D3A2F351C9209EE0071F08F" : {
+      "path" : "Info.plist",
+      "isa" : "PBXFileReference",
+      "lastKnownFileType" : "text.plist.xml",
+      "sourceTree" : "<group>"
+    },
+    "5DB1A4AE1C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A48B1C876AD1000CF9EE"
+    },
+    "5D39CEEA1C6E983100DFCF86" : {
+      "buildConfigurationList" : "5D39CEF81C6E983100DFCF86",
+      "productReference" : "5D39CEEB1C6E983100DFCF86",
+      "productType" : "com.apple.product-type.bundle.unit-test",
+      "productName" : "AdvanceTests",
+      "isa" : "PBXNativeTarget",
+      "buildPhases" : [
+        "5D39CEE71C6E983100DFCF86",
+        "5D39CEE81C6E983100DFCF86",
+        "5D39CEE91C6E983100DFCF86"
+      ],
+      "dependencies" : [
+        "5D39CEEE1C6E983100DFCF86",
+        "5DE959EB1C938C54008487A8"
+      ],
+      "name" : "AdvanceTests-iOS",
+      "buildRules" : [
+
+      ]
+    },
+    "5D39CEF61C6E983100DFCF86" : {
+      "isa" : "XCBuildConfiguration",
+      "buildSettings" : {
+        "LD_RUNPATH_SEARCH_PATHS" : "$(inherited) @executable_path\/Frameworks @loader_path\/Frameworks",
+        "APPLICATION_EXTENSION_API_ONLY" : "YES",
+        "CLANG_ENABLE_MODULES" : "YES",
+        "INFOPLIST_FILE" : "$(SRCROOT)\/Advance-iOS\/Info.plist",
+        "CODE_SIGN_IDENTITY" : "iPhone Developer",
+        "DEFINES_MODULE" : "YES",
+        "DYLIB_COMPATIBILITY_VERSION" : "1",
+        "INSTALL_PATH" : "$(LOCAL_LIBRARY_DIR)\/Frameworks",
+        "SKIP_INSTALL" : "YES",
+        "SWIFT_OPTIMIZATION_LEVEL" : "-Onone",
+        "DYLIB_INSTALL_NAME_BASE" : "@rpath",
+        "PRODUCT_NAME" : "Advance",
+        "DYLIB_CURRENT_VERSION" : "1",
+        "IPHONEOS_DEPLOYMENT_TARGET" : "8.0",
+        "PRODUCT_BUNDLE_IDENTIFIER" : "co.storehouse.Advance"
+      },
+      "name" : "Debug"
+    },
+    "5D3A2F521C920CC20071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4851C876AD1000CF9EE"
+    },
+    "228E20531C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4661C876AD1000CF9EE"
+    },
+    "5D3A2F3A1C920C7C0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4691C876AD1000CF9EE"
+    },
+    "5D39CEE71C6E983100DFCF86" : {
+      "isa" : "PBXSourcesBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+        "5DA94F4D1C8112810039B9BB",
+        "5DA94F4B1C80E2700039B9BB",
+        "5DE959E91C9388B9008487A8",
+        "22168B5B1C7A547300BAE519",
+        "22168B5D1C7A5E3500BAE519",
+        "5DA94F4F1C8114680039B9BB",
+        "5DA94F481C80DAA00039B9BB"
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "228E20441C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4821C876AD1000CF9EE"
+    },
+    "5DB1A4A11C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A47C1C876AD1000CF9EE"
+    },
+    "5DA94F4E1C8114680039B9BB" : {
+      "path" : "EventTests.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5DB1A46D1C876AD1000CF9EE" : {
+      "path" : "DecayAnimation.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5DB1A49E1C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4771C876AD1000CF9EE"
+    },
+    "228E20741C9CB9B00058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DA94F4A1C80E2700039B9BB"
+    },
+    "22F74AA61C7674BB004C6E4C" : {
+      "path" : "AdvanceSample-iOS",
+      "isa" : "PBXGroup",
+      "children" : [
+        "22142E681C810DAC000C6DEB",
+        "22142E631C810D6C000C6DEB",
+        "223E49711C76C9350048CAB6",
+        "22F74AB91C767740004C6E4C",
+        "22F74AA71C7674BB004C6E4C",
+        "222E21201C7E44660063FAA2",
+        "222E21241C7E45420063FAA2",
+        "222E21221C7E448D0063FAA2",
+        "22319B711C8110A300D4E027",
+        "22F74AAE1C7674BB004C6E4C",
+        "22F74AB01C7674BB004C6E4C",
+        "22F74AB31C7674BB004C6E4C"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "5D3A2F721C92559B0071F08F" : {
+      "isa" : "XCConfigurationList",
+      "defaultConfigurationIsVisible" : "0",
+      "defaultConfigurationName" : "Release",
+      "buildConfigurations" : [
+        "5D3A2F731C92559B0071F08F",
+        "5D3A2F741C92559B0071F08F"
+      ]
+    },
+    "228E20901C9CBA490058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "228E208F1C9CBA490058ADA1"
+    },
+    "223E49721C76C9430048CAB6" : {
+      "path" : "SpringsViewController.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "228E206A1C9CB99D0058ADA1" : {
+      "isa" : "XCBuildConfiguration",
+      "buildSettings" : {
+        "LD_RUNPATH_SEARCH_PATHS" : "$(inherited) @executable_path\/Frameworks @loader_path\/Frameworks",
+        "APPLICATION_EXTENSION_API_ONLY" : "YES",
+        "CLANG_ENABLE_MODULES" : "YES",
+        "INFOPLIST_FILE" : "Advance-tvOS\/Info.plist",
+        "CODE_SIGN_IDENTITY" : "iPhone Developer",
+        "DEFINES_MODULE" : "YES",
+        "DYLIB_COMPATIBILITY_VERSION" : "1",
+        "INSTALL_PATH" : "$(LOCAL_LIBRARY_DIR)\/Frameworks",
+        "SKIP_INSTALL" : "YES",
+        "TVOS_DEPLOYMENT_TARGET" : "9.0",
+        "SWIFT_OPTIMIZATION_LEVEL" : "-Owholemodule",
+        "DYLIB_INSTALL_NAME_BASE" : "@rpath",
+        "PRODUCT_NAME" : "Advance",
+        "DYLIB_CURRENT_VERSION" : "1",
+        "IPHONEOS_DEPLOYMENT_TARGET" : "8.0",
+        "PRODUCT_BUNDLE_IDENTIFIER" : "co.storehouse.Advance",
+        "SDKROOT" : "appletvos"
+      },
+      "name" : "Release"
+    },
+    "5DB1A4911C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4631C876AD1000CF9EE"
+    },
+    "5D3A2F791C9255B30071F08F" : {
+      "buildActionMask" : "2147483647",
+      "dstSubfolderSpec" : "10",
+      "isa" : "PBXCopyFilesBuildPhase",
+      "runOnlyForDeploymentPostprocessing" : "0",
+      "dstPath" : "",
+      "files" : [
+        "5D3A2F761C9255B30071F08F"
+      ],
+      "name" : "Embed Frameworks"
+    },
+    "228E208F1C9CBA490058ADA1" : {
+      "path" : "Assets.xcassets",
+      "isa" : "PBXFileReference",
+      "lastKnownFileType" : "folder.assetcatalog",
+      "sourceTree" : "<group>"
+    },
+    "22DA152C1C9CBD0100A70551" : {
+      "isa" : "PBXContainerItemProxy",
+      "containerPortal" : "5D39CED81C6E983100DFCF86",
+      "remoteGlobalIDString" : "228E20401C9CB99D0058ADA1",
+      "remoteInfo" : "Advance-tvOS",
+      "proxyType" : "1"
+    },
+    "228E20671C9CB99D0058ADA1" : {
+      "isa" : "PBXResourcesBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "5DB1A4821C876AD1000CF9EE" : {
+      "path" : "CGFloat+VectorConvertible.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5D3A2F491C920CBC0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A47D1C876AD1000CF9EE"
+    },
+    "5D28A2DA1C9378F000E5A1E9" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5D28A2D91C9378F000E5A1E9"
+    },
+    "228E20581C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4871C876AD1000CF9EE"
+    },
+    "5DE95A051C93963A008487A8" : {
+      "path" : "Advance-iOS",
+      "isa" : "PBXGroup",
+      "children" : [
+        "5DE95A061C93963A008487A8"
+      ],
+      "sourceTree" : "SOURCE_ROOT"
+    },
+    "22F74AB71C76769C004C6E4C" : {
+      "path" : "GesturesViewController.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "228E209A1C9CBBC30058ADA1" : {
+      "isa" : "PBXTargetDependency",
+      "target" : "228E20851C9CBA490058ADA1",
+      "targetProxy" : "228E20991C9CBBC30058ADA1"
+    },
+    "5DA94F471C80DAA00039B9BB" : {
+      "path" : "VectorConvenienceTests.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5D3A2F571C920CCA0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A48E1C876AD1000CF9EE"
+    },
+    "5D28A2D81C93757200E5A1E9" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5D28A2D71C93757200E5A1E9"
+    },
+    "5D3A2F2F1C9209EE0071F08F" : {
+      "isa" : "PBXResourcesBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "228E20791C9CB9B00058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DA94F471C80DAA00039B9BB"
+    },
+    "228E204D1C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4691C876AD1000CF9EE"
+    },
+    "22F74AA11C7674BB004C6E4C" : {
+      "isa" : "PBXSourcesBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+        "223E49751C76C9510048CAB6",
+        "222E21211C7E44660063FAA2",
+        "2299A6831C7D35FE009DE78C",
+        "22F74AA81C7674BB004C6E4C",
+        "22142E671C810DA7000C6DEB",
+        "2212A2F11C82702500BB79F4",
+        "222E21251C7E45420063FAA2",
+        "222E211D1C7D4C300063FAA2",
+        "22F74ABB1C767757004C6E4C",
+        "22319B721C8110A300D4E027",
+        "22142E651C810D86000C6DEB",
+        "22F74AB81C76769C004C6E4C",
+        "222E211F1C7D8CF00063FAA2",
+        "226A752E1C84206D00A7F1FB",
+        "226A752C1C84153E00A7F1FB",
+        "223E49731C76C9430048CAB6",
+        "222E21231C7E448D0063FAA2"
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "5DB1A4961C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A46A1C876AD1000CF9EE"
+    },
+    "5DB1A4651C876AD1000CF9EE" : {
+      "path" : "Advanceable.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "228E206E1C9CB9B00058ADA1" : {
+      "isa" : "PBXTargetDependency",
+      "target" : "5D39CEE01C6E983100DFCF86",
+      "targetProxy" : "228E206F1C9CB9B00058ADA1"
+    },
+    "5D3A2F6C1C92559B0071F08F" : {
+      "path" : "Assets.xcassets",
+      "isa" : "PBXFileReference",
+      "lastKnownFileType" : "folder.assetcatalog",
+      "sourceTree" : "<group>"
+    },
+    "5DE959FA1C9392E1008487A8" : {
+      "isa" : "XCBuildConfiguration",
+      "buildSettings" : {
+        "CODE_SIGN_IDENTITY" : "-",
+        "COMBINE_HIDPI_IMAGES" : "YES",
+        "TEST_HOST" : "$(BUILT_PRODUCTS_DIR)\/AdvanceSample-OSX.app\/Contents\/MacOS\/AdvanceSample-OSX",
+        "LD_RUNPATH_SEARCH_PATHS" : "$(inherited) @executable_path\/..\/Frameworks @loader_path\/..\/Frameworks",
+        "INFOPLIST_FILE" : "AdvanceTests-OSX\/Info.plist",
+        "MACOSX_DEPLOYMENT_TARGET" : "10.11",
+        "PRODUCT_BUNDLE_IDENTIFIER" : "co.storehouse.AdvanceTests-OSX",
+        "SDKROOT" : "macosx",
+        "PRODUCT_NAME" : "$(TARGET_NAME)"
+      },
+      "name" : "Release"
+    },
+    "228E208A1C9CBA490058ADA1" : {
+      "path" : "ViewController.swift",
+      "isa" : "PBXFileReference",
+      "lastKnownFileType" : "sourcecode.swift",
+      "sourceTree" : "<group>"
+    },
+    "228E20621C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A46A1C876AD1000CF9EE"
+    },
+    "5D3A2F691C92559B0071F08F" : {
+      "path" : "AdvanceSample-OSX",
+      "isa" : "PBXGroup",
+      "children" : [
+        "5D3A2F6A1C92559B0071F08F",
+        "5D28A2D91C9378F000E5A1E9",
+        "5D28A2D71C93757200E5A1E9",
+        "5D3A2F6C1C92559B0071F08F",
+        "5D3A2F6E1C92559B0071F08F",
+        "5D3A2F711C92559B0071F08F"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "5DB1A48B1C876AD1000CF9EE" : {
+      "path" : "Vector1.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "228E20871C9CBA490058ADA1" : {
+      "path" : "AdvanceSample-tvOS",
+      "isa" : "PBXGroup",
+      "children" : [
+        "228E20881C9CBA490058ADA1",
+        "228E208A1C9CBA490058ADA1",
+        "228E208F1C9CBA490058ADA1",
+        "228E20911C9CBA490058ADA1"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "5DE959F71C9392E1008487A8" : {
+      "isa" : "PBXTargetDependency",
+      "target" : "5D3A2F301C9209EE0071F08F",
+      "targetProxy" : "5DE959F61C9392E1008487A8"
+    },
+    "5DB1A4B01C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A48D1C876AD1000CF9EE"
+    },
+    "5DB1A47C1C876AD1000CF9EE" : {
+      "path" : "DecayFunction.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5D3A2F361C9209EE0071F08F" : {
+      "isa" : "XCBuildConfiguration",
+      "buildSettings" : {
+        "LD_RUNPATH_SEARCH_PATHS" : "$(inherited) @executable_path\/..\/Frameworks @loader_path\/Frameworks",
+        "INFOPLIST_FILE" : "Advance-OSX\/Info.plist",
+        "DEFINES_MODULE" : "YES",
+        "CODE_SIGN_IDENTITY" : "-",
+        "MACOSX_DEPLOYMENT_TARGET" : "10.11",
+        "DYLIB_COMPATIBILITY_VERSION" : "1",
+        "INSTALL_PATH" : "$(LOCAL_LIBRARY_DIR)\/Frameworks",
+        "SKIP_INSTALL" : "YES",
+        "FRAMEWORK_VERSION" : "A",
+        "DYLIB_INSTALL_NAME_BASE" : "@rpath",
+        "PRODUCT_NAME" : "Advance",
+        "DYLIB_CURRENT_VERSION" : "1",
+        "PRODUCT_BUNDLE_IDENTIFIER" : "co.storehouse.Advance-OSX",
+        "COMBINE_HIDPI_IMAGES" : "YES",
+        "SDKROOT" : "macosx"
+      },
+      "name" : "Debug"
+    },
+    "22F74AB51C7674BB004C6E4C" : {
+      "isa" : "XCBuildConfiguration",
+      "buildSettings" : {
+        "CODE_SIGN_IDENTITY" : "iPhone Developer",
+        "EMBEDDED_CONTENT_CONTAINS_SWIFT" : "YES",
+        "IPHONEOS_DEPLOYMENT_TARGET" : "8.2",
+        "LD_RUNPATH_SEARCH_PATHS" : "$(inherited) @executable_path\/Frameworks",
+        "INFOPLIST_FILE" : "$(SRCROOT)\/AdvanceSample-iOS\/Info.plist",
+        "PRODUCT_BUNDLE_IDENTIFIER" : "co.storehouse.AdvanceSample",
+        "ASSETCATALOG_COMPILER_APPICON_NAME" : "AppIcon",
+        "SWIFT_OPTIMIZATION_LEVEL" : "-Owholemodule",
+        "PRODUCT_NAME" : "AdvanceSample"
+      },
+      "name" : "Release"
+    },
+    "5DB1A4AF1C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A48C1C876AD1000CF9EE"
+    },
+    "5D39CEEB1C6E983100DFCF86" : {
+      "path" : "Advance.xctest",
+      "isa" : "PBXFileReference",
+      "includeInIndex" : "0",
+      "explicitFileType" : "wrapper.cfbundle",
+      "sourceTree" : "BUILT_PRODUCTS_DIR"
+    },
+    "5DB1A4791C876AD1000CF9EE" : {
+      "path" : "Loop",
+      "isa" : "PBXGroup",
+      "children" : [
+        "5DB1A47A1C876AD1000CF9EE",
+        "5D3A2F5E1C922DAA0071F08F"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "5D39CEDC1C6E983100DFCF86" : {
+      "isa" : "PBXSourcesBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+        "5DB1A4A01C876AD1000CF9EE",
+        "5DB1A4AD1C876AD1000CF9EE",
+        "5DB1A4A61C876AD1000CF9EE",
+        "5DB1A49C1C876AD1000CF9EE",
+        "5DB1A4AC1C876AD1000CF9EE",
+        "5DB1A4B01C876AD1000CF9EE",
+        "5DB1A4971C876AD1000CF9EE",
+        "5DB1A4921C876AD1000CF9EE",
+        "5DB1A4A51C876AD1000CF9EE",
+        "5DB1A4911C876AD1000CF9EE",
+        "5D3A2F5F1C922DAA0071F08F",
+        "5DB1A4951C876AD1000CF9EE",
+        "5DB1A49A1C876AD1000CF9EE",
+        "5DB1A4A91C876AD1000CF9EE",
+        "5DB1A4A41C876AD1000CF9EE",
+        "5DB1A4AF1C876AD1000CF9EE",
+        "5DB1A4B11C876AD1000CF9EE",
+        "5DB1A4931C876AD1000CF9EE",
+        "5DB1A4981C876AD1000CF9EE",
+        "5DB1A4991C876AD1000CF9EE",
+        "5DB1A4A11C876AD1000CF9EE",
+        "5DB1A4B31C876AD1000CF9EE",
+        "5DB1A4AB1C876AD1000CF9EE",
+        "5DB1A4941C876AD1000CF9EE",
+        "5DB1A4A81C876AD1000CF9EE",
+        "5DB1A4B21C876AD1000CF9EE",
+        "5DB1A4A71C876AD1000CF9EE",
+        "5DB1A4AE1C876AD1000CF9EE",
+        "5DB1A4A21C876AD1000CF9EE",
+        "5DB1A49B1C876AD1000CF9EE",
+        "5DB1A4A31C876AD1000CF9EE",
+        "5DB1A4AA1C876AD1000CF9EE",
+        "5DB1A4961C876AD1000CF9EE",
+        "5DB1A49E1C876AD1000CF9EE",
+        "5DB1A49D1C876AD1000CF9EE"
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "5D39CEE81C6E983100DFCF86" : {
+      "isa" : "PBXFrameworksBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+        "5D39CEEC1C6E983100DFCF86"
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "228E20451C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4731C876AD1000CF9EE"
+    },
+    "226A752E1C84206D00A7F1FB" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "226A752D1C84206D00A7F1FB"
+    },
+    "22168B5C1C7A5E3500BAE519" : {
+      "path" : "BasicAnimationTests.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "228E20971C9CBB300058ADA1" : {
+      "path" : "AdvanceTests-tvOS",
+      "isa" : "PBXGroup",
+      "children" : [
+        "228E20981C9CBB9B0058ADA1"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "5D3A2F731C92559B0071F08F" : {
+      "isa" : "XCBuildConfiguration",
+      "buildSettings" : {
+        "CODE_SIGN_IDENTITY" : "-",
+        "EMBEDDED_CONTENT_CONTAINS_SWIFT" : "YES",
+        "COMBINE_HIDPI_IMAGES" : "YES",
+        "LD_RUNPATH_SEARCH_PATHS" : "$(inherited) @executable_path\/..\/Frameworks",
+        "INFOPLIST_FILE" : "AdvanceSample-OSX\/Info.plist",
+        "MACOSX_DEPLOYMENT_TARGET" : "10.11",
+        "ASSETCATALOG_COMPILER_APPICON_NAME" : "AppIcon",
+        "PRODUCT_BUNDLE_IDENTIFIER" : "co.storehouse.AdvanceSample-OSX",
+        "SDKROOT" : "macosx",
+        "PRODUCT_NAME" : "$(TARGET_NAME)"
+      },
+      "name" : "Debug"
+    },
+    "22B8E9821C7713F40010EF5A" : {
+      "isa" : "PBXCopyFilesBuildPhase",
+      "buildActionMask" : "2147483647",
+      "dstPath" : "",
+      "dstSubfolderSpec" : "10",
+      "files" : [
+        "22B8E9831C7713FF0010EF5A"
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "228E206B1C9CB99D0058ADA1" : {
+      "path" : "Advance.framework",
+      "isa" : "PBXFileReference",
+      "includeInIndex" : "0",
+      "explicitFileType" : "wrapper.framework",
+      "sourceTree" : "BUILT_PRODUCTS_DIR"
+    },
+    "5D3A2F641C92559B0071F08F" : {
+      "isa" : "PBXSourcesBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+        "5D28A2DA1C9378F000E5A1E9",
+        "5D3A2F6B1C92559B0071F08F",
+        "5D28A2D81C93757200E5A1E9"
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "228E20821C9CBA490058ADA1" : {
+      "isa" : "PBXSourcesBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+        "228E208B1C9CBA490058ADA1",
+        "228E20891C9CBA490058ADA1"
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "22DA152D1C9CBD0100A70551" : {
+      "isa" : "PBXTargetDependency",
+      "target" : "228E20401C9CB99D0058ADA1",
+      "targetProxy" : "22DA152C1C9CBD0100A70551"
+    },
+    "228E205C1C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4831C876AD1000CF9EE"
+    },
+    "5DB1A4831C876AD1000CF9EE" : {
+      "path" : "CGPoint+VectorConvertible.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5DE959FE1C93940E008487A8" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DA94F471C80DAA00039B9BB"
+    },
+    "5D3A2F311C9209EE0071F08F" : {
+      "path" : "Advance.framework",
+      "isa" : "PBXFileReference",
+      "includeInIndex" : "0",
+      "explicitFileType" : "wrapper.framework",
+      "sourceTree" : "BUILT_PRODUCTS_DIR"
+    },
+    "226A752C1C84153E00A7F1FB" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "226A752B1C84153E00A7F1FB"
+    },
+    "228E20591C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4671C876AD1000CF9EE"
+    },
+    "22F74AB01C7674BB004C6E4C" : {
+      "isa" : "PBXVariantGroup",
+      "name" : "LaunchScreen.storyboard",
+      "children" : [
+        "22F74AB11C7674BB004C6E4C"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "5DB1A4AA1C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4861C876AD1000CF9EE"
+    },
+    "5DB1A4741C876AD1000CF9EE" : {
+      "path" : "Events",
+      "isa" : "PBXGroup",
+      "children" : [
+        "5DB1A4751C876AD1000CF9EE"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "5D39CEF21C6E983100DFCF86" : {
+      "path" : "Info.plist",
+      "isa" : "PBXFileReference",
+      "lastKnownFileType" : "text.plist.xml",
+      "sourceTree" : "<group>"
+    },
+    "5DA94F481C80DAA00039B9BB" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DA94F471C80DAA00039B9BB"
+    },
+    "5D3A2F581C920CCA0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A48F1C876AD1000CF9EE"
+    },
+    "22F74AAF1C7674BB004C6E4C" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "22F74AAE1C7674BB004C6E4C"
+    },
+    "228E207D1C9CB9B00058ADA1" : {
+      "isa" : "XCConfigurationList",
+      "defaultConfigurationIsVisible" : "0",
+      "defaultConfigurationName" : "Release",
+      "buildConfigurations" : [
+        "228E207E1C9CB9B00058ADA1",
+        "228E207F1C9CB9B00058ADA1"
+      ]
+    },
+    "5DB1A4A71C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4831C876AD1000CF9EE"
+    },
+    "5D3A2F3E1C920C860071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A46F1C876AD1000CF9EE"
+    },
+    "228E20401C9CB99D0058ADA1" : {
+      "buildConfigurationList" : "228E20681C9CB99D0058ADA1",
+      "productReference" : "228E206B1C9CB99D0058ADA1",
+      "productType" : "com.apple.product-type.framework",
+      "productName" : "Advance",
+      "isa" : "PBXNativeTarget",
+      "buildPhases" : [
+        "228E20411C9CB99D0058ADA1",
+        "228E20651C9CB99D0058ADA1",
+        "228E20661C9CB99D0058ADA1",
+        "228E20671C9CB99D0058ADA1"
+      ],
+      "dependencies" : [
+
+      ],
+      "name" : "Advance-tvOS",
+      "buildRules" : [
+
+      ]
+    },
+    "5DB1A49A1C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4701C876AD1000CF9EE"
+    },
+    "228E20701C9CB9B00058ADA1" : {
+      "isa" : "PBXTargetDependency",
+      "target" : "22F74AA41C7674BB004C6E4C",
+      "targetProxy" : "228E20711C9CB9B00058ADA1"
+    },
+    "5D3A2F441C920C920071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4731C876AD1000CF9EE"
+    },
+    "5DA94F491C80DEEB0039B9BB" : {
+      "path" : "Playground.playground",
+      "isa" : "PBXFileReference",
+      "lastKnownFileType" : "file.playground",
+      "sourceTree" : "<group>"
+    },
+    "5DB1A4971C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A46B1C876AD1000CF9EE"
+    },
+    "5D3A2F6D1C92559B0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5D3A2F6C1C92559B0071F08F"
+    },
+    "5D3A2F751C9255B30071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5D3A2F311C9209EE0071F08F"
+    },
+    "222E21241C7E45420063FAA2" : {
+      "path" : "BrowserView.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5DB1A4881C876AD1000CF9EE" : {
+      "path" : "VectorConvertible.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5D39CEFA1C6E983100DFCF86" : {
+      "isa" : "XCBuildConfiguration",
+      "buildSettings" : {
+        "IPHONEOS_DEPLOYMENT_TARGET" : "8.0",
+        "TEST_HOST" : "$(BUILT_PRODUCTS_DIR)\/AdvanceSample.app\/AdvanceSample",
+        "LD_RUNPATH_SEARCH_PATHS" : "$(inherited) @executable_path\/Frameworks @loader_path\/Frameworks",
+        "INFOPLIST_FILE" : "AdvanceTests-iOS\/Info.plist",
+        "PRODUCT_BUNDLE_IDENTIFIER" : "co.storehouse.Advance",
+        "PRODUCT_MODULE_NAME" : "$(PRODUCT_NAME:c99extidentifier)Tests",
+        "PRODUCT_NAME" : "Advance"
+      },
+      "name" : "Release"
+    },
+    "228E20631C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4771C876AD1000CF9EE"
+    },
+    "5DE959EC1C9392E1008487A8" : {
+      "isa" : "PBXSourcesBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+        "5DE959FE1C93940E008487A8",
+        "5DE95A001C93940E008487A8",
+        "5DE95A021C93940E008487A8",
+        "5DE95A011C93940E008487A8",
+        "5DE959FF1C93940E008487A8",
+        "5DE959FD1C93940E008487A8",
+        "5DE959FC1C93940E008487A8"
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "5D3A2F531C920CC20071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4861C876AD1000CF9EE"
+    },
+    "22142E641C810D86000C6DEB" : {
+      "path" : "ActivityViewController.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "228E20541C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A46D1C876AD1000CF9EE"
+    },
+    "5D3A2F3B1C920C7C0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A46A1C876AD1000CF9EE"
+    },
+    "5DE95A001C93940E008487A8" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DA94F4A1C80E2700039B9BB"
+    },
+    "5DB1A4B11C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A48E1C876AD1000CF9EE"
+    },
+    "5DB1A47D1C876AD1000CF9EE" : {
+      "path" : "DynamicFunctionType.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5D39CEF71C6E983100DFCF86" : {
+      "isa" : "XCBuildConfiguration",
+      "buildSettings" : {
+        "LD_RUNPATH_SEARCH_PATHS" : "$(inherited) @executable_path\/Frameworks @loader_path\/Frameworks",
+        "APPLICATION_EXTENSION_API_ONLY" : "YES",
+        "CLANG_ENABLE_MODULES" : "YES",
+        "INFOPLIST_FILE" : "$(SRCROOT)\/Advance-iOS\/Info.plist",
+        "CODE_SIGN_IDENTITY" : "iPhone Developer",
+        "DEFINES_MODULE" : "YES",
+        "DYLIB_COMPATIBILITY_VERSION" : "1",
+        "INSTALL_PATH" : "$(LOCAL_LIBRARY_DIR)\/Frameworks",
+        "SKIP_INSTALL" : "YES",
+        "SWIFT_OPTIMIZATION_LEVEL" : "-Owholemodule",
+        "DYLIB_INSTALL_NAME_BASE" : "@rpath",
+        "PRODUCT_NAME" : "Advance",
+        "DYLIB_CURRENT_VERSION" : "1",
+        "IPHONEOS_DEPLOYMENT_TARGET" : "8.0",
+        "PRODUCT_BUNDLE_IDENTIFIER" : "co.storehouse.Advance"
+      },
+      "name" : "Release"
+    },
+    "5DE959F81C9392E1008487A8" : {
+      "isa" : "XCConfigurationList",
+      "defaultConfigurationIsVisible" : "0",
+      "defaultConfigurationName" : "Release",
+      "buildConfigurations" : [
+        "5DE959F91C9392E1008487A8",
+        "5DE959FA1C9392E1008487A8"
+      ]
+    },
+    "5D3A2F371C9209EE0071F08F" : {
+      "isa" : "XCBuildConfiguration",
+      "buildSettings" : {
+        "LD_RUNPATH_SEARCH_PATHS" : "$(inherited) @executable_path\/..\/Frameworks @loader_path\/Frameworks",
+        "INFOPLIST_FILE" : "Advance-OSX\/Info.plist",
+        "DEFINES_MODULE" : "YES",
+        "CODE_SIGN_IDENTITY" : "-",
+        "MACOSX_DEPLOYMENT_TARGET" : "10.11",
+        "DYLIB_COMPATIBILITY_VERSION" : "1",
+        "INSTALL_PATH" : "$(LOCAL_LIBRARY_DIR)\/Frameworks",
+        "SKIP_INSTALL" : "YES",
+        "FRAMEWORK_VERSION" : "A",
+        "SWIFT_OPTIMIZATION_LEVEL" : "-Owholemodule",
+        "DYLIB_INSTALL_NAME_BASE" : "@rpath",
+        "PRODUCT_NAME" : "Advance",
+        "DYLIB_CURRENT_VERSION" : "1",
+        "PRODUCT_BUNDLE_IDENTIFIER" : "co.storehouse.Advance-OSX",
+        "COMBINE_HIDPI_IMAGES" : "YES",
+        "SDKROOT" : "macosx"
+      },
+      "name" : "Release"
+    },
+    "22F74AB61C7674BB004C6E4C" : {
+      "isa" : "XCConfigurationList",
+      "defaultConfigurationIsVisible" : "0",
+      "defaultConfigurationName" : "Release",
+      "buildConfigurations" : [
+        "22F74AB41C7674BB004C6E4C",
+        "22F74AB51C7674BB004C6E4C"
+      ]
+    },
+    "5DB1A4A21C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A47D1C876AD1000CF9EE"
+    },
+    "5DA94F4F1C8114680039B9BB" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DA94F4E1C8114680039B9BB"
+    },
+    "228E20751C9CB9B00058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DE959E81C9388B9008487A8"
+    },
+    "5D3A2F401C920C8C0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4671C876AD1000CF9EE"
+    },
+    "5D39CEEC1C6E983100DFCF86" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5D39CEE11C6E983100DFCF86"
+    },
+    "22F74AA71C7674BB004C6E4C" : {
+      "path" : "AppDelegate.swift",
+      "isa" : "PBXFileReference",
+      "lastKnownFileType" : "sourcecode.swift",
+      "sourceTree" : "<group>"
+    },
+    "5DB1A46E1C876AD1000CF9EE" : {
+      "path" : "Spring",
+      "isa" : "PBXGroup",
+      "children" : [
+        "5DB1A46F1C876AD1000CF9EE"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "228E20911C9CBA490058ADA1" : {
+      "path" : "Info.plist",
+      "isa" : "PBXFileReference",
+      "lastKnownFileType" : "text.plist.xml",
+      "sourceTree" : "<group>"
+    },
+    "2299A6821C7D35FE009DE78C" : {
+      "path" : "DirectManipulationGestureRecognizer.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "223E49731C76C9430048CAB6" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "223E49721C76C9430048CAB6"
+    },
+    "228E20981C9CBB9B0058ADA1" : {
+      "path" : "Info.plist",
+      "isa" : "PBXFileReference",
+      "lastKnownFileType" : "text.plist.xml",
+      "sourceTree" : "<group>"
+    },
+    "5D3A2F3F1C920C8C0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4661C876AD1000CF9EE"
+    },
+    "5D3A2F391C920C710071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4631C876AD1000CF9EE"
+    },
+    "5DB1A4921C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4651C876AD1000CF9EE"
+    },
+    "22168B5D1C7A5E3500BAE519" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "22168B5C1C7A5E3500BAE519"
+    },
+    "5D39CEDD1C6E983100DFCF86" : {
+      "isa" : "PBXFrameworksBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "5DB1A4611C876AD1000CF9EE" : {
+      "path" : "Advance",
+      "isa" : "PBXGroup",
+      "children" : [
+        "5DB1A4621C876AD1000CF9EE",
+        "5DB1A4641C876AD1000CF9EE",
+        "5DB1A4711C876AD1000CF9EE",
+        "5DB1A4741C876AD1000CF9EE",
+        "5DB1A4761C876AD1000CF9EE",
+        "5DB1A4791C876AD1000CF9EE",
+        "5DB1A47B1C876AD1000CF9EE",
+        "5DB1A4811C876AD1000CF9EE",
+        "5DB1A4891C876AD1000CF9EE"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "228E20681C9CB99D0058ADA1" : {
+      "isa" : "XCConfigurationList",
+      "defaultConfigurationIsVisible" : "0",
+      "defaultConfigurationName" : "Release",
+      "buildConfigurations" : [
+        "228E20691C9CB99D0058ADA1",
+        "228E206A1C9CB99D0058ADA1"
+      ]
+    },
+    "5DE95A061C93963A008487A8" : {
+      "path" : "Info.plist",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "text.plist.xml"
+    },
+    "22F74AB81C76769C004C6E4C" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "22F74AB71C76769C004C6E4C"
+    },
+    "5D3A2F651C92559B0071F08F" : {
+      "isa" : "PBXFrameworksBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+        "5D3A2F751C9255B30071F08F"
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "22DA152E1C9CBD0100A70551" : {
+      "buildActionMask" : "2147483647",
+      "dstSubfolderSpec" : "10",
+      "isa" : "PBXCopyFilesBuildPhase",
+      "runOnlyForDeploymentPostprocessing" : "0",
+      "dstPath" : "",
+      "files" : [
+        "22DA152B1C9CBD0100A70551"
+      ],
+      "name" : "Embed Frameworks"
+    },
+    "228E205D1C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A48B1C876AD1000CF9EE"
+    },
+    "5D3A2F5E1C922DAA0071F08F" : {
+      "path" : "DisplayLink.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5DE959FF1C93940E008487A8" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "22168B5C1C7A5E3500BAE519"
+    },
+    "5D3A2F4D1C920CC20071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4881C876AD1000CF9EE"
+    },
+    "228E204E1C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4701C876AD1000CF9EE"
+    },
+    "22F74AB11C7674BB004C6E4C" : {
+      "path" : "Base.lproj\/LaunchScreen.storyboard",
+      "isa" : "PBXFileReference",
+      "name" : "Base",
+      "lastKnownFileType" : "file.storyboard",
+      "sourceTree" : "<group>"
+    },
+    "5D3A2F321C9209EE0071F08F" : {
+      "path" : "Advance-OSX",
+      "isa" : "PBXGroup",
+      "children" : [
+        "5D3A2F351C9209EE0071F08F"
+      ],
+      "sourceTree" : "SOURCE_ROOT"
+    },
+    "5DB1A4751C876AD1000CF9EE" : {
+      "path" : "Event.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5DB1A4AB1C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4871C876AD1000CF9EE"
+    },
+    "228E207E1C9CB9B00058ADA1" : {
+      "isa" : "XCBuildConfiguration",
+      "buildSettings" : {
+        "IPHONEOS_DEPLOYMENT_TARGET" : "8.0",
+        "TEST_HOST" : "$(BUILT_PRODUCTS_DIR)\/AdvanceSample-tvOS.app\/AdvanceSample-tvOS",
+        "LD_RUNPATH_SEARCH_PATHS" : "$(inherited) @executable_path\/Frameworks @loader_path\/Frameworks",
+        "INFOPLIST_FILE" : "AdvanceTests-tvOS\/Info.plist",
+        "SDKROOT" : "appletvos",
+        "PRODUCT_BUNDLE_IDENTIFIER" : "co.storehouse.Advance",
+        "PRODUCT_MODULE_NAME" : "$(PRODUCT_NAME:c99extidentifier)Tests",
+        "PRODUCT_NAME" : "$(TARGET_NAME)"
+      },
+      "name" : "Debug"
+    },
+    "22F74AA21C7674BB004C6E4C" : {
+      "isa" : "PBXFrameworksBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+        "22F74ABC1C76778E004C6E4C"
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "5DB1A4661C876AD1000CF9EE" : {
+      "path" : "AnimationType.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5DB1A4A81C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4841C876AD1000CF9EE"
+    },
+    "228E206F1C9CB9B00058ADA1" : {
+      "isa" : "PBXContainerItemProxy",
+      "containerPortal" : "5D39CED81C6E983100DFCF86",
+      "remoteGlobalIDString" : "5D39CEE01C6E983100DFCF86",
+      "remoteInfo" : "Advance",
+      "proxyType" : "1"
+    },
+    "22142E631C810D6C000C6DEB" : {
+      "isa" : "PBXGroup",
+      "name" : "Activity",
+      "children" : [
+        "22142E641C810D86000C6DEB",
+        "2212A2F01C82702500BB79F4"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "228E20411C9CB99D0058ADA1" : {
+      "isa" : "PBXSourcesBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+        "228E20421C9CB99D0058ADA1",
+        "228E20431C9CB99D0058ADA1",
+        "228E20441C9CB99D0058ADA1",
+        "228E20451C9CB99D0058ADA1",
+        "228E20461C9CB99D0058ADA1",
+        "228E20471C9CB99D0058ADA1",
+        "228E20481C9CB99D0058ADA1",
+        "228E20491C9CB99D0058ADA1",
+        "228E204A1C9CB99D0058ADA1",
+        "228E204B1C9CB99D0058ADA1",
+        "228E204C1C9CB99D0058ADA1",
+        "228E204D1C9CB99D0058ADA1",
+        "228E204E1C9CB99D0058ADA1",
+        "228E204F1C9CB99D0058ADA1",
+        "228E20501C9CB99D0058ADA1",
+        "228E20511C9CB99D0058ADA1",
+        "228E20521C9CB99D0058ADA1",
+        "228E20531C9CB99D0058ADA1",
+        "228E20541C9CB99D0058ADA1",
+        "228E20551C9CB99D0058ADA1",
+        "228E20561C9CB99D0058ADA1",
+        "228E20571C9CB99D0058ADA1",
+        "228E20581C9CB99D0058ADA1",
+        "228E20591C9CB99D0058ADA1",
+        "228E205A1C9CB99D0058ADA1",
+        "228E205B1C9CB99D0058ADA1",
+        "228E205C1C9CB99D0058ADA1",
+        "228E205D1C9CB99D0058ADA1",
+        "228E205E1C9CB99D0058ADA1",
+        "228E205F1C9CB99D0058ADA1",
+        "228E20601C9CB99D0058ADA1",
+        "228E20611C9CB99D0058ADA1",
+        "228E20621C9CB99D0058ADA1",
+        "228E20631C9CB99D0058ADA1",
+        "228E20641C9CB99D0058ADA1"
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "5DB1A49B1C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4721C876AD1000CF9EE"
+    },
+    "228E208B1C9CBA490058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "228E208A1C9CBA490058ADA1"
+    },
+    "5DB1A48C1C876AD1000CF9EE" : {
+      "path" : "Vector2.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "22319B711C8110A300D4E027" : {
+      "path" : "CoverView.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "228E20881C9CBA490058ADA1" : {
+      "path" : "AppDelegate.swift",
+      "isa" : "PBXFileReference",
+      "lastKnownFileType" : "sourcecode.swift",
+      "sourceTree" : "<group>"
+    },
+    "22F74AB91C767740004C6E4C" : {
+      "isa" : "PBXGroup",
+      "name" : "Gestures",
+      "children" : [
+        "22F74AB71C76769C004C6E4C",
+        "22F74ABA1C767757004C6E4C",
+        "2299A6821C7D35FE009DE78C",
+        "222E211C1C7D4C300063FAA2"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "5DB1A4891C876AD1000CF9EE" : {
+      "path" : "Vectors",
+      "isa" : "PBXGroup",
+      "children" : [
+        "5DB1A48B1C876AD1000CF9EE",
+        "5DB1A48C1C876AD1000CF9EE",
+        "5DB1A48D1C876AD1000CF9EE",
+        "5DB1A48E1C876AD1000CF9EE",
+        "5DB1A48F1C876AD1000CF9EE",
+        "5DB1A4901C876AD1000CF9EE",
+        "5DB1A48A1C876AD1000CF9EE"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "5D3A2F761C9255B30071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5D3A2F311C9209EE0071F08F",
+      "settings" : {
+        "ATTRIBUTES" : [
+          "CodeSignOnCopy",
+          "RemoveHeadersOnCopy"
+        ]
+      }
+    },
+    "22F74ABD1C767797004C6E4C" : {
+      "isa" : "PBXContainerItemProxy",
+      "containerPortal" : "5D39CED81C6E983100DFCF86",
+      "remoteGlobalIDString" : "5D39CEE01C6E983100DFCF86",
+      "remoteInfo" : "Animation",
+      "proxyType" : "1"
+    },
+    "5DE959ED1C9392E1008487A8" : {
+      "isa" : "PBXFrameworksBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+        "5DE959F51C9392E1008487A8"
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "5D39CEF81C6E983100DFCF86" : {
+      "isa" : "XCConfigurationList",
+      "defaultConfigurationIsVisible" : "0",
+      "defaultConfigurationName" : "Release",
+      "buildConfigurations" : [
+        "5D39CEF91C6E983100DFCF86",
+        "5D39CEFA1C6E983100DFCF86"
+      ]
+    },
+    "228E20551C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A46F1C876AD1000CF9EE"
+    },
+    "5D3A2F3C1C920C7C0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A46B1C876AD1000CF9EE"
+    },
+    "5DB1A4701C876AD1000CF9EE" : {
+      "path" : "ValueAnimationType.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5D39CEE91C6E983100DFCF86" : {
+      "isa" : "PBXResourcesBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "5D3A2F541C920CCA0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A48B1C876AD1000CF9EE"
+    },
+    "228E20461C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4881C876AD1000CF9EE"
+    },
+    "5D3A2F2C1C9209EE0071F08F" : {
+      "isa" : "PBXSourcesBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+        "5D3A2F471C920CB10071F08F",
+        "5D3A2F441C920C920071F08F",
+        "5D3A2F3C1C920C7C0071F08F",
+        "5D3A2F411C920C8C0071F08F",
+        "5D3A2F4C1C920CBC0071F08F",
+        "5D3A2F391C920C710071F08F",
+        "5D3A2F3A1C920C7C0071F08F",
+        "5D3A2F591C920CCA0071F08F",
+        "5D3A2F3F1C920C8C0071F08F",
+        "5D3A2F4F1C920CC20071F08F",
+        "5D3A2F531C920CC20071F08F",
+        "5D3A2F4B1C920CBC0071F08F",
+        "5D3A2F3E1C920C860071F08F",
+        "5D3A2F541C920CCA0071F08F",
+        "5D3A2F571C920CCA0071F08F",
+        "5D3A2F521C920CC20071F08F",
+        "5D3A2F421C920C8C0071F08F",
+        "5D3A2F5A1C920CCA0071F08F",
+        "5D3A2F4E1C920CC20071F08F",
+        "5D3A2F3D1C920C810071F08F",
+        "5D3A2F481C920CBC0071F08F",
+        "5D3A2F3B1C920C7C0071F08F",
+        "5D3A2F511C920CC20071F08F",
+        "5D3A2F491C920CBC0071F08F",
+        "5D3A2F501C920CC20071F08F",
+        "5D3A2F581C920CCA0071F08F",
+        "5D3A2F631C923ADB0071F08F",
+        "5D3A2F4D1C920CC20071F08F",
+        "5D3A2F431C920C920071F08F",
+        "5D3A2F401C920C8C0071F08F",
+        "5D3A2F461C920C9C0071F08F",
+        "5D3A2F4A1C920CBC0071F08F",
+        "5D3A2F551C920CCA0071F08F",
+        "5D3A2F561C920CCA0071F08F",
+        "5D3A2F451C920C970071F08F"
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "228E20961C9CBAF70058ADA1" : {
+      "path" : "Info.plist",
+      "isa" : "PBXFileReference",
+      "lastKnownFileType" : "text.plist.xml",
+      "sourceTree" : "<group>"
+    },
+    "5DB1A4A31C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A47E1C876AD1000CF9EE"
+    },
+    "5DB1A46F1C876AD1000CF9EE" : {
+      "path" : "SpringAnimation.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5D3A2F471C920CB10071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A47A1C876AD1000CF9EE"
+    },
+    "5D3A2F411C920C8C0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4701C876AD1000CF9EE"
+    },
+    "228E20761C9CB9B00058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "22168B5A1C7A547300BAE519"
+    },
+    "22F74AA81C7674BB004C6E4C" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "22F74AA71C7674BB004C6E4C"
+    },
+    "228E20951C9CBA7A0058ADA1" : {
+      "path" : "..\/Advance-tvOS",
+      "isa" : "PBXGroup",
+      "name" : "Advance-tvOS",
+      "children" : [
+        "228E20961C9CBAF70058ADA1"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "5D3A2F741C92559B0071F08F" : {
+      "isa" : "XCBuildConfiguration",
+      "buildSettings" : {
+        "CODE_SIGN_IDENTITY" : "-",
+        "EMBEDDED_CONTENT_CONTAINS_SWIFT" : "YES",
+        "COMBINE_HIDPI_IMAGES" : "YES",
+        "LD_RUNPATH_SEARCH_PATHS" : "$(inherited) @executable_path\/..\/Frameworks",
+        "INFOPLIST_FILE" : "AdvanceSample-OSX\/Info.plist",
+        "MACOSX_DEPLOYMENT_TARGET" : "10.11",
+        "ASSETCATALOG_COMPILER_APPICON_NAME" : "AppIcon",
+        "PRODUCT_BUNDLE_IDENTIFIER" : "co.storehouse.AdvanceSample-OSX",
+        "SDKROOT" : "macosx",
+        "PRODUCT_NAME" : "$(TARGET_NAME)"
+      },
+      "name" : "Release"
+    },
+    "228E20921C9CBA490058ADA1" : {
+      "isa" : "XCConfigurationList",
+      "defaultConfigurationIsVisible" : "0",
+      "defaultConfigurationName" : "Release",
+      "buildConfigurations" : [
+        "228E20931C9CBA490058ADA1",
+        "228E20941C9CBA490058ADA1"
+      ]
+    },
+    "5D39CEDE1C6E983100DFCF86" : {
+      "isa" : "PBXHeadersBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "5DB1A4931C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4661C876AD1000CF9EE"
+    },
+    "228E20831C9CBA490058ADA1" : {
+      "isa" : "PBXFrameworksBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+        "22DA152A1C9CBD0100A70551"
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "228E20691C9CB99D0058ADA1" : {
+      "isa" : "XCBuildConfiguration",
+      "buildSettings" : {
+        "LD_RUNPATH_SEARCH_PATHS" : "$(inherited) @executable_path\/Frameworks @loader_path\/Frameworks",
+        "APPLICATION_EXTENSION_API_ONLY" : "YES",
+        "CLANG_ENABLE_MODULES" : "YES",
+        "INFOPLIST_FILE" : "Advance-tvOS\/Info.plist",
+        "CODE_SIGN_IDENTITY" : "iPhone Developer",
+        "DEFINES_MODULE" : "YES",
+        "DYLIB_COMPATIBILITY_VERSION" : "1",
+        "INSTALL_PATH" : "$(LOCAL_LIBRARY_DIR)\/Frameworks",
+        "SKIP_INSTALL" : "YES",
+        "TVOS_DEPLOYMENT_TARGET" : "9.0",
+        "SWIFT_OPTIMIZATION_LEVEL" : "-Onone",
+        "DYLIB_INSTALL_NAME_BASE" : "@rpath",
+        "PRODUCT_NAME" : "Advance",
+        "DYLIB_CURRENT_VERSION" : "1",
+        "IPHONEOS_DEPLOYMENT_TARGET" : "8.0",
+        "PRODUCT_BUNDLE_IDENTIFIER" : "co.storehouse.Advance",
+        "SDKROOT" : "appletvos"
+      },
+      "name" : "Debug"
+    },
+    "5DB1A4841C876AD1000CF9EE" : {
+      "path" : "CGRect+VectorConvertible.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5D3A2F591C920CCA0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4901C876AD1000CF9EE"
+    },
+    "22168B5A1C7A547300BAE519" : {
+      "path" : "VectorTypeTests.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5D28A2D91C9378F000E5A1E9" : {
+      "path" : "SpringContainerView.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "228E20501C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A47F1C876AD1000CF9EE"
+    },
+    "228E20991C9CBBC30058ADA1" : {
+      "isa" : "PBXContainerItemProxy",
+      "containerPortal" : "5D39CED81C6E983100DFCF86",
+      "remoteGlobalIDString" : "228E20851C9CBA490058ADA1",
+      "remoteInfo" : "AdvanceSample-tvOS",
+      "proxyType" : "1"
+    },
+    "5D3A2F5F1C922DAA0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5D3A2F5E1C922DAA0071F08F"
+    },
+    "5D39CEF31C6E983100DFCF86" : {
+      "isa" : "XCBuildConfiguration",
+      "buildSettings" : {
+        "GCC_WARN_UNDECLARED_SELECTOR" : "YES",
+        "VERSION_INFO_PREFIX" : "",
+        "CLANG_ENABLE_OBJC_ARC" : "YES",
+        "CLANG_WARN_DIRECT_OBJC_ISA_USAGE" : "YES_ERROR",
+        "CLANG_WARN__DUPLICATE_METHOD_MATCH" : "YES",
+        "CODE_SIGN_IDENTITY[sdk=iphoneos*]" : "iPhone Developer",
+        "SDKROOT" : "iphoneos",
+        "CLANG_CXX_LANGUAGE_STANDARD" : "gnu++0x",
+        "ENABLE_TESTABILITY" : "YES",
+        "CLANG_WARN_BOOL_CONVERSION" : "YES",
+        "CLANG_WARN_UNREACHABLE_CODE" : "YES",
+        "ENABLE_STRICT_OBJC_MSGSEND" : "YES",
+        "CLANG_ANALYZER_NONNULL" : "YES",
+        "GCC_PREPROCESSOR_DEFINITIONS" : [
+          "DEBUG=1",
+          "$(inherited)"
+        ],
+        "CLANG_WARN_ENUM_CONVERSION" : "YES",
+        "GCC_WARN_64_TO_32_BIT_CONVERSION" : "YES",
+        "GCC_WARN_UNINITIALIZED_AUTOS" : "YES_AGGRESSIVE",
+        "CLANG_WARN_EMPTY_BODY" : "YES",
+        "GCC_WARN_ABOUT_RETURN_TYPE" : "YES_ERROR",
+        "GCC_DYNAMIC_NO_PIC" : "NO",
+        "GCC_WARN_UNUSED_VARIABLE" : "YES",
+        "GCC_C_LANGUAGE_STANDARD" : "gnu99",
+        "CLANG_ENABLE_MODULES" : "YES",
+        "GCC_NO_COMMON_BLOCKS" : "YES",
+        "CLANG_WARN_INT_CONVERSION" : "YES",
+        "ALWAYS_SEARCH_USER_PATHS" : "NO",
+        "CLANG_WARN_OBJC_ROOT_CLASS" : "YES_ERROR",
+        "MTL_ENABLE_DEBUG_INFO" : "YES",
+        "GCC_OPTIMIZATION_LEVEL" : "0",
+        "CLANG_WARN_CONSTANT_CONVERSION" : "YES",
+        "CURRENT_PROJECT_VERSION" : "1",
+        "COPY_PHASE_STRIP" : "NO",
+        "SWIFT_OPTIMIZATION_LEVEL" : "-Onone",
+        "ONLY_ACTIVE_ARCH" : "YES",
+        "TARGETED_DEVICE_FAMILY" : "1,2",
+        "VERSIONING_SYSTEM" : "apple-generic",
+        "GCC_WARN_UNUSED_FUNCTION" : "YES",
+        "DEBUG_INFORMATION_FORMAT" : "dwarf",
+        "IPHONEOS_DEPLOYMENT_TARGET" : "9.3",
+        "CLANG_CXX_LIBRARY" : "libc++"
+      },
+      "name" : "Debug"
+    },
+    "228E20801C9CB9B00058ADA1" : {
+      "path" : "AdvanceTests-tvOS.xctest",
+      "isa" : "PBXFileReference",
+      "includeInIndex" : "0",
+      "explicitFileType" : "wrapper.cfbundle",
+      "sourceTree" : "BUILT_PRODUCTS_DIR"
+    },
+    "5D3A2F4E1C920CC20071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4871C876AD1000CF9EE"
+    },
+    "222E211C1C7D4C300063FAA2" : {
+      "path" : "SimpleTransform.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "22F74AB21C7674BB004C6E4C" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "22F74AB01C7674BB004C6E4C"
+    },
+    "228E204F1C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4851C876AD1000CF9EE"
+    },
+    "5DB1A46A1C876AD1000CF9EE" : {
+      "path" : "TimingFunctionType.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "228E20711C9CB9B00058ADA1" : {
+      "isa" : "PBXContainerItemProxy",
+      "containerPortal" : "5D39CED81C6E983100DFCF86",
+      "remoteGlobalIDString" : "22F74AA41C7674BB004C6E4C",
+      "remoteInfo" : "AdvanceSample",
+      "proxyType" : "1"
+    },
+    "22F74AA31C7674BB004C6E4C" : {
+      "isa" : "PBXResourcesBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+        "22F74AB21C7674BB004C6E4C",
+        "22F74AAF1C7674BB004C6E4C"
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "5DB1A4981C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A46D1C876AD1000CF9EE"
+    },
+    "5DB1A4671C876AD1000CF9EE" : {
+      "path" : "AnyValueAnimation.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "22142E661C810DA7000C6DEB" : {
+      "path" : "GravityViewController.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5D3A2F6E1C92559B0071F08F" : {
+      "isa" : "PBXVariantGroup",
+      "name" : "MainMenu.xib",
+      "children" : [
+        "5D3A2F6F1C92559B0071F08F"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "2212A2F01C82702500BB79F4" : {
+      "path" : "ActivityView.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "222E21251C7E45420063FAA2" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "222E21241C7E45420063FAA2"
+    },
+    "228E20641C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4751C876AD1000CF9EE"
+    },
+    "5D39CF281C6E9B2E00DFCF86" : {
+      "path" : "Advance",
+      "isa" : "PBXGroup",
+      "name" : "Resources",
+      "children" : [
+        "228E20951C9CBA7A0058ADA1",
+        "5DE95A051C93963A008487A8",
+        "5D3A2F321C9209EE0071F08F"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "5DB1A48D1C876AD1000CF9EE" : {
+      "path" : "Vector3.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "22319B721C8110A300D4E027" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "22319B711C8110A300D4E027"
+    },
+    "228E20891C9CBA490058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "228E20881C9CBA490058ADA1"
+    },
+    "22142E651C810D86000C6DEB" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "22142E641C810D86000C6DEB"
+    },
+    "5DE95A011C93940E008487A8" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DA94F4C1C8112810039B9BB"
+    },
+    "5DB1A4B21C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A48F1C876AD1000CF9EE"
+    },
+    "5DB1A47E1C876AD1000CF9EE" : {
+      "path" : "DynamicSolver.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5DE959E81C9388B9008487A8" : {
+      "path" : "DisplayLinkTests.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5D3A2F4A1C920CBC0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A47E1C876AD1000CF9EE"
+    },
+    "5DE959F91C9392E1008487A8" : {
+      "isa" : "XCBuildConfiguration",
+      "buildSettings" : {
+        "CODE_SIGN_IDENTITY" : "-",
+        "COMBINE_HIDPI_IMAGES" : "YES",
+        "TEST_HOST" : "$(BUILT_PRODUCTS_DIR)\/AdvanceSample-OSX.app\/Contents\/MacOS\/AdvanceSample-OSX",
+        "LD_RUNPATH_SEARCH_PATHS" : "$(inherited) @executable_path\/..\/Frameworks @loader_path\/..\/Frameworks",
+        "INFOPLIST_FILE" : "AdvanceTests-OSX\/Info.plist",
+        "MACOSX_DEPLOYMENT_TARGET" : "10.11",
+        "PRODUCT_BUNDLE_IDENTIFIER" : "co.storehouse.AdvanceTests-OSX",
+        "SDKROOT" : "macosx",
+        "PRODUCT_NAME" : "$(TARGET_NAME)"
+      },
+      "name" : "Debug"
+    },
+    "5DE95A031C939427008487A8" : {
+      "isa" : "PBXContainerItemProxy",
+      "containerPortal" : "5D39CED81C6E983100DFCF86",
+      "remoteGlobalIDString" : "5D3A2F671C92559B0071F08F",
+      "remoteInfo" : "AdvanceSample-OSX",
+      "proxyType" : "1"
+    },
+    "5D3A2F381C9209EE0071F08F" : {
+      "isa" : "XCConfigurationList",
+      "defaultConfigurationIsVisible" : "0",
+      "defaultConfigurationName" : "Release",
+      "buildConfigurations" : [
+        "5D3A2F361C9209EE0071F08F",
+        "5D3A2F371C9209EE0071F08F"
+      ]
+    },
+    "5DA94F4C1C8112810039B9BB" : {
+      "path" : "CAMediaTimingFunctionTests.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5D39CEED1C6E983100DFCF86" : {
+      "isa" : "PBXContainerItemProxy",
+      "containerPortal" : "5D39CED81C6E983100DFCF86",
+      "remoteGlobalIDString" : "5D39CEE01C6E983100DFCF86",
+      "remoteInfo" : "Advance",
+      "proxyType" : "1"
+    },
+    "228E204A1C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4801C876AD1000CF9EE"
+    },
+    "2299A6831C7D35FE009DE78C" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "2299A6821C7D35FE009DE78C"
+    },
+    "5DB1A4711C876AD1000CF9EE" : {
+      "path" : "Animator",
+      "isa" : "PBXGroup",
+      "children" : [
+        "5DB1A4721C876AD1000CF9EE",
+        "5DB1A4731C876AD1000CF9EE"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "222E211E1C7D8CF00063FAA2" : {
+      "path" : "SpringConfigurationView.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "22B8E9831C7713FF0010EF5A" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5D39CEE11C6E983100DFCF86",
+      "settings" : {
+        "ATTRIBUTES" : [
+          "CodeSignOnCopy",
+          "RemoveHeadersOnCopy"
+        ]
+      }
+    },
+    "228E20471C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A48D1C876AD1000CF9EE"
+    },
+    "228E207A1C9CB9B00058ADA1" : {
+      "isa" : "PBXFrameworksBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+        "228E207B1C9CB9B00058ADA1"
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "5DB1A4621C876AD1000CF9EE" : {
+      "path" : "Animatable",
+      "isa" : "PBXGroup",
+      "children" : [
+        "5DB1A4631C876AD1000CF9EE"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "228E20931C9CBA490058ADA1" : {
+      "isa" : "XCBuildConfiguration",
+      "buildSettings" : {
+        "CODE_SIGN_IDENTITY" : "iPhone Developer",
+        "TVOS_DEPLOYMENT_TARGET" : "9.2",
+        "EMBEDDED_CONTENT_CONTAINS_SWIFT" : "YES",
+        "LD_RUNPATH_SEARCH_PATHS" : "$(inherited) @executable_path\/Frameworks",
+        "INFOPLIST_FILE" : "AdvanceSample-tvOS\/Info.plist",
+        "PRODUCT_BUNDLE_IDENTIFIER" : "co.storehouse.AdvanceSample-tvOS",
+        "ASSETCATALOG_COMPILER_APPICON_NAME" : "App Icon & Top Shelf Image",
+        "SDKROOT" : "appletvos",
+        "TARGETED_DEVICE_FAMILY" : "3",
+        "ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME" : "LaunchImage",
+        "PRODUCT_NAME" : "$(TARGET_NAME)"
+      },
+      "name" : "Debug"
+    },
+    "5D3A2F661C92559B0071F08F" : {
+      "isa" : "PBXResourcesBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+        "5D3A2F6D1C92559B0071F08F",
+        "5D3A2F701C92559B0071F08F"
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "5DE959F41C9392E1008487A8" : {
+      "path" : "Info.plist",
+      "isa" : "PBXFileReference",
+      "lastKnownFileType" : "text.plist.xml",
+      "sourceTree" : "<group>"
+    },
+    "228E20841C9CBA490058ADA1" : {
+      "isa" : "PBXResourcesBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+        "228E20901C9CBA490058ADA1"
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "228E205E1C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A47D1C876AD1000CF9EE"
+    },
+    "5DB1A4851C876AD1000CF9EE" : {
+      "path" : "CGSize+VectorConvertible.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "223E49741C76C9510048CAB6" : {
+      "path" : "SpringView.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5DB1A4AC1C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4881C876AD1000CF9EE"
+    },
+    "5DB1A4761C876AD1000CF9EE" : {
+      "path" : "Extensions",
+      "isa" : "PBXGroup",
+      "children" : [
+        "5DB1A4771C876AD1000CF9EE"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "228E207F1C9CB9B00058ADA1" : {
+      "isa" : "XCBuildConfiguration",
+      "buildSettings" : {
+        "IPHONEOS_DEPLOYMENT_TARGET" : "8.0",
+        "TEST_HOST" : "$(BUILT_PRODUCTS_DIR)\/AdvanceSample-tvOS.app\/AdvanceSample-tvOS",
+        "LD_RUNPATH_SEARCH_PATHS" : "$(inherited) @executable_path\/Frameworks @loader_path\/Frameworks",
+        "INFOPLIST_FILE" : "AdvanceTests-tvOS\/Info.plist",
+        "SDKROOT" : "appletvos",
+        "PRODUCT_BUNDLE_IDENTIFIER" : "co.storehouse.Advance",
+        "PRODUCT_MODULE_NAME" : "$(PRODUCT_NAME:c99extidentifier)Tests",
+        "PRODUCT_NAME" : "$(TARGET_NAME)"
+      },
+      "name" : "Release"
+    },
+    "5D3A2F501C920CC20071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4831C876AD1000CF9EE"
+    },
+    "5D39CEF41C6E983100DFCF86" : {
+      "isa" : "XCBuildConfiguration",
+      "buildSettings" : {
+        "CLANG_CXX_LIBRARY" : "libc++",
+        "GCC_WARN_UNDECLARED_SELECTOR" : "YES",
+        "CLANG_ENABLE_OBJC_ARC" : "YES",
+        "CLANG_WARN_DIRECT_OBJC_ISA_USAGE" : "YES_ERROR",
+        "VERSION_INFO_PREFIX" : "",
+        "CLANG_WARN__DUPLICATE_METHOD_MATCH" : "YES",
+        "CODE_SIGN_IDENTITY[sdk=iphoneos*]" : "iPhone Developer",
+        "SDKROOT" : "iphoneos",
+        "CLANG_CXX_LANGUAGE_STANDARD" : "gnu++0x",
+        "CLANG_WARN_BOOL_CONVERSION" : "YES",
+        "CLANG_WARN_UNREACHABLE_CODE" : "YES",
+        "ENABLE_STRICT_OBJC_MSGSEND" : "YES",
+        "CLANG_ANALYZER_NONNULL" : "YES",
+        "CLANG_WARN_ENUM_CONVERSION" : "YES",
+        "GCC_WARN_64_TO_32_BIT_CONVERSION" : "YES",
+        "GCC_WARN_UNINITIALIZED_AUTOS" : "YES_AGGRESSIVE",
+        "CLANG_WARN_EMPTY_BODY" : "YES",
+        "GCC_WARN_ABOUT_RETURN_TYPE" : "YES_ERROR",
+        "GCC_WARN_UNUSED_VARIABLE" : "YES",
+        "GCC_C_LANGUAGE_STANDARD" : "gnu99",
+        "CLANG_ENABLE_MODULES" : "YES",
+        "GCC_NO_COMMON_BLOCKS" : "YES",
+        "CLANG_WARN_INT_CONVERSION" : "YES",
+        "MTL_ENABLE_DEBUG_INFO" : "NO",
+        "TARGETED_DEVICE_FAMILY" : "1,2",
+        "ALWAYS_SEARCH_USER_PATHS" : "NO",
+        "COPY_PHASE_STRIP" : "NO",
+        "CLANG_WARN_CONSTANT_CONVERSION" : "YES",
+        "CURRENT_PROJECT_VERSION" : "1",
+        "CLANG_WARN_OBJC_ROOT_CLASS" : "YES_ERROR",
+        "VERSIONING_SYSTEM" : "apple-generic",
+        "VALIDATE_PRODUCT" : "YES",
+        "GCC_WARN_UNUSED_FUNCTION" : "YES",
+        "DEBUG_INFORMATION_FORMAT" : "dwarf-with-dsym",
+        "ENABLE_NS_ASSERTIONS" : "NO",
+        "IPHONEOS_DEPLOYMENT_TARGET" : "9.3"
+      },
+      "name" : "Release"
+    },
+    "228E20511C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A48C1C876AD1000CF9EE"
+    },
+    "5DB1A4A91C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4851C876AD1000CF9EE"
+    },
+    "222E211D1C7D4C300063FAA2" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "222E211C1C7D4C300063FAA2"
+    },
+    "228E20421C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A47A1C876AD1000CF9EE"
+    },
+    "5DB1A49C1C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4731C876AD1000CF9EE"
+    },
+    "5DB1A46B1C876AD1000CF9EE" : {
+      "path" : "UnitBezier.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "228E20721C9CB9B00058ADA1" : {
+      "isa" : "PBXSourcesBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+        "228E20731C9CB9B00058ADA1",
+        "228E20741C9CB9B00058ADA1",
+        "228E20751C9CB9B00058ADA1",
+        "228E20761C9CB9B00058ADA1",
+        "228E20771C9CB9B00058ADA1",
+        "228E20781C9CB9B00058ADA1",
+        "228E20791C9CB9B00058ADA1"
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "5D3A2F701C92559B0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5D3A2F6E1C92559B0071F08F"
+    },
+    "22F74AA41C7674BB004C6E4C" : {
+      "buildConfigurationList" : "22F74AB61C7674BB004C6E4C",
+      "productReference" : "22F74AA51C7674BB004C6E4C",
+      "productType" : "com.apple.product-type.application",
+      "productName" : "AnimationSample",
+      "isa" : "PBXNativeTarget",
+      "buildPhases" : [
+        "22F74AA11C7674BB004C6E4C",
+        "22F74AA21C7674BB004C6E4C",
+        "22F74AA31C7674BB004C6E4C",
+        "22B8E9821C7713F40010EF5A"
+      ],
+      "dependencies" : [
+        "22F74ABE1C767797004C6E4C"
+      ],
+      "name" : "AdvanceSample-iOS",
+      "buildRules" : [
+
+      ]
+    },
+    "5DB1A4991C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A46F1C876AD1000CF9EE"
+    },
+    "22142E671C810DA7000C6DEB" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "22142E661C810DA7000C6DEB"
+    },
+    "5D3A2F6F1C92559B0071F08F" : {
+      "path" : "Base.lproj\/MainMenu.xib",
+      "isa" : "PBXFileReference",
+      "name" : "Base",
+      "lastKnownFileType" : "file.xib",
+      "sourceTree" : "<group>"
+    },
+    "2212A2F11C82702500BB79F4" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "2212A2F01C82702500BB79F4"
+    },
+    "5D3A2F771C9255B30071F08F" : {
+      "isa" : "PBXContainerItemProxy",
+      "containerPortal" : "5D39CED81C6E983100DFCF86",
+      "remoteGlobalIDString" : "5D3A2F301C9209EE0071F08F",
+      "remoteInfo" : "Advance-OSX",
+      "proxyType" : "1"
+    },
+    "22DA152A1C9CBD0100A70551" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "228E206B1C9CB99D0058ADA1"
+    },
+    "228E20651C9CB99D0058ADA1" : {
+      "isa" : "PBXFrameworksBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "5DA94F4A1C80E2700039B9BB" : {
+      "path" : "UnitBezierTests.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5DB1A4801C876AD1000CF9EE" : {
+      "path" : "SpringFunction.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5DE959EE1C9392E1008487A8" : {
+      "isa" : "PBXResourcesBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "22F74ABE1C767797004C6E4C" : {
+      "isa" : "PBXTargetDependency",
+      "target" : "5D39CEE01C6E983100DFCF86",
+      "targetProxy" : "22F74ABD1C767797004C6E4C"
+    },
+    "5D39CEF91C6E983100DFCF86" : {
+      "isa" : "XCBuildConfiguration",
+      "buildSettings" : {
+        "IPHONEOS_DEPLOYMENT_TARGET" : "8.0",
+        "TEST_HOST" : "$(BUILT_PRODUCTS_DIR)\/AdvanceSample.app\/AdvanceSample",
+        "LD_RUNPATH_SEARCH_PATHS" : "$(inherited) @executable_path\/Frameworks @loader_path\/Frameworks",
+        "INFOPLIST_FILE" : "AdvanceTests-iOS\/Info.plist",
+        "PRODUCT_BUNDLE_IDENTIFIER" : "co.storehouse.Advance",
+        "PRODUCT_MODULE_NAME" : "$(PRODUCT_NAME:c99extidentifier)Tests",
+        "PRODUCT_NAME" : "Advance"
+      },
+      "name" : "Debug"
+    },
+    "228E20561C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A47C1C876AD1000CF9EE"
+    },
+    "5D3A2F3D1C920C810071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A46D1C876AD1000CF9EE"
+    },
+    "5DE95A021C93940E008487A8" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DE959E81C9388B9008487A8"
+    },
+    "222E21221C7E448D0063FAA2" : {
+      "path" : "DemoViewController.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5D3A2F551C920CCA0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A48C1C876AD1000CF9EE"
+    },
+    "5DB1A4B31C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4901C876AD1000CF9EE"
+    },
+    "5D3A2F451C920C970071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4751C876AD1000CF9EE"
+    },
+    "5DB1A47F1C876AD1000CF9EE" : {
+      "path" : "Spring.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5D3A2F2D1C9209EE0071F08F" : {
+      "isa" : "PBXFrameworksBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "5DB1A4A41C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A47F1C876AD1000CF9EE"
+    },
+    "5D39CEE01C6E983100DFCF86" : {
+      "buildConfigurationList" : "5D39CEF51C6E983100DFCF86",
+      "productReference" : "5D39CEE11C6E983100DFCF86",
+      "productType" : "com.apple.product-type.framework",
+      "productName" : "Advance",
+      "isa" : "PBXNativeTarget",
+      "buildPhases" : [
+        "5D39CEDC1C6E983100DFCF86",
+        "5D39CEDD1C6E983100DFCF86",
+        "5D39CEDE1C6E983100DFCF86",
+        "5D39CEDF1C6E983100DFCF86"
+      ],
+      "dependencies" : [
+
+      ],
+      "name" : "Advance-iOS",
+      "buildRules" : [
+
+      ]
+    },
+    "228E20771C9CB9B00058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "22168B5C1C7A5E3500BAE519"
+    },
+    "5D3A2F421C920C8C0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4651C876AD1000CF9EE"
+    },
+    "5D39CEEE1C6E983100DFCF86" : {
+      "isa" : "PBXTargetDependency",
+      "target" : "5D39CEE01C6E983100DFCF86",
+      "targetProxy" : "5D39CEED1C6E983100DFCF86"
+    },
+    "22142E681C810DAC000C6DEB" : {
+      "isa" : "PBXGroup",
+      "name" : "Gravity",
+      "children" : [
+        "22142E661C810DA7000C6DEB",
+        "226A752B1C84153E00A7F1FB",
+        "226A752D1C84206D00A7F1FB"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "228E204B1C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4631C876AD1000CF9EE"
+    },
+    "5DE95A041C939427008487A8" : {
+      "isa" : "PBXTargetDependency",
+      "target" : "5D3A2F671C92559B0071F08F",
+      "targetProxy" : "5DE95A031C939427008487A8"
+    },
+    "22F74ABA1C767757004C6E4C" : {
+      "path" : "GestureView.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5D39CEDF1C6E983100DFCF86" : {
+      "isa" : "PBXResourcesBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "5DB1A4941C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4671C876AD1000CF9EE"
+    },
+    "5DB1A4631C876AD1000CF9EE" : {
+      "path" : "Animatable.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5D3A2F6A1C92559B0071F08F" : {
+      "path" : "AppDelegate.swift",
+      "isa" : "PBXFileReference",
+      "lastKnownFileType" : "sourcecode.swift",
+      "sourceTree" : "<group>"
+    },
+    "222E21201C7E44660063FAA2" : {
+      "path" : "BrowserViewController.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5D3A2F461C920C9C0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4771C876AD1000CF9EE"
+    },
+    "228E20601C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A47E1C876AD1000CF9EE"
+    },
+    "5D3A2F671C92559B0071F08F" : {
+      "buildConfigurationList" : "5D3A2F721C92559B0071F08F",
+      "productReference" : "5D3A2F681C92559B0071F08F",
+      "productType" : "com.apple.product-type.application",
+      "productName" : "AdvanceSample-OSX",
+      "isa" : "PBXNativeTarget",
+      "buildPhases" : [
+        "5D3A2F641C92559B0071F08F",
+        "5D3A2F651C92559B0071F08F",
+        "5D3A2F661C92559B0071F08F",
+        "5D3A2F791C9255B30071F08F"
+      ],
+      "dependencies" : [
+        "5D3A2F781C9255B30071F08F"
+      ],
+      "name" : "AdvanceSample-OSX",
+      "buildRules" : [
+
+      ]
+    },
+    "22168B5B1C7A547300BAE519" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "22168B5A1C7A547300BAE519"
+    },
+    "5DE959F51C9392E1008487A8" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5D3A2F311C9209EE0071F08F"
+    },
+    "228E20851C9CBA490058ADA1" : {
+      "buildConfigurationList" : "228E20921C9CBA490058ADA1",
+      "productReference" : "228E20861C9CBA490058ADA1",
+      "productType" : "com.apple.product-type.application",
+      "productName" : "AdvanceSample-tvOS",
+      "isa" : "PBXNativeTarget",
+      "buildPhases" : [
+        "228E20821C9CBA490058ADA1",
+        "228E20831C9CBA490058ADA1",
+        "228E20841C9CBA490058ADA1",
+        "22DA152E1C9CBD0100A70551"
+      ],
+      "dependencies" : [
+        "22DA152D1C9CBD0100A70551"
+      ],
+      "name" : "AdvanceSample-tvOS",
+      "buildRules" : [
+
+      ]
+    },
+    "228E205F1C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4721C876AD1000CF9EE"
+    },
+    "5DB1A47A1C876AD1000CF9EE" : {
+      "path" : "Loop.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "223E49711C76C9350048CAB6" : {
+      "isa" : "PBXGroup",
+      "name" : "Springs",
+      "children" : [
+        "223E49721C76C9430048CAB6",
+        "222E211E1C7D8CF00063FAA2",
+        "223E49741C76C9510048CAB6"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "5D3A2F4F1C920CC20071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4821C876AD1000CF9EE"
+    },
+    "22F74AB31C7674BB004C6E4C" : {
+      "path" : "Info.plist",
+      "isa" : "PBXFileReference",
+      "lastKnownFileType" : "text.plist.xml",
+      "sourceTree" : "<group>"
+    },
+    "5DB1A4AD1C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A48A1C876AD1000CF9EE"
+    },
+    "5DB1A4771C876AD1000CF9EE" : {
+      "path" : "CAMediaTimingFunction.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5DB1A4681C876AD1000CF9EE" : {
+      "path" : "Basic",
+      "isa" : "PBXGroup",
+      "children" : [
+        "5DB1A4691C876AD1000CF9EE",
+        "5DB1A46A1C876AD1000CF9EE",
+        "5DB1A46B1C876AD1000CF9EE"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "228E20431C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A48A1C876AD1000CF9EE"
+    },
+    "5DB1A49D1C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4751C876AD1000CF9EE"
+    },
+    "5D39CED71C6E983100DFCF86" : {
+      "isa" : "PBXGroup",
+      "sourceTree" : "<group>",
+      "children" : [
+        "5DA94F491C80DEEB0039B9BB",
+        "5DB1A4611C876AD1000CF9EE",
+        "22F74AA61C7674BB004C6E4C",
+        "5D3A2F691C92559B0071F08F",
+        "228E20871C9CBA490058ADA1",
+        "5D39CEEF1C6E983100DFCF86",
+        "5DE959F11C9392E1008487A8",
+        "228E20971C9CBB300058ADA1",
+        "5D39CF281C6E9B2E00DFCF86",
+        "5D39CEE21C6E983100DFCF86"
+      ]
+    },
+    "5D3A2F711C92559B0071F08F" : {
+      "path" : "Info.plist",
+      "isa" : "PBXFileReference",
+      "lastKnownFileType" : "text.plist.xml",
+      "sourceTree" : "<group>"
+    },
+    "5DB1A48E1C876AD1000CF9EE" : {
+      "path" : "Vector4.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5DE959E91C9388B9008487A8" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DE959E81C9388B9008487A8"
+    },
+    "5DE959F01C9392E1008487A8" : {
+      "path" : "AdvanceTests-OSX.xctest",
+      "isa" : "PBXFileReference",
+      "includeInIndex" : "0",
+      "explicitFileType" : "wrapper.cfbundle",
+      "sourceTree" : "BUILT_PRODUCTS_DIR"
+    },
+    "5D3A2F4B1C920CBC0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A47F1C876AD1000CF9EE"
+    },
+    "5D3A2F781C9255B30071F08F" : {
+      "isa" : "PBXTargetDependency",
+      "target" : "5D3A2F301C9209EE0071F08F",
+      "targetProxy" : "5D3A2F771C9255B30071F08F"
+    },
+    "22DA152B1C9CBD0100A70551" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "228E206B1C9CB99D0058ADA1",
+      "settings" : {
+        "ATTRIBUTES" : [
+          "CodeSignOnCopy",
+          "RemoveHeadersOnCopy"
+        ]
+      }
+    },
+    "228E205A1C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4841C876AD1000CF9EE"
+    },
+    "5DA94F4D1C8112810039B9BB" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DA94F4C1C8112810039B9BB"
+    },
+    "5D3A2F481C920CBC0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A47C1C876AD1000CF9EE"
+    },
+    "5DE959FC1C93940E008487A8" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DA94F4E1C8114680039B9BB"
+    },
+    "5DB1A4811C876AD1000CF9EE" : {
+      "path" : "VectorConvertible",
+      "isa" : "PBXGroup",
+      "children" : [
+        "5DB1A4881C876AD1000CF9EE",
+        "5DB1A4871C876AD1000CF9EE",
+        "5DB1A4821C876AD1000CF9EE",
+        "5DB1A4831C876AD1000CF9EE",
+        "5DB1A4841C876AD1000CF9EE",
+        "5DB1A4851C876AD1000CF9EE",
+        "5DB1A4861C876AD1000CF9EE"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "228E20571C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4901C876AD1000CF9EE"
+    },
+    "5DE959EF1C9392E1008487A8" : {
+      "buildConfigurationList" : "5DE959F81C9392E1008487A8",
+      "productReference" : "5DE959F01C9392E1008487A8",
+      "productType" : "com.apple.product-type.bundle.unit-test",
+      "productName" : "AdvanceTests-OSX",
+      "isa" : "PBXNativeTarget",
+      "buildPhases" : [
+        "5DE959EC1C9392E1008487A8",
+        "5DE959ED1C9392E1008487A8",
+        "5DE959EE1C9392E1008487A8"
+      ],
+      "dependencies" : [
+        "5DE959F71C9392E1008487A8",
+        "5DE95A041C939427008487A8"
+      ],
+      "name" : "AdvanceTests-OSX",
+      "buildRules" : [
+
+      ]
+    },
+    "5DB1A4721C876AD1000CF9EE" : {
+      "path" : "Animator.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5D3A2F561C920CCA0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A48D1C876AD1000CF9EE"
+    },
+    "228E207B1C9CB9B00058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5D39CEE11C6E983100DFCF86"
+    },
+    "228E20481C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A46B1C876AD1000CF9EE"
+    },
+    "222E211F1C7D8CF00063FAA2" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "222E211E1C7D8CF00063FAA2"
+    },
+    "5D3A2F2E1C9209EE0071F08F" : {
+      "isa" : "PBXHeadersBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "5DB1A4A51C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4801C876AD1000CF9EE"
+    },
+    "5D39CEE11C6E983100DFCF86" : {
+      "path" : "Advance.framework",
+      "isa" : "PBXFileReference",
+      "includeInIndex" : "0",
+      "explicitFileType" : "wrapper.framework",
+      "sourceTree" : "BUILT_PRODUCTS_DIR"
+    },
+    "228E20781C9CB9B00058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DA94F4E1C8114680039B9BB"
+    },
+    "22F74ABB1C767757004C6E4C" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "22F74ABA1C767757004C6E4C"
+    },
+    "228E20941C9CBA490058ADA1" : {
+      "isa" : "XCBuildConfiguration",
+      "buildSettings" : {
+        "CODE_SIGN_IDENTITY" : "iPhone Developer",
+        "TVOS_DEPLOYMENT_TARGET" : "9.2",
+        "EMBEDDED_CONTENT_CONTAINS_SWIFT" : "YES",
+        "LD_RUNPATH_SEARCH_PATHS" : "$(inherited) @executable_path\/Frameworks",
+        "INFOPLIST_FILE" : "AdvanceSample-tvOS\/Info.plist",
+        "PRODUCT_BUNDLE_IDENTIFIER" : "co.storehouse.AdvanceSample-tvOS",
+        "ASSETCATALOG_COMPILER_APPICON_NAME" : "App Icon & Top Shelf Image",
+        "SDKROOT" : "appletvos",
+        "TARGETED_DEVICE_FAMILY" : "3",
+        "ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME" : "LaunchImage",
+        "PRODUCT_NAME" : "$(TARGET_NAME)"
+      },
+      "name" : "Release"
+    },
+    "5DE959EA1C938C54008487A8" : {
+      "isa" : "PBXContainerItemProxy",
+      "containerPortal" : "5D39CED81C6E983100DFCF86",
+      "remoteGlobalIDString" : "22F74AA41C7674BB004C6E4C",
+      "remoteInfo" : "AdvanceSample",
+      "proxyType" : "1"
+    },
+    "5DB1A4951C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4691C876AD1000CF9EE"
+    },
+    "5D3A2F6B1C92559B0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5D3A2F6A1C92559B0071F08F"
+    },
+    "223E49751C76C9510048CAB6" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "223E49741C76C9510048CAB6"
+    },
+    "5DB1A4861C876AD1000CF9EE" : {
+      "path" : "CGVector+VectorConvertible.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "228E20611C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4861C876AD1000CF9EE"
+    },
+    "5D3A2F681C92559B0071F08F" : {
+      "path" : "AdvanceSample-OSX.app",
+      "isa" : "PBXFileReference",
+      "includeInIndex" : "0",
+      "explicitFileType" : "wrapper.application",
+      "sourceTree" : "BUILT_PRODUCTS_DIR"
+    },
+    "5D39CEF51C6E983100DFCF86" : {
+      "isa" : "XCConfigurationList",
+      "defaultConfigurationIsVisible" : "0",
+      "defaultConfigurationName" : "Release",
+      "buildConfigurations" : [
+        "5D39CEF61C6E983100DFCF86",
+        "5D39CEF71C6E983100DFCF86"
+      ]
+    },
+    "5D3A2F511C920CC20071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4841C876AD1000CF9EE"
+    },
+    "228E20521C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A48E1C876AD1000CF9EE"
+    },
+    "5DB1A47B1C876AD1000CF9EE" : {
+      "path" : "Simulation",
+      "isa" : "PBXGroup",
+      "name" : "Dynamics",
+      "children" : [
+        "5DB1A47C1C876AD1000CF9EE",
+        "5DB1A47D1C876AD1000CF9EE",
+        "5DB1A47E1C876AD1000CF9EE",
+        "5DB1A47F1C876AD1000CF9EE",
+        "5DB1A4801C876AD1000CF9EE"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "22F74ABC1C76778E004C6E4C" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5D39CEE11C6E983100DFCF86"
+    },
+    "5DB1A4A01C876AD1000CF9EE" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A47A1C876AD1000CF9EE"
+    },
+    "5DB1A46C1C876AD1000CF9EE" : {
+      "path" : "Decay",
+      "isa" : "PBXGroup",
+      "children" : [
+        "5DB1A46D1C876AD1000CF9EE"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "228E20731C9CB9B00058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DA94F4C1C8112810039B9BB"
+    },
+    "22F74AB41C7674BB004C6E4C" : {
+      "isa" : "XCBuildConfiguration",
+      "buildSettings" : {
+        "CODE_SIGN_IDENTITY" : "iPhone Developer",
+        "EMBEDDED_CONTENT_CONTAINS_SWIFT" : "YES",
+        "IPHONEOS_DEPLOYMENT_TARGET" : "8.2",
+        "LD_RUNPATH_SEARCH_PATHS" : "$(inherited) @executable_path\/Frameworks",
+        "INFOPLIST_FILE" : "$(SRCROOT)\/AdvanceSample-iOS\/Info.plist",
+        "PRODUCT_BUNDLE_IDENTIFIER" : "co.storehouse.AdvanceSample",
+        "ASSETCATALOG_COMPILER_APPICON_NAME" : "AppIcon",
+        "PRODUCT_NAME" : "AdvanceSample"
+      },
+      "name" : "Debug"
+    },
+    "22F74AA51C7674BB004C6E4C" : {
+      "path" : "AdvanceSample.app",
+      "isa" : "PBXFileReference",
+      "includeInIndex" : "0",
+      "explicitFileType" : "wrapper.application",
+      "sourceTree" : "BUILT_PRODUCTS_DIR"
+    },
+    "5DB1A4691C876AD1000CF9EE" : {
+      "path" : "BasicAnimation.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5D39CEDB1C6E983100DFCF86" : {
+      "isa" : "XCConfigurationList",
+      "defaultConfigurationIsVisible" : "0",
+      "defaultConfigurationName" : "Release",
+      "buildConfigurations" : [
+        "5D39CEF31C6E983100DFCF86",
+        "5D39CEF41C6E983100DFCF86"
+      ]
+    },
+    "5DB1A4901C876AD1000CF9EE" : {
+      "path" : "VectorType.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "226A752D1C84206D00A7F1FB" : {
+      "path" : "GravityFunction.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5D39CED81C6E983100DFCF86" : {
+      "buildConfigurationList" : "5D39CEDB1C6E983100DFCF86",
+      "targets" : [
+        "5D39CEE01C6E983100DFCF86",
+        "228E20401C9CB99D0058ADA1",
+        "5D3A2F301C9209EE0071F08F",
+        "5D39CEEA1C6E983100DFCF86",
+        "228E206D1C9CB9B00058ADA1",
+        "5DE959EF1C9392E1008487A8",
+        "22F74AA41C7674BB004C6E4C",
+        "5D3A2F671C92559B0071F08F",
+        "228E20851C9CBA490058ADA1"
+      ],
+      "developmentRegion" : "English",
+      "knownRegions" : [
+        "en",
+        "Base"
+      ],
+      "isa" : "PBXProject",
+      "compatibilityVersion" : "Xcode 3.2",
+      "productRefGroup" : "5D39CEE21C6E983100DFCF86",
+      "projectDirPath" : "",
+      "attributes" : {
+        "LastSwiftUpdateCheck" : "0730",
+        "LastUpgradeCheck" : "0730",
+        "ORGANIZATIONNAME" : "Storehouse Media Inc",
+        "TargetAttributes" : {
+          "22F74AA41C7674BB004C6E4C" : {
+            "CreatedOnToolsVersion" : "7.2.1"
+          },
+          "5D39CEE01C6E983100DFCF86" : {
+            "CreatedOnToolsVersion" : "7.3"
+          },
+          "5DE959EF1C9392E1008487A8" : {
+            "TestTargetID" : "5D3A2F671C92559B0071F08F",
+            "CreatedOnToolsVersion" : "7.2.1"
+          },
+          "228E206D1C9CB9B00058ADA1" : {
+            "TestTargetID" : "228E20851C9CBA490058ADA1"
+          },
+          "5D3A2F671C92559B0071F08F" : {
+            "CreatedOnToolsVersion" : "7.2.1"
+          },
+          "5D39CEEA1C6E983100DFCF86" : {
+            "TestTargetID" : "22F74AA41C7674BB004C6E4C",
+            "CreatedOnToolsVersion" : "7.3"
+          },
+          "5D3A2F301C9209EE0071F08F" : {
+            "CreatedOnToolsVersion" : "7.2.1"
+          },
+          "228E20851C9CBA490058ADA1" : {
+            "CreatedOnToolsVersion" : "7.3"
+          }
+        }
+      },
+      "hasScannedForEncodings" : "0",
+      "projectRoot" : "",
+      "mainGroup" : "5D39CED71C6E983100DFCF86"
+    },
+    "228E20661C9CB99D0058ADA1" : {
+      "isa" : "PBXHeadersBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "5DA94F4B1C80E2700039B9BB" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DA94F4A1C80E2700039B9BB"
+    },
+    "5DB1A48F1C876AD1000CF9EE" : {
+      "path" : "VectorMathCapable.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "222E21231C7E448D0063FAA2" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "222E21221C7E448D0063FAA2"
+    },
+    "5D28A2D71C93757200E5A1E9" : {
+      "path" : "SpringView.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5DE959F11C9392E1008487A8" : {
+      "path" : "AdvanceTests-OSX",
+      "isa" : "PBXGroup",
+      "children" : [
+        "5DE959F41C9392E1008487A8"
+      ],
+      "sourceTree" : "SOURCE_ROOT"
+    },
+    "5D3A2F4C1C920CBC0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4801C876AD1000CF9EE"
+    },
+    "228E205B1C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A48F1C876AD1000CF9EE"
+    },
+    "5D3A2F631C923ADB0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5D3A2F5E1C922DAA0071F08F"
+    },
+    "5D39CEEF1C6E983100DFCF86" : {
+      "path" : "AdvanceTests-iOS",
+      "isa" : "PBXGroup",
+      "children" : [
+        "5DA94F4E1C8114680039B9BB",
+        "22168B5A1C7A547300BAE519",
+        "5DA94F471C80DAA00039B9BB",
+        "22168B5C1C7A5E3500BAE519",
+        "5DA94F4A1C80E2700039B9BB",
+        "5DA94F4C1C8112810039B9BB",
+        "5DE959E81C9388B9008487A8",
+        "5D39CEF21C6E983100DFCF86"
+      ],
+      "sourceTree" : "<group>"
+    },
+    "5DE959FD1C93940E008487A8" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "22168B5A1C7A547300BAE519"
+    },
+    "5D3A2F5A1C920CCA0071F08F" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A48A1C876AD1000CF9EE"
+    },
+    "228E204C1C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5D3A2F5E1C922DAA0071F08F"
+    },
+    "226A752B1C84153E00A7F1FB" : {
+      "path" : "GravitySimulation.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "5D3A2F301C9209EE0071F08F" : {
+      "buildConfigurationList" : "5D3A2F381C9209EE0071F08F",
+      "productReference" : "5D3A2F311C9209EE0071F08F",
+      "productType" : "com.apple.product-type.framework",
+      "productName" : "Advance-OSX",
+      "isa" : "PBXNativeTarget",
+      "buildPhases" : [
+        "5D3A2F2C1C9209EE0071F08F",
+        "5D3A2F2D1C9209EE0071F08F",
+        "5D3A2F2E1C9209EE0071F08F",
+        "5D3A2F2F1C9209EE0071F08F"
+      ],
+      "dependencies" : [
+
+      ],
+      "name" : "Advance-OSX",
+      "buildRules" : [
+
+      ]
+    },
+    "5DB1A4731C876AD1000CF9EE" : {
+      "path" : "AnimatorContext.swift",
+      "isa" : "PBXFileReference",
+      "sourceTree" : "<group>",
+      "fileEncoding" : "4",
+      "lastKnownFileType" : "sourcecode.swift"
+    },
+    "228E207C1C9CB9B00058ADA1" : {
+      "isa" : "PBXResourcesBuildPhase",
+      "buildActionMask" : "2147483647",
+      "files" : [
+
+      ],
+      "runOnlyForDeploymentPostprocessing" : "0"
+    },
+    "228E20491C9CB99D0058ADA1" : {
+      "isa" : "PBXBuildFile",
+      "fileRef" : "5DB1A4651C876AD1000CF9EE"
+    },
+    "22F74AAE1C7674BB004C6E4C" : {
+      "path" : "Assets.xcassets",
+      "isa" : "PBXFileReference",
+      "lastKnownFileType" : "folder.assetcatalog",
+      "sourceTree" : "<group>"
+    }
+  },
+  "rootObject" : "5D39CED81C6E983100DFCF86",
+  "objectVersion" : "46",
+  "archiveVersion" : "1"
+}

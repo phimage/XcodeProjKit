@@ -8,16 +8,97 @@
 
 import Foundation
 
-public class XcodeProj {
+open class PropertyList {
+
+    public enum Format {
+        case binary
+        case xml
+        case json
+        case openStep
+
+        public func toPropertyListformat() -> PropertyListSerialization.PropertyListFormat? {
+            switch self {
+            case .binary:
+                return .binary
+            case .xml:
+                return .xml
+            case .openStep:
+                return .openStep
+            case .json:
+                return nil
+            }
+        }
+
+        public init(_ format: PropertyListSerialization.PropertyListFormat) {
+            switch format {
+            case .binary:
+                self = .binary
+            case .xml:
+                self = .xml
+            case .openStep:
+                self = .openStep
+            }
+        }
+
+        public init?(_ format: PropertyListSerialization.PropertyListFormat?) {
+            if let format = format {
+                self.init(format)
+            } else {
+                return nil
+            }
+        }
+    }
+
+    public let dict: PBXObject.Fields
+    public let format: Format
+
+    public init(dict: PBXObject.Fields, format: Format) throws {
+        self.dict = dict
+        self.format = format
+    }
+
+    public convenience init(propertyListData data: Data) throws {
+        let format: Format
+        let obj: Any
+        if data.first == 123 { // start with {
+            obj = try JSONSerialization.jsonObject(with: data)
+            format = .json
+        } else {
+            var propertyListFormat: PropertyListSerialization.PropertyListFormat = .binary
+            obj = try PropertyListSerialization.propertyList(from: data, options: [], format: &propertyListFormat)
+            format = .init(propertyListFormat)
+        }
+
+        guard let dict = obj as? PBXObject.Fields else {
+            throw XcodeProjError.invalidData(object: obj)
+        }
+
+        try self.init(dict: dict, format: format)
+    }
+
+    public convenience init(url: URL) throws {
+        assert(url.isFileURL)
+        do {
+            let data = try Data(contentsOf: url)
+            try self.init(propertyListData: data)
+        } catch let error as XcodeProjError {
+            throw error
+        } catch {
+            throw XcodeProjError.failedToReadFile(error: error)
+        }
+    }
+
+}
+
+public class XcodeProj: PropertyList {
 
     public static let pbxprojFileExtension = "pbxproj"
     public static let pbxprojFileName = "project.pbxproj"
 
-    public let dict: PBXObject.Fields
-    public let format: PropertyListSerialization.PropertyListFormat
     public var projectName: String = "PRODUCT_NAME"
     public var lineEnding: String = "\r\n"
 
+    public let objects: Objects
     public let project: PBXProject
 
     public class Objects: PBXObjectFactory {
@@ -69,7 +150,6 @@ public class XcodeProj {
 
     }
 
-    public let objects: Objects
 
     // MARK: init
     public convenience init(url: URL) throws {
@@ -112,35 +192,25 @@ public class XcodeProj {
         }
     }
 
-    public convenience init(propertyListData data: Data) throws {
-        var format: PropertyListSerialization.PropertyListFormat = .binary
-        let obj = try PropertyListSerialization.propertyList(from: data, options: [], format: &format)
-
-        guard let dict = obj as? PBXObject.Fields else {
-            throw XcodeProjError.invalidData(object: obj)
-        }
-
-        try self.init(dict: dict, format: format)
+    public convenience init(dict: PBXObject.Fields, format: PropertyListSerialization.PropertyListFormat) throws {
+        try self.init(dict: dict, format: .init(format))
     }
 
-    init(dict: PBXObject.Fields, format: PropertyListSerialization.PropertyListFormat) throws {
-        self.dict = dict
-        self.format = format
-
+    public override init(dict: PBXObject.Fields, format: Format) throws {
         self.objects = Objects()
 
-        if let objs = self.dict[FieldKey.objects.rawValue] as? [String: PBXObject.Fields] {
+        if let objs = dict[FieldKey.objects.rawValue] as? [String: PBXObject.Fields] {
             // Create all objects
             for (ref, obj) in objs {
                 self.objects.dict[ref] = try XcodeProj.createObject(ref: ref, fields: obj, objects: self.objects)
             }
 
             // parsing project
-            if let rootObjectRef = self.dict[FieldKey.rootObject.rawValue] as? String {
+            if let rootObjectRef = dict[FieldKey.rootObject.rawValue] as? String {
                 if let projDict = objs[rootObjectRef] {
                     self.project = PBXProject(ref: rootObjectRef, fields: projDict, objects: self.objects)
                     if let mainGroup = self.project.mainGroup {
-                        objects.fullFilePaths = paths(mainGroup, prefix: "")
+                        objects.fullFilePaths = XcodeProj.paths(mainGroup, prefix: "")
                     } else {
                         if let mainGroupref = self.project.string(PBXProject.PBXKeys.mainGroup) {
                             throw XcodeProjError.objectMissing(key: mainGroupref, expectedType: .group)
@@ -157,6 +227,7 @@ public class XcodeProj {
         } else {
             throw XcodeProjError.fieldKeyMissing(.objects)
         }
+        try super.init(dict: dict, format: format)
     }
 
     static func createObject(ref: String, fields: PBXObject.Fields, objects: XcodeProj.Objects) throws -> PBXObject {

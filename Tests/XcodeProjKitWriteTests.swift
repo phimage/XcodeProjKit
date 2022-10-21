@@ -102,12 +102,22 @@ class XcodeProjKitWriteTests: XCTestCase {
                 XCTAssertNotNil(proj.project.buildConfigurationList)
                 let testURL = URL(fileURLWithPath: XcodeProjKitWriteTests.directory + resource.replacingOccurrences(of: "ok/", with: "") + "." + XcodeProj.pbxprojFileExtension)
                 try proj.write(to: testURL)
-                
+
+                assertContentsEqual(url, testURL)
+
+                // test passing by xml before recoding to openstep
                 let testURLPlist = URL(fileURLWithPath: XcodeProjKitWriteTests.directory + resource.replacingOccurrences(of: "ok/", with: "") + ".plist")
                 try proj.write(to: testURLPlist, format: .xml)
-                
-                compare(url, testURL)
-                
+                try XcodeProj(url: testURLPlist).write(to: testURLPlist.appendingPathExtension("pbxproj"), format: .openStep, projectName: proj.projectName, lineEnding: proj.lineEnding)
+                print("\(url.path)")
+                print("\(testURLPlist.appendingPathExtension("pbxproj").path)")
+                assertContentsEqual(url, testURLPlist.appendingPathExtension("pbxproj"))
+
+                // test passing by json before recoding to openstep
+                let testURLJSON = URL(fileURLWithPath: XcodeProjKitWriteTests.directory + resource.replacingOccurrences(of: "ok/", with: "") + ".json")
+                try proj.write(to: testURLJSON, format: .json)
+                try XcodeProj(url: testURLJSON).write(to: testURLJSON.appendingPathExtension(".pbxproj"), format: .openStep, projectName: proj.projectName, lineEnding: proj.lineEnding)
+                assertContentsEqual(url, testURLJSON.appendingPathExtension(".pbxproj"))
             } catch {
                 XCTFail("\(error)")
             }
@@ -116,35 +126,8 @@ class XcodeProjKitWriteTests: XCTestCase {
         }
     }
 
-    func compare(_ url: URL, _ testURL: URL ) {
-        do {
-            let contents = try String(contentsOf: url)
-            let testContents = try String(contentsOf: testURL)
-            #if os(Linux)
-            XCTAssertEqual(contents.replacingOccurrences(matchingPattern: "classes = \\{\\s*\\};", by: "classes = [:];"), testContents, "diff \(url.path) \(testURL.path)")
-            #else
-            XCTAssertEqual(contents, testContents)
-            #endif
-            
-        } catch {
-            XCTFail("\(error)")
-        }
-        
-    }
-    
 }
 
-fileprivate extension String {
-    func replacingOccurrences(matchingPattern pattern: String, by replacement: String) -> String {
-        do {
-            let expression = try NSRegularExpression(pattern: pattern, options: [])
-            let matches = expression.matches(in: self, options: [], range: NSRange(startIndex..<endIndex, in: self))
-            return matches.reversed().reduce(into: self) { (current, result) in
-                let range = Range(result.range, in: current)!
-                current.replaceSubrange(range, with: replacement)
-            }
-        } catch {
-            return self
-        }
-    }
-}
+
+
+

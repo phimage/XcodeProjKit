@@ -53,7 +53,7 @@ class XcodeProjKitEditionTests: XCTestCase {
                 XCTAssertEqual(PBXProject.Version(major: 12, minor: 0), testproj.project.lastUpgradeCheck)
 
 
-                compare(url, testURL)
+                assertContentsNotEqual(url, testURL)
 
             } catch {
                 XCTFail("\(error)")
@@ -63,19 +63,4 @@ class XcodeProjKitEditionTests: XCTestCase {
         }
     }
 
-    func compare(_ url: URL, _ testURL: URL ) {
-        do {
-            let contents = try String(contentsOf: url)
-            let testContents = try String(contentsOf: testURL)
-            #if os(Linux)
-            XCTAssertNotEqual(contents.replacingOccurrences(matchingPattern: "classes = \\{\\s*\\};", by: "classes = [:];"), testContents, "diff \(url.path) \(testURL.path)")
-            #else
-            XCTAssertNotEqual(contents, testContents)
-            #endif
-
-        } catch {
-            XCTFail("\(error)")
-        }
-
-    }
 }
