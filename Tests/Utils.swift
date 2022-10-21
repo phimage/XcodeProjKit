@@ -52,12 +52,7 @@ extension XCTestCase {
         do {
             let contents = try String(contentsOf: url)
             let testContents = try String(contentsOf: testURL)
-#if os(Linux)
-            XCTAssertEqual(contents.replacingOccurrences(matchingPattern: "classes = \\{\\s*\\};", by: "classes = [:];"), testContents, "diff \(url.path) \(testURL.path)")
-#else
             XCTAssertEqual(contents, testContents)
-#endif
-
         } catch {
             XCTFail("\(error)")
         }
@@ -67,12 +62,7 @@ extension XCTestCase {
         do {
             let contents = try String(contentsOf: url)
             let testContents = try String(contentsOf: testURL)
-#if os(Linux)
-            XCTAssertNotEqual(contents.replacingOccurrences(matchingPattern: "classes = \\{\\s*\\};", by: "classes = [:];"), testContents, "diff \(url.path) \(testURL.path)")
-#else
             XCTAssertNotEqual(contents, testContents)
-#endif
-
         } catch {
             XCTFail("\(error)")
         }

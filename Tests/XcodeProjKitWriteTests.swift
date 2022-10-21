@@ -109,8 +109,6 @@ class XcodeProjKitWriteTests: XCTestCase {
                 let testURLPlist = URL(fileURLWithPath: XcodeProjKitWriteTests.directory + resource.replacingOccurrences(of: "ok/", with: "") + ".plist")
                 try proj.write(to: testURLPlist, format: .xml)
                 try XcodeProj(url: testURLPlist).write(to: testURLPlist.appendingPathExtension("pbxproj"), format: .openStep, projectName: proj.projectName, lineEnding: proj.lineEnding)
-                print("\(url.path)")
-                print("\(testURLPlist.appendingPathExtension("pbxproj").path)")
                 assertContentsEqual(url, testURLPlist.appendingPathExtension("pbxproj"))
 
                 // test passing by json before recoding to openstep

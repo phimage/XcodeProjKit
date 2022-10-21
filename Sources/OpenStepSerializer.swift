@@ -65,8 +65,16 @@ class OpenStepSerializer {
                 if key == "rootObject" {
                     comment = " /* Project object */"
                 }
-
+#if os(Linux)
+                let row: String
+                if let dict = val as? [AnyHashable: Any], dict.isEmpty { 
+                    row = "\(key) = {\n}\(comment);" // print on linux give [:] ...
+                } else {
+                    row = "\(key) = \(val)\(comment);"
+                }
+#else
                 let row = "\(key) = \(val)\(comment);"
+#endif
                 for line in row.components(separatedBy: "\n") {
                     lines.append("\t\(line)")
                 }

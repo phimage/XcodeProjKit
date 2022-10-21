@@ -48,8 +48,7 @@ class XcodeProjKitEditionTests: XCTestCase {
 
                 let testURL = URL(fileURLWithPath: XcodeProjKitEditionTests.directory + resource.replacingOccurrences(of: "ok/", with: "") + "." + XcodeProj.pbxprojFileExtension)
                 try proj.write(to: testURL)
-
-                let testproj = try XcodeProj(url: testURL)
+                let testproj: XcodeProj = try XcodeProj(url: testURL)
                 XCTAssertEqual(PBXProject.Version(major: 12, minor: 0), testproj.project.lastUpgradeCheck)
 
 
