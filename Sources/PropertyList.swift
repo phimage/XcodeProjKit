@@ -63,7 +63,7 @@ open class PropertyList {
                 return nil
             }
         }
-        
+
     }
 
     public let dict: PBXObject.Fields
@@ -107,10 +107,17 @@ open class PropertyList {
 
      // MARK: - Write
     public func write(to url: URL,
-                      format: Format,
+                      format: Format? = nil,
+                      projectName: String? = nil,
+                      lineEnding: String? = nil,
                       atomic: Bool = true) throws {
+        let format = format ?? .xml
         if format == .openStep {
-            throw XcodeProjError.notSupported
+            try XcodeProj(dict: self.dict, format: Format.openStep).write(to: url,
+                                                                         format: format,
+                                                                         projectName: projectName,
+                                                                         lineEnding: lineEnding,
+                                                                         atomic: atomic)
         } else if let propertyListformat = format.toPropertyListformat() {
             let data = try PropertyListSerialization.data(
                 fromPropertyList: dict,
@@ -131,9 +138,9 @@ open class PropertyList {
         }
     }
 
-    public func data() throws -> Data {
+    public func data(projectName: String? = nil) throws -> Data {
         if format == .openStep {
-            throw XcodeProjError.notSupported
+            return try XcodeProj(dict: self.dict, format: Format.openStep).data(projectName: projectName)
         } else if let propertyListformat = format.toPropertyListformat() {
             return try PropertyListSerialization.data(fromPropertyList: dict, format: propertyListformat, options: 0)
         } else if format == .json {

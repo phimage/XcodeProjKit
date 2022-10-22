@@ -22,7 +22,4 @@ public enum XcodeProjError: Error {
     // object missing
     case objectMissing(key: String, expectedType: Isa?)
 
-    // not supported
-    case notSupported
-
 }

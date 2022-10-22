@@ -158,6 +158,53 @@ public class XcodeProj: PropertyList {
         return PBXObject(ref: ref, fields: fields, objects: objects)
     }
 
+    public override func write(to url: URL,
+                               format: Format? = nil,
+                               projectName: String? = nil,
+                               lineEnding: String? = nil,
+                               atomic: Bool = true) throws {
+        let pbxprojURL: URL
+        let name: String
+        if url.isDirectoryURL {
+            pbxprojURL = url.appendingPathComponent(XcodeProj.pbxprojFileName, isDirectory: false)
+            let subpaths = url.pathComponents
+            if let projectName = projectName {
+                name = projectName
+            } else {
+                // Find in project
+                if let last = subpaths.last, let range = last.range(of: ".xcodeproj") {
+                    name = String(last[...range.lowerBound])
+                } else {
+                    name = self.projectName // default
+                }
+            }
+        } else {
+            pbxprojURL = url
+            name = projectName ?? self.projectName
+        }
+        let lineEnding = lineEnding ?? self.lineEnding
+        let format = format ?? self.format
+        if format == .openStep {
+            let serializer = OpenStepSerializer(projectName: name, lineEnding: lineEnding, projectFile: self)
+            try serializer.serialize().write(to: pbxprojURL, atomically: atomic, encoding: .utf8)
+        } else {
+            try super.write(to: pbxprojURL,
+                            format: format,
+                            projectName: projectName,
+                            lineEnding: lineEnding,
+                            atomic: atomic)
+        }
+    }
+
+    public override func data(projectName: String? = nil) throws -> Data {
+        if format == .openStep {
+            let projectName = projectName ?? self.projectName
+            let serializer = OpenStepSerializer(projectName: projectName, projectFile: self)
+            return try serializer.serialize().data(using: .utf8) ?? Data()
+        }
+        return try super.data(projectName: projectName)
+    }
+
 }
 
 let extractProjetName = "Build configuration list for PBXProject \""
