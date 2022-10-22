@@ -40,8 +40,8 @@ try xcodeProj.write(to: newURL, format: .openStep)
 ```swift
 let package = Package(
     name: "MyProject",
-    dependencies: [
-        .package(url: "https://github.com/phimage/XcodeProjKit.git", .upToNextMajor(from: "2.2.0")),
+    dependencies: ["
+        .package(url: "https://github.com/phimage/XcodeProjKit.git", from: "3.0.0"),
         ],
     targets: [
         .target(
@@ -68,7 +68,7 @@ Add the project to your Podfile.
 pod "XcodeProjKit"
 ```
 
-### Referenes
+### References
 
 - http://danwright.info/blog/2010/10/xcode-pbxproject-files/
 - http://www.monobjc.net/xcode-project-file-format.html
@@ -79,9 +79,10 @@ pod "XcodeProjKit"
 - @Karumi for the test files : https://github.com/Karumi/Kin
 - @allu22 for the PR
 
-### TODO
+### Used by
 
-- Make a command line tools
+- [iblinter](https://github.com/IBDecodable/IBLinter) a command line tool to check your storyboards
+- [plistconvert](https://github.com/phimage/plistconvert) a command line tool to convert plist and pbxproj to different supported format (work on linux and macOS)
 
 ### Contribute
 - Fork
