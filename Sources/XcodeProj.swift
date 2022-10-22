@@ -8,88 +8,6 @@
 
 import Foundation
 
-open class PropertyList {
-
-    public enum Format {
-        case binary
-        case xml
-        case json
-        case openStep
-
-        public func toPropertyListformat() -> PropertyListSerialization.PropertyListFormat? {
-            switch self {
-            case .binary:
-                return .binary
-            case .xml:
-                return .xml
-            case .openStep:
-                return .openStep
-            case .json:
-                return nil
-            }
-        }
-
-        public init(_ format: PropertyListSerialization.PropertyListFormat) {
-            switch format {
-            case .binary:
-                self = .binary
-            case .xml:
-                self = .xml
-            case .openStep:
-                self = .openStep
-            }
-        }
-
-        public init?(_ format: PropertyListSerialization.PropertyListFormat?) {
-            if let format = format {
-                self.init(format)
-            } else {
-                return nil
-            }
-        }
-    }
-
-    public let dict: PBXObject.Fields
-    public let format: Format
-
-    public init(dict: PBXObject.Fields, format: Format) throws {
-        self.dict = dict
-        self.format = format
-    }
-
-    public convenience init(propertyListData data: Data) throws {
-        let format: Format
-        let obj: Any
-        if data.first == 123 { // start with {
-            obj = try JSONSerialization.jsonObject(with: data)
-            format = .json
-        } else {
-            var propertyListFormat: PropertyListSerialization.PropertyListFormat = .binary
-            obj = try PropertyListSerialization.propertyList(from: data, options: [], format: &propertyListFormat)
-            format = .init(propertyListFormat)
-        }
-
-        guard let dict = obj as? PBXObject.Fields else {
-            throw XcodeProjError.invalidData(object: obj)
-        }
-
-        try self.init(dict: dict, format: format)
-    }
-
-    public convenience init(url: URL) throws {
-        assert(url.isFileURL)
-        do {
-            let data = try Data(contentsOf: url)
-            try self.init(propertyListData: data)
-        } catch let error as XcodeProjError {
-            throw error
-        } catch {
-            throw XcodeProjError.failedToReadFile(error: error)
-        }
-    }
-
-}
-
 public class XcodeProj: PropertyList {
 
     public static let pbxprojFileExtension = "pbxproj"
@@ -149,7 +67,6 @@ public class XcodeProj: PropertyList {
         #endif
 
     }
-
 
     // MARK: init
     public convenience init(url: URL) throws {

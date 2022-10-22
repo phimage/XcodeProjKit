@@ -14,9 +14,9 @@ class OpenStepSerializer {
     let projectFile: XcodeProj
     let lineEnding: String
 
-    init(projectName: String, lineEnding: String = "\r\n", projectFile: XcodeProj) {
+    init(projectName: String, lineEnding: String? = "\r\n", projectFile: XcodeProj) {
         self.projectName = projectName
-        self.lineEnding = lineEnding
+        self.lineEnding = lineEnding ?? "\r\n"
         self.projectFile = projectFile
     }
 
@@ -67,7 +67,7 @@ class OpenStepSerializer {
                 }
 #if os(Linux)
                 let row: String
-                if let dict = val as? [AnyHashable: Any], dict.isEmpty { 
+                if let dict = val as? [AnyHashable: Any], dict.isEmpty {
                     row = "\(key) = {\n}\(comment);" // print on linux give [:] ...
                 } else {
                     row = "\(key) = \(val)\(comment);"
