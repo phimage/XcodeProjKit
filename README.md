@@ -1,6 +1,14 @@
 # XcodeProjKit
 
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://mit-license.org)
+[![Platform](http://img.shields.io/badge/platform-macOS_Linux-lightgrey.svg?style=flat)](https://developer.apple.com/resources/)
+[![Language](http://img.shields.io/badge/language-swift-orange.svg?style=flat)](https://developer.apple.com/swift)
+[![Swift](https://github.com/phimage/XcodeProjKit/actions/workflows/swift.yml/badge.svg)](https://github.com/phimage/XcodeProjKit/actions/workflows/swift.yml)
+[![Sponsor](https://img.shields.io/badge/Sponsor-%F0%9F%A7%A1-white.svg?style=flat)](https://github.com/sponsors/phimage)
+
 Parse project file and write it to open step format.
+
+Work also on simple plist in xml, binary or json format.
 
 ## Project description
 
