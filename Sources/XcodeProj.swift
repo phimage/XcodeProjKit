@@ -79,20 +79,20 @@ public class XcodeProj: PropertyList {
             let data = try Data(contentsOf: pbxprojURL)
             try self.init(propertyListData: data)
 
-            if !url.isDirectoryURL, let str = String(data: data, encoding: .utf8) {
-
+            if let str = String(data: data, encoding: .utf8) {
                 if str.contains("\r\n") { // xxx very basic way to detect line ending...
                     lineEnding = "\r\n"
                 } else {
                     lineEnding = "\n"
                 }
+                if !url.isDirectoryURL {
+                    let entireRange = NSRange(location: 0, length: str.utf16.count)
+                    if let result = extractProjetNameRegex.firstMatch(in: str, options: [], range: entireRange) {
+                        self.projectName = (str as NSString).substring(with: result.range)
+                        self.projectName = String(self.projectName[
+                            extractProjetName.endIndex..<self.projectName.index(self.projectName.endIndex, offsetBy: -1)])
 
-                let entireRange = NSRange(location: 0, length: str.utf16.count)
-                if let result = extractProjetNameRegex.firstMatch(in: str, options: [], range: entireRange) {
-                    self.projectName = (str as NSString).substring(with: result.range)
-                    self.projectName = String(self.projectName[
-                        extractProjetName.endIndex..<self.projectName.index(self.projectName.endIndex, offsetBy: -1)])
-
+                    }
                 }
             }
         } catch let error as XcodeProjError {
@@ -104,7 +104,7 @@ public class XcodeProj: PropertyList {
         if url.isDirectoryURL {
             let subpaths = url.pathComponents
             if let last = subpaths.last, let range = last.range(of: ".xcodeproj") {
-                self.projectName = String(last[...range.lowerBound])
+                self.projectName = String(last[..<range.lowerBound])
             }
         }
     }
@@ -173,7 +173,7 @@ public class XcodeProj: PropertyList {
             } else {
                 // Find in project
                 if let last = subpaths.last, let range = last.range(of: ".xcodeproj") {
-                    name = String(last[...range.lowerBound])
+                    name = String(last[..<range.lowerBound])
                 } else {
                     name = self.projectName // default
                 }
