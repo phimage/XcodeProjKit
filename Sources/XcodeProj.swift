@@ -186,7 +186,13 @@ public class XcodeProj: PropertyList {
         let format = format ?? self.format
         if format == .openStep {
             let serializer = OpenStepSerializer(projectName: name, lineEnding: lineEnding, projectFile: self)
-            try serializer.serialize().write(to: pbxprojURL, atomically: atomic, encoding: .utf8)
+            let string = try serializer.serialize()
+            #if os(Linux)
+            let atomically = false
+            #else
+            let atomically = atomic && !pbxprojURL.isStdOut
+            #endif
+            try string.write(to: pbxprojURL, atomically: atomically, encoding: .utf8)
         } else {
             try super.write(to: pbxprojURL,
                             format: format,

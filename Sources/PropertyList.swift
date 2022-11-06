@@ -112,6 +112,11 @@ open class PropertyList {
                       lineEnding: String? = nil,
                       atomic: Bool = true) throws {
         let format = format ?? .xml
+        #if os(Linux)
+        let writingOptions: Data.WritingOptions = []
+        #else
+        let writingOptions: Data.WritingOptions = atomic && !url.isStdOut ? [.atomicWrite]: []
+        #endif
         if format == .openStep {
             try XcodeProj(dict: self.dict, format: Format.openStep).write(to: url,
                                                                          format: format,
@@ -123,18 +128,10 @@ open class PropertyList {
                 fromPropertyList: dict,
                 format: propertyListformat,
                 options: 0)
-#if os(Linux)
-            try data.write(to: url, options: []) // error no attomic on linux
-#else
-            try data.write(to: url, options: atomic ? [.atomicWrite] : [])
-#endif
+            try data.write(to: url, options: writingOptions)
         } else if format == .json {
             let data = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
-#if os(Linux)
-            try data.write(to: url, options: []) // error no attomic on linux
-#else
-            try data.write(to: url, options: atomic ? [.atomicWrite] : [])
-#endif
+            try data.write(to: url, options: writingOptions)
         }
     }
 
@@ -149,4 +146,10 @@ open class PropertyList {
         return Data()
     }
 
+}
+
+extension URL {
+    var isStdOut: Bool {
+        return self.isFileURL && self.path == "/dev/stdout"
+    }
 }
