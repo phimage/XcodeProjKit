@@ -91,7 +91,8 @@ pod "XcodeProjKit"
 
 - [iblinter](https://github.com/IBDecodable/IBLinter) a command line tool to check your storyboards
 - [plistconvert](https://github.com/phimage/plistconvert) a command line tool to convert plist and pbxproj to different supported format (work on linux and macOS)
-- [xprojup](https://github.com/phimage/xprojup) a command line tool to update xcode proj to latest version
+- [xprojup](https://github.com/phimage/xprojup) a command line tool to update xcode proj to latest version (to avoid warnings)
+- [punic](https://github.com/phimage/punic) a command line tool too remove the usage of binary frameworks introduced by [Carthage](https://github.com/Carthage/Carthage) and to go back to developpement with sources.
 
 ### Contribute
 - Fork
