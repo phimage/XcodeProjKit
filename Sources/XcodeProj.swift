@@ -90,7 +90,7 @@ public class XcodeProj: PropertyList {
                     if let result = extractProjetNameRegex.firstMatch(in: str, options: [], range: entireRange) {
                         self.projectName = (str as NSString).substring(with: result.range)
                         self.projectName = String(self.projectName[
-                            extractProjetName.endIndex..<self.projectName.index(self.projectName.endIndex, offsetBy: -1)])
+                            extractProjetName.endIndex..<self.projectName.index(self.projectName.endIndex, offsetBy: -1)]) // swiftlint:disable:this line_length
 
                     }
                 }

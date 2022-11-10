@@ -30,13 +30,18 @@
 		480B88021F31C78400E700F7 /* yocelsius.09b4cb7.project.pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 480B87EE1F31C78400E700F7 /* yocelsius.09b4cb7.project.pbxproj */; };
 		480B88041F31CAFA00E700F7 /* XcodeProjKitParseKoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480B88031F31CAFA00E700F7 /* XcodeProjKitParseKoTests.swift */; };
 		480B88061F31CD5E00E700F7 /* XcodeProjKitWriteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480B88051F31CD5E00E700F7 /* XcodeProjKitWriteTests.swift */; };
+		48164867291CEE1D008ED706 /* PBXBuildRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48164866291CEE1D008ED706 /* PBXBuildRule.swift */; };
+		48164868291CEE1D008ED706 /* PBXBuildRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48164866291CEE1D008ED706 /* PBXBuildRule.swift */; };
+		4816486C291CF1C2008ED706 /* oauthswift.project.pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 48164869291CEF3F008ED706 /* oauthswift.project.pbxproj */; };
+		4816486D291CF1C3008ED706 /* oauthswift.project.pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 48164869291CEF3F008ED706 /* oauthswift.project.pbxproj */; };
+		4816486F291CF267008ED706 /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4816486E291CF267008ED706 /* PropertyList.swift */; };
+		48164870291CF267008ED706 /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4816486E291CF267008ED706 /* PropertyList.swift */; };
 		481EAA091F31B9D90039C6C0 /* FieldKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481EAA081F31B9D90039C6C0 /* FieldKey.swift */; };
 		481EDC6B1F4C1E2A00E97960 /* PBXLegacyTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481EDC6A1F4C1E2A00E97960 /* PBXLegacyTarget.swift */; };
 		481EDC6D1F4C1F3100E97960 /* plist.pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 481EDC6C1F4C1F3100E97960 /* plist.pbxproj */; };
 		4869C3311F30BC0F00BFED57 /* XcodeProjKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4869C32F1F30BC0F00BFED57 /* XcodeProjKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4869C33E1F30BC2800BFED57 /* Sequence+XcodeProjKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869C3391F30BC2800BFED57 /* Sequence+XcodeProjKit.swift */; };
 		4869C33F1F30BC2800BFED57 /* PBXObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869C33A1F30BC2800BFED57 /* PBXObject.swift */; };
-		4869C3401F30BC2800BFED57 /* XcodeProj+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869C33B1F30BC2800BFED57 /* XcodeProj+Serialization.swift */; };
 		4869C3411F30BC2800BFED57 /* XcodeProj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869C33C1F30BC2800BFED57 /* XcodeProj.swift */; };
 		4869C3441F30BCAE00BFED57 /* XcodeProjError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869C3431F30BCAE00BFED57 /* XcodeProjError.swift */; };
 		4869C3461F30BCFA00BFED57 /* PBXProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869C3451F30BCFA00BFED57 /* PBXProject.swift */; };
@@ -87,7 +92,6 @@
 		48E4034B1F31ED5C000C81A0 /* String+XcodeProjKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E403491F31ED43000C81A0 /* String+XcodeProjKit.swift */; };
 		48E4034E1F31FFCD000C81A0 /* XcodeProj+FilePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4034C1F31FF0D000C81A0 /* XcodeProj+FilePath.swift */; };
 		E48F58191F949F4800F92F20 /* PBXNativeTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869C3801F30C66100BFED57 /* PBXNativeTarget.swift */; };
-		E48F581A1F949F4800F92F20 /* XcodeProj+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869C33B1F30BC2800BFED57 /* XcodeProj+Serialization.swift */; };
 		E48F581B1F949F4800F92F20 /* PBXObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869C33A1F30BC2800BFED57 /* PBXObject.swift */; };
 		E48F581C1F949F4800F92F20 /* PBXContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869C3471F30BD1A00BFED57 /* PBXContainer.swift */; };
 		E48F581D1F949F4800F92F20 /* PBXResourcesBuildPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869C3861F30C6AD00BFED57 /* PBXResourcesBuildPhase.swift */; };
@@ -197,6 +201,9 @@
 		480B87EE1F31C78400E700F7 /* yocelsius.09b4cb7.project.pbxproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.pbxproject; path = yocelsius.09b4cb7.project.pbxproj; sourceTree = "<group>"; };
 		480B88031F31CAFA00E700F7 /* XcodeProjKitParseKoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeProjKitParseKoTests.swift; sourceTree = "<group>"; };
 		480B88051F31CD5E00E700F7 /* XcodeProjKitWriteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeProjKitWriteTests.swift; sourceTree = "<group>"; };
+		48164866291CEE1D008ED706 /* PBXBuildRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBXBuildRule.swift; sourceTree = "<group>"; };
+		48164869291CEF3F008ED706 /* oauthswift.project.pbxproj */ = {isa = PBXFileReference; lastKnownFileType = text.pbxproject; path = oauthswift.project.pbxproj; sourceTree = "<group>"; };
+		4816486E291CF267008ED706 /* PropertyList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyList.swift; sourceTree = "<group>"; };
 		481EAA081F31B9D90039C6C0 /* FieldKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldKey.swift; sourceTree = "<group>"; };
 		481EDC6A1F4C1E2A00E97960 /* PBXLegacyTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBXLegacyTarget.swift; sourceTree = "<group>"; };
 		481EDC6C1F4C1F3100E97960 /* plist.pbxproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.pbxproject; path = plist.pbxproj; sourceTree = "<group>"; };
@@ -205,7 +212,6 @@
 		4869C3301F30BC0F00BFED57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4869C3391F30BC2800BFED57 /* Sequence+XcodeProjKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sequence+XcodeProjKit.swift"; sourceTree = "<group>"; };
 		4869C33A1F30BC2800BFED57 /* PBXObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBXObject.swift; sourceTree = "<group>"; };
-		4869C33B1F30BC2800BFED57 /* XcodeProj+Serialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeProj+Serialization.swift"; sourceTree = "<group>"; };
 		4869C33C1F30BC2800BFED57 /* XcodeProj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeProj.swift; sourceTree = "<group>"; };
 		4869C3431F30BCAE00BFED57 /* XcodeProjError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeProjError.swift; sourceTree = "<group>"; };
 		4869C3451F30BCFA00BFED57 /* PBXProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBXProject.swift; sourceTree = "<group>"; };
@@ -321,6 +327,7 @@
 				480B87ED1F31C78400E700F7 /* xcglogger.iosdemo.5510795.project.pbxproj */,
 				480B87EE1F31C78400E700F7 /* yocelsius.09b4cb7.project.pbxproj */,
 				481EDC6C1F4C1F3100E97960 /* plist.pbxproj */,
+				48164869291CEF3F008ED706 /* oauthswift.project.pbxproj */,
 			);
 			path = ok;
 			sourceTree = "<group>";
@@ -358,9 +365,9 @@
 		4869C3371F30BC2800BFED57 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4816486E291CF267008ED706 /* PropertyList.swift */,
 				4869C33C1F30BC2800BFED57 /* XcodeProj.swift */,
 				48E4034C1F31FF0D000C81A0 /* XcodeProj+FilePath.swift */,
-				4869C33B1F30BC2800BFED57 /* XcodeProj+Serialization.swift */,
 				4869C3431F30BCAE00BFED57 /* XcodeProjError.swift */,
 				4805AC101F32043E0021930A /* OpenStepSerializer.swift */,
 				4869C3781F30C03800BFED57 /* Extensions */,
@@ -410,6 +417,7 @@
 				4869C35F1F30BE5800BFED57 /* PBXTargetDependency.swift */,
 				4869C35C1F30BE2600BFED57 /* PBXTarget */,
 				4869C3541F30BDB600BFED57 /* PBXBuildPhase */,
+				48164866291CEE1D008ED706 /* PBXBuildRule.swift */,
 			);
 			name = PBXProjectItem;
 			sourceTree = "<group>";
@@ -704,6 +712,7 @@
 				480B87F51F31C78400E700F7 /* dwifft.05d449a.project.pbxproj in Resources */,
 				480B88001F31C78400E700F7 /* weixin.17aeced.project.pbxproj in Resources */,
 				480B88021F31C78400E700F7 /* yocelsius.09b4cb7.project.pbxproj in Resources */,
+				4816486C291CF1C2008ED706 /* oauthswift.project.pbxproj in Resources */,
 				480B87FC1F31C78400E700F7 /* sdwebimage.07fe1f0.project.pbxproj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -740,6 +749,7 @@
 				E4B73BA41F94A28F00B23049 /* xcglogger.iosdemo.5510795.project.pbxproj in Resources */,
 				E4B73BA81F94A29200B23049 /* 001.pbxproj in Resources */,
 				E4B73BA51F94A28F00B23049 /* yocelsius.09b4cb7.project.pbxproj in Resources */,
+				4816486D291CF1C3008ED706 /* oauthswift.project.pbxproj in Resources */,
 				E4B73B9B1F94A28F00B23049 /* masonry.b88578c.project.pbxproj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -811,7 +821,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4869C3811F30C66100BFED57 /* PBXNativeTarget.swift in Sources */,
-				4869C3401F30BC2800BFED57 /* XcodeProj+Serialization.swift in Sources */,
 				4869C33F1F30BC2800BFED57 /* PBXObject.swift in Sources */,
 				4869C3481F30BD1A00BFED57 /* PBXContainer.swift in Sources */,
 				4869C3871F30C6AD00BFED57 /* PBXResourcesBuildPhase.swift in Sources */,
@@ -821,6 +830,7 @@
 				4869C3701F30BF1700BFED57 /* XCVersionGroup.swift in Sources */,
 				4869C3751F30BF6500BFED57 /* SourceTreeFolder.swift in Sources */,
 				4805AC111F32043E0021930A /* OpenStepSerializer.swift in Sources */,
+				4816486F291CF267008ED706 /* PropertyList.swift in Sources */,
 				48AFAB031F320BD300AC8AE8 /* PBXProductType.swift in Sources */,
 				4869C3621F30BE6E00BFED57 /* XCConfigurationList.swift in Sources */,
 				4869C3831F30C68700BFED57 /* PBXCopyFilesBuildPhase.swift in Sources */,
@@ -845,6 +855,7 @@
 				4869C3531F30BDA600BFED57 /* PBXBuildFile.swift in Sources */,
 				4869C34C1F30BD6000BFED57 /* PBXContainerItem.swift in Sources */,
 				4869C3721F30BF3100BFED57 /* SourceTree.swift in Sources */,
+				48164867291CEE1D008ED706 /* PBXBuildRule.swift in Sources */,
 				480B87D81F31C49600E700F7 /* URL+XcodeProjKit.swift in Sources */,
 				4869C38D1F30C6E500BFED57 /* PBXFrameworksBuildPhase.swift in Sources */,
 				4869C35E1F30BE2F00BFED57 /* PBXTarget.swift in Sources */,
@@ -875,7 +886,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E48F58191F949F4800F92F20 /* PBXNativeTarget.swift in Sources */,
-				E48F581A1F949F4800F92F20 /* XcodeProj+Serialization.swift in Sources */,
 				E48F581B1F949F4800F92F20 /* PBXObject.swift in Sources */,
 				E48F581C1F949F4800F92F20 /* PBXContainer.swift in Sources */,
 				E48F581D1F949F4800F92F20 /* PBXResourcesBuildPhase.swift in Sources */,
@@ -885,6 +895,7 @@
 				E48F58201F949F4800F92F20 /* XCVersionGroup.swift in Sources */,
 				E48F58211F949F4800F92F20 /* SourceTreeFolder.swift in Sources */,
 				E48F58221F949F4800F92F20 /* OpenStepSerializer.swift in Sources */,
+				48164870291CF267008ED706 /* PropertyList.swift in Sources */,
 				E48F58231F949F4800F92F20 /* PBXProductType.swift in Sources */,
 				E48F58241F949F4800F92F20 /* XCConfigurationList.swift in Sources */,
 				E48F58251F949F4800F92F20 /* PBXCopyFilesBuildPhase.swift in Sources */,
@@ -909,6 +920,7 @@
 				E48F58371F949F4800F92F20 /* PBXBuildFile.swift in Sources */,
 				E48F58381F949F4800F92F20 /* PBXContainerItem.swift in Sources */,
 				E48F58391F949F4800F92F20 /* SourceTree.swift in Sources */,
+				48164868291CEE1D008ED706 /* PBXBuildRule.swift in Sources */,
 				E48F583A1F949F4800F92F20 /* URL+XcodeProjKit.swift in Sources */,
 				E48F583B1F949F4800F92F20 /* PBXFrameworksBuildPhase.swift in Sources */,
 				E48F583C1F949F4800F92F20 /* PBXTarget.swift in Sources */,

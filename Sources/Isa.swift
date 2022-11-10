@@ -14,6 +14,7 @@ public enum Isa: String, CaseIterable, CustomStringConvertible {
     case containerItemProxy = "PBXContainerItemProxy"
     case buildFile = "PBXBuildFile"
     case buildStyle = "PBXBuildStyle"
+    case buildRule = "PBXBuildRule"
     case aggregateTarget = "PBXAggregateTarget"
     case nativeTarget = "PBXNativeTarget"
     case targetDependency = "PBXTargetDependency"
@@ -83,6 +84,7 @@ extension Isa {
         case .buildConfiguration: return XCBuildConfiguration.self
         case .remoteSwiftPackageReference: return XCRemoteSwiftPackageReference.self
         case .swiftPackageProductDependency: return XCSwiftPackageProductDependency.self
+        case .buildRule: return PBXBuildRule.self
         }
     }
 }

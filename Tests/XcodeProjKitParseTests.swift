@@ -83,7 +83,11 @@ class XcodeProjKitParseTests: XCTestCase {
     func testyocelsius() {
         testParse("ok/yocelsius.09b4cb7.project")
     }
-    
+
+    func testoauthswift() {
+        testParse("ok/oauthswift.project")
+    }
+
     func testplist() {
         testParse("ok/plist")
     }
