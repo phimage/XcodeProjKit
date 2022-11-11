@@ -18,6 +18,8 @@ public /* abstract */ class PBXObject {
     public var fields: PBXObject.Fields
     let objects: PBXObjectFactory
 
+    public var referrers: [PBXObject] = []
+
     public enum PBXKeys: PBXKey {
         case isa
     }
@@ -148,12 +150,19 @@ extension PBXObject {
         guard let objectKeys = fields[key] as? [String] else {
             return []
         }
-
-        return objectKeys.compactMap(objects.object)
+        let objects: [T] = objectKeys.compactMap(objects.object)
+        for object in objects {
+            object.addReferrers(self)
+        }
+        return objects
     }
 
     func object<T: PBXObject, R: RawRepresentable>(_ key: R) -> T? where R.RawValue == String {
-        return object(key.rawValue)
+        if let object: T = object(key.rawValue) {
+            object.addReferrers(self)
+            return object
+        }
+        return nil
     }
 
     func objects<T: PBXObject, R: RawRepresentable>(_ key: R) -> [T] where R.RawValue == String {
@@ -226,6 +235,37 @@ extension PBXObject {
 
     public func attach() {
         objects.add(self)
+    }
+
+    public func addReferrers(_ object: PBXObject) {
+        self.referrers.append(object)
+    }
+
+    public func removeReferrers(_ object: PBXObject) {
+        self.referrers.removeAll(where: { $0.ref == object.ref})
+    }
+
+    public func removeFromReferrers() {
+        for referrer in self.referrers {
+            for (key, value) in referrer.fields {
+                if let value = value as? String {
+                    if value == self.ref {
+                        referrer.fields[key] = nil
+                    }
+                } else if var values = value as? [String] {
+                    for (index, value) in values.enumerated() where value == self.ref {
+                        values.remove(at: index)
+                        referrer.fields[key] = values
+                        break
+                    }
+                }
+            }
+        }
+    }
+
+    public func remove() {
+        unattach()
+        removeFromReferrers()
     }
 }
 

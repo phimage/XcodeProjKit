@@ -17,11 +17,11 @@ public class PBXBuildFile: PBXProjectItem {
     }
 
     #if LAZY
-    public lazy var fileRef: PBXReference? = self.object(PBXKeys.fileRef)
+    public lazy var fileRef: PBXFileReference? = self.object(PBXKeys.fileRef)
     public lazy var productRef: XCSwiftPackageProductDependency? = self.object(PBXKeys.productRef)
     public lazy var settings: [String: Any]? = self.dictionary(PBXKeys.settings)
     #else
-    public var fileRef: PBXReference? { self.object(PBXKeys.fileRef) }
+    public var fileRef: PBXFileReference? { self.object(PBXKeys.fileRef) }
     public var productRef: XCSwiftPackageProductDependency? { self.object(PBXKeys.productRef) }
     public var settings: [String: Any]? { self.dictionary(PBXKeys.settings) }
     #endif

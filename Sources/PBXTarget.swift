@@ -13,6 +13,8 @@ public /* abstract */ class PBXTarget: PBXProjectItem, PBXBuildConfigurationList
     public enum PBXKeys: PBXKey {
         case name
         case productName
+        case productReference
+        case productType
         case buildPhases
         case buildRules
         case buildConfigurationList
@@ -23,6 +25,8 @@ public /* abstract */ class PBXTarget: PBXProjectItem, PBXBuildConfigurationList
     #if LAZY
     public lazy var name: String = self.string(PBXKeys.name)
     public lazy var productName: String? = self.string(PBXKeys.productName)
+    public lazy var productReference: PBXFileReference? = self.object(PBXKeys.productReference)
+    public lazy var productType: String? = self.string(PBXKeys.productName)
     public lazy var buildPhases: [PBXBuildPhase] = self.objects(PBXKeys.buildPhases)
     public lazy var buildRules: [PBXBuildRule] = self.objects(PBXKeys.buildRules)
     public lazy var buildConfigurationList: XCConfigurationList? = self.object(PBXKeys.buildConfigurationList)
@@ -31,6 +35,8 @@ public /* abstract */ class PBXTarget: PBXProjectItem, PBXBuildConfigurationList
     #else
     public var name: String { self.string(PBXKeys.name) }
     public var productName: String? { self.string(PBXKeys.productName) }
+    public var productReference: PBXFileReference? { self.object(PBXKeys.productReference) }
+    public var productType: String? { self.string(PBXKeys.productName) }
     public var buildPhases: [PBXBuildPhase] { self.objects(PBXKeys.buildPhases) }
     public var buildRules: [PBXBuildRule] { self.objects(PBXKeys.buildRules) }
     public var buildConfigurationList: XCConfigurationList? { self.object(PBXKeys.buildConfigurationList) }
