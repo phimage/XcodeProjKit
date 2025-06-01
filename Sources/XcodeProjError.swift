@@ -8,10 +8,14 @@
 
 import Foundation
 
+public struct AnySendable: @unchecked Sendable {
+    let value: Any?
+}
+
 public enum XcodeProjError: Error {
 
     // Data not a dictionary
-    case invalidData(object: Any)
+    case invalidData(object: AnySendable)
 
     // Missing field
     case fieldMissing(key: String)

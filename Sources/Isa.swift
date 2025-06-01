@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum Isa: String, CaseIterable, CustomStringConvertible {
+public enum Isa: String, CaseIterable, CustomStringConvertible, Sendable {
 
     case project = "PBXProject"
     case containerItemProxy = "PBXContainerItemProxy"

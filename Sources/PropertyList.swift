@@ -87,7 +87,7 @@ open class PropertyList {
         }
 
         guard let dict = obj as? PBXObject.Fields else {
-            throw XcodeProjError.invalidData(object: obj)
+            throw XcodeProjError.invalidData(object: AnySendable(value: obj))
         }
 
         try self.init(dict: dict, format: format)
