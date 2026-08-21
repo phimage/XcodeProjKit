@@ -7,6 +7,13 @@ disabled_rules:
 
 shorthand_operator: warning
 
+# Xcode's own isa names (e.g. PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet)
+# are long, so allow generous type and identifier lengths.
+type_name:
+    max_length: 80
+identifier_name:
+    max_length: 80
+
 # some rules are only opt-in
 opt_in_rules:
     - empty_count

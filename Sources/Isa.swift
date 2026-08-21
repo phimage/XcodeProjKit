@@ -34,7 +34,13 @@ public enum Isa: String, CaseIterable, CustomStringConvertible, Sendable {
     case configurationList = "XCConfigurationList"
     case buildConfiguration = "XCBuildConfiguration"
     case remoteSwiftPackageReference = "XCRemoteSwiftPackageReference"
+    case localSwiftPackageReference = "XCLocalSwiftPackageReference"
     case swiftPackageProductDependency = "XCSwiftPackageProductDependency"
+    case rezBuildPhase = "PBXRezBuildPhase"
+    case fileSystemSynchronizedRootGroup = "PBXFileSystemSynchronizedRootGroup"
+    case fileSystemSynchronizedBuildFileExceptionSet = "PBXFileSystemSynchronizedBuildFileExceptionSet"
+    case fileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet =
+        "PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet"
 
     public var description: String {
         return rawValue
@@ -85,6 +91,12 @@ extension Isa {
         case .remoteSwiftPackageReference: return XCRemoteSwiftPackageReference.self
         case .swiftPackageProductDependency: return XCSwiftPackageProductDependency.self
         case .buildRule: return PBXBuildRule.self
+        case .localSwiftPackageReference: return XCLocalSwiftPackageReference.self
+        case .rezBuildPhase: return PBXRezBuildPhase.self
+        case .fileSystemSynchronizedRootGroup: return PBXFileSystemSynchronizedRootGroup.self
+        case .fileSystemSynchronizedBuildFileExceptionSet: return PBXFileSystemSynchronizedBuildFileExceptionSet.self
+        case .fileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet:
+            return PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet.self
         }
     }
 }

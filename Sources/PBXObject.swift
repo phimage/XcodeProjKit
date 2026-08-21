@@ -30,6 +30,13 @@ public /* abstract */ class PBXObject {
     public var isa: Isa { Isa(rawValue: self.string("isa")!)! }
     #endif
 
+    /// The raw `isa` string, even for object types this version of the library does not model.
+    /// Unlike `isa` (which force-unwraps into the known `Isa` enum), this never crashes, so it is
+    /// the safe way to identify an object of an unknown/future `isa`.
+    public var isaString: String {
+        return (self.fields[PBXKeys.isa.rawValue] as? String) ?? ""
+    }
+
     public required init(ref: XcodeUUID, fields: PBXObject.Fields = [:], objects: PBXObjectFactory) {
         self.ref = ref
         self.fields = fields
@@ -40,7 +47,7 @@ public /* abstract */ class PBXObject {
     }
 
     public var comment: String? {
-        return self.isa.rawValue
+        return self.isaString
     }
 
 }

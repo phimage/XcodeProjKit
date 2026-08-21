@@ -33,9 +33,9 @@ class OpenStepSerializer {
 
                 lines.append("\tobjects = {")
 
-                // Group by isa
+                // Group by isa (raw string, so unknown/future isa types still serialize into a section)
                 let groupedObjects = projectFile.objects.dict.values
-                    .grouped { $0.isa }
+                    .grouped { $0.isaString }
                     .sorted { $0.0 }
 
                 // For each isa, a section
@@ -45,9 +45,9 @@ class OpenStepSerializer {
 
                     for object in objects.sorted(by: { $0.ref }) {
 
-                        let multiline = isa != .buildFile && isa != .fileReference
+                        let multiline = isa != Isa.buildFile.rawValue && isa != Isa.fileReference.rawValue
 
-                        let parts = try rows(type: isa, objKey: object.ref, multiline: multiline, fields: object.fields)
+                        let parts = try rows(isa: isa, objKey: object.ref, multiline: multiline, fields: object.fields)
                         if multiline {
                             for line in parts {
                                 lines.append("\t\t" + line)
@@ -220,13 +220,13 @@ class OpenStepSerializer {
         return parts
     }
 
-    func rows(type: Isa, objKey: String, multiline: Bool, fields: PBXObject.Fields) throws ->  [String] {
+    func rows(isa: String, objKey: String, multiline: Bool, fields: PBXObject.Fields) throws -> [String] {
 
         var parts: [String] = []
         if multiline {
-            parts.append("isa = \(type.rawValue);")
+            parts.append("isa = \(isa);")
         } else {
-            parts.append("isa = \(type.rawValue); ")
+            parts.append("isa = \(isa); ")
         }
 
         for key in fields.keys.sorted() where key != FieldKey.isa.rawValue {

@@ -154,7 +154,9 @@ public class XcodeProj: PropertyList {
         if let type = Isa(rawValue: isa)?.type {
             return type.init(ref: ref, fields: fields, objects: objects)
         }
-        assertionFailure("Unknown isa=\(isa)")
+        // Unknown/future isa: keep it as a generic object. Its raw fields are preserved and
+        // round-trip through serialization (which groups by `isaString`), so a project written by
+        // a newer Xcode than this library knows about does not break parsing or writing.
         return PBXObject(ref: ref, fields: fields, objects: objects)
     }
 

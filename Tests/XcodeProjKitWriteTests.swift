@@ -93,7 +93,13 @@ class XcodeProjKitWriteTests: XCTestCase {
     func testyocelsius() {
         testWrite("ok/yocelsius.09b4cb7.project")
     }
-    
+
+    // Modern Xcode format (real Xcode output, byte-exact round-trip)
+
+    func testXcode16SyncGroup() {
+        testWrite("ok/xcode16syncgroup.project")
+    }
+
     func testWrite(_ resource: String) {
         if let url = url(forResource: resource, withExtension: XcodeProj.pbxprojFileExtension) {
             do {
